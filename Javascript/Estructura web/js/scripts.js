@@ -171,18 +171,99 @@ switch (estacion) {
     alert("Estacion no registrada");
     break;
 }
-*/
 let resultado;
 for (let index = 0; index <= 1000; index++) {
-   
-  if (index === 0) {
-      continue; //omite las instrucciones de este mini bloque
-  } 
-  resultado = index * 5; 
-  document.write("<p>" + resultado+ "</p>");
-  if (index===10) {
-      break; // omite el resto al cumplior la condicion
-  }
+    
+    if (index === 0) {
+        continue; //omite las instrucciones de este mini bloque
+    } 
+    resultado = index * 5; 
+    document.write("<p>" + resultado+ "</p>");
+    if (index===10) {
+        break; // omite el resto al cumplior la condicion
+    }
     
 }
 
+
+
+//Arrays vacios: declaracion
+// let myArray = [];
+let myArray = new Array(); // se declara un objeto del tipo array
+alert(typeof(myArray));
+//Arrays con valores: declaracion
+let meses = new Array("Enero","Febrero","Marzo");
+let meses = ["Enero","Febrero","Marzo"];
+let meses = Array.of("Enero", "Febrero", "Marzo");// Propia de Ecmascript 6
+
+
+const longitud = meses.length;
+document.write("<p>El array tiene "+longitud+" elementos.</p>");
+document.write("<p>Puedo lisar el array de una vez: "+meses+".</p>");
+
+const primerMes = meses[0];
+document.write("<p>El primer es: "+primerMes+".</p>");
+
+meses[2] = "Antes de Abril";
+document.write(meses);
+//Una posicion inexistente retorna undefined
+
+let alumno1 = Array.of(265, 'José', 'Álvarez', 16, '28005', false);
+let alumno2 = Array.of(382, 'María', 'Gómez', 15, '28036', true);
+let alumno3 = Array.of(425, 'Sergio', 'Santamaría', 17, '28012', false);
+let alumno4 = Array.of(342, 'Rafael', 'Cantos', 14, '28010', false);
+let alumno5 = Array.of(446, 'Sara', 'Gómez', 15, '28010', false);
+let alumno6 = Array.of(452, 'Ivan', 'Sánchez', 16, '28010', true);
+let alumno7 = Array.of(754, 'Lydia', 'Somonte', 13, '28010', false);
+let alumno8 = Array.of(345, 'Carlos', 'Pacheco', 14, '28010', false);
+let alumno9 = Array.of(678, 'Rubén', 'Punset', 15, '28010', false);
+
+let clase = Array.of(alumno1,alumno2,alumno3,alumno4,alumno5,alumno6,alumno7,alumno8,alumno9);
+document.write("<h1>Total de alumnos en la clase: "+clase.length+"</h1>");
+let texto;
+let sumaEdades = 0,
+media, cantCeliacos = 0,
+porcentajeCeliacos=0;
+
+for (let i = 0; i < clase.length; i++) {
+    texto = "<p><strong>Matrícula número: "+clase[i][0]+".</strong></p>";
+    texto+="<p>Nombre: " +clase[i][1]+ " "+clase[i][2] + ".</p>";
+    texto+="<p>Edad: "+clase[i][3]+" años.</p>";
+    texto+="<p>Código postal: "+clase[i][4]+".</p>";
+    if (clase[i][5]) {
+        
+        cantCeliacos ++;
+        texto+="<p>Necesita menú especial.</p><br>";
+        
+    }else{
+        
+        texto+="<p>No necesita menú especial.</p><br>";
+        
+    }
+    
+    document.write(texto);
+    sumaEdades += clase[i][3];//Para la estadistica - Media
+    
+}
+document.write("<hr><h1>Estadística</h1>");
+
+media = parseInt(sumaEdades) / clase.length;
+
+document.write("<p>La media de edad es de: "+media+" años.</p>");
+
+document.write("<p>En la clase hay " + cantCeliacos + " celíacos.</p>");
+porcentajeCeliacos = (cantCeliacos / clase.length)*100;
+document.write("<p>Los celíacos representan un " + porcentajeCeliacos.toFixed(2) + "% del total.</p>");
+
+// alert(cantCeliacos)
+
+
+*/
+//Recorrido por arrays bidimensionales
+for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
+        document.write("Vuelta "+i+" "+j+"<br>");
+        
+    }
+    
+}

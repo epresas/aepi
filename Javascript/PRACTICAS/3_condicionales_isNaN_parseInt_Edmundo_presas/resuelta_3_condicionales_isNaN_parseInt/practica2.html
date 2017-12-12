@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Práctica</title>
+		<meta charset="UTF8"/>		
+	</head>
+	<body>
+		<script>
+			/*-------------------------------------------------------
+
+			PASO 2 DE 4
+
+			- En caso de que el usuario haya introducido un nombre válido (es decir, ni vacío ni null), solicita al usuario una contraseña de acceso y almacénala en una variable.
+
+			- En caso de que la clave no sea la palabra Qwerty (empezando en mayúscula), muestra una alerta por pantalla con el siguiente texto:
+
+					Lo sentimos <NOMBREUSUARIO>, pero la clave <CLAVEUSUARIO> es incorrecta. Por favor, reinicie la aplicación para escribirla de nuevo.
+
+			- Sustituye en el texto de la alerta <NOMBREUSUARIO> por el nombre que ha introducido, y <CLAVEUSUARIO> por la clave que ha introducido.
+
+			-------------------------------------------------------*/
+
+			let nombre = prompt("Indique su nombre");
+
+			if (nombre === null || nombre === ""){
+
+				alert("Por favor indique un nombre de acceso correcto. Reinicie la aplicación para escribirlo de nuevo.");
+			}
+			else{
+
+				let clave = prompt("Indique su clave de acceso");
+
+				if ( clave != "Qwerty" ){
+
+					alert("Lo sentimos "+nombre+", pero la clave "+clave+" es incorrecta. Por favor, reinicie la aplicación para escribirla de nuevo.");
+
+				}			
+				else{
+
+					// Zona de acceso
+
+				}
+
+			}
+
+			
+
+			
+		</script>		
+	</body>
+</html>

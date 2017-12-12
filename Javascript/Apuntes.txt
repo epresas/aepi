@@ -84,6 +84,14 @@ Bucles: Estructuras de control que ejecutan instrucciones una y otra vez mientra
     la palabra clave "continue" dentro de un bloque omite el resto de iteraciones
     la palabra clave "break" aqui determina un abandono prematuro del bloque, haciendo caso omiso no solo del resto de instrucciones de la vuelta sino de las demas repeticiones
 
+    -while: realiza instrucciones mientras se cumpla una condicion
+    while (condicion){
+        instrucciones
+    }
+
+Arrays: Objeto que permite almacenar una coleccion de valores.
+imprimiendo el array como variable sin indice se imprimen todos los elementos separados por coma.
+
 ############## ECMASCRIPT 6 #######################
 
 
