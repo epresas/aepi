@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Práctica</title>
+		<meta charset="UTF8"/>		
+	</head>
+	<body>
+
+		<script>
+			/*-------------------------------------------------------
+
+			- De los valores listados a continuación, selecciona los valores que SÍ sean operables y asígnalos cada uno a una variable (¡no olvides declararlas previamente!):
+
+				1
+				"1"
+				2.22
+				'2,22'
+				-2.22
+				"-2,22"
+				" -2 "
+				"-2"
+				-2
+				33.33
+				'33. 33'
+				'3 3 .33'
+				"hola"
+
+			- Declara otras 4 variables adicionales, en las que, en cada una de ellas y haciendo uso de los operadores aritméticos + - / * realices un cálculo con las variables operables anteriores. Utiliza cada operador una vez.
+
+			- Mediante el método write() escribe un total de 6 frases en el documento como la que sigue:
+
+				"El resultado de realizar una operación de <NOMBREOPERACION> entre los valores <VALORVARIABLE> y <VALORVARIABLE> devuelve <RESULTADO>"
+
+			- Escribe en el texto <NOMBREOPERACION> el nombre de la operación que estés realizando, y sustituye el texto <VALORAVARIABLE> por el valor que tenga almacenado cada una de las dos variables, así como el texto <RESULTADO> por el resultado que arroje la operación. Aquí puedes ver un ejemplo de cómo debe quedar cada frase:
+
+				"El resultado de realizar una operación de suma entre los valores 1 y -2 devuelve -1"			
+
+			-------------------------------------------------------*/
+			//Comprobación de operabilidad
+				const valor1 = 1;
+				const valor2 = "1";
+				const valor3 = '2.22';
+				const valor4 = -2.22;
+				const valor5 = "-2.22";
+				const valor6 = " -2 ";
+				const valor7 = 2.22;
+				const valor8 = "-2";
+				const valor9 = -2;
+				const valor10 = 33.33;
+				const valor11 = '33. 33';
+				const valor12 = "3 3 .33";
+				const valor13 = "hola";			
+
+				document.write("<p>"+isNaN(valor1)+"</p>");	// false, se puede utilizar
+				document.write("<p>"+isNaN(valor2)+"</p>");	// false, se puede utilizar
+				document.write("<p>"+isNaN(valor3)+"</p>");	// false, se puede utilizar
+				document.write("<p>"+isNaN(valor4)+"</p>");	// false, se puede utilizar
+				document.write("<p>"+isNaN(valor5)+"</p>");	// false, se puede utilizar
+				document.write("<p>"+isNaN(valor6)+"</p>");	// false, se puede utilizar
+				document.write("<p>"+isNaN(valor7)+"</p>");	// false, se puede utilizar
+				document.write("<p>"+isNaN(valor8)+"</p>");	// false, se puede utilizar
+				document.write("<p>"+isNaN(valor9)+"</p>");	// false, se puede utilizar
+				document.write("<p>"+isNaN(valor10)+"</p>");// false, se puede utilizar
+				document.write("<p>"+isNaN(valor11)+"</p>");// true, no se puede utilizar
+				document.write("<p>"+isNaN(valor12)+"</p>");// true, no se puede utilizar
+				document.write("<p>"+isNaN(valor13)+"</p>");// true, no se puede utilizar
+
+			//Operaciones con las variables operables
+				let resultado1 = valor1 + valor2;
+				let resultado2 = valor5 - valor6;
+				let resultado3 = valor3 + valor4 * valor10;
+				let resultado4 = valor10 / valor7 + valor9;
+
+			//Impresión de los resultados
+ 				document.write("<p>El resultado de realizar una operación de suma entre los valores "+valor1+" y "+valor2+" devuelve "+resultado1+"</p>");
+ 				document.write("<p>El resultado de realizar una operación de resta entre los valores "+valor5+" y "+valor6+" devuelve "+resultado2+"</p>");
+ 				document.write("<p>El resultado de realizar una operación de suma y multiplicación entre los valores "+valor3+", "+valor4+" y "+valor10+" devuelve "+resultado3+"</p>");
+ 				document.write("<p>El resultado de realizar una operación de división y suma entre los valores "+valor10+ ", " + valor7 +" y "+valor9+" devuelve "+resultado4+"</p>");
+		</script>
+		
+	</body>
+</html>

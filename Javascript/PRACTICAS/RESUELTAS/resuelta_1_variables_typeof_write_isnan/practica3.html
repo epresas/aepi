@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Práctica</title>
+		<meta charset="UTF8"/>		
+	</head>
+	<body>
+
+		<script>
+			/*-------------------------------------------------------
+
+			- De los valores listados a continuación, selecciona los valores que SÍ sean operables y asígnalos cada uno a una letiable (¡no olvides declararlas previamente!):
+
+				1
+				"1"
+				2.22
+				'2,22'
+				-2.22
+				"-2,22"
+				" -2 "
+				"-2"
+				-2
+				33.33
+				'33. 33'
+				'3 3 .33'
+				"hola"
+
+			- Declara otras 4 letiables adicionales, en las que, en cada una de ellas y haciendo uso de los operadores aritméticos + - / * realices un cálculo con las letiables operables anteriores. Utiliza cada operador una vez.
+
+			- Mediante el método write() escribe un total de 6 frases en el documento como la que sigue:
+
+				"El resultado de realizar una operación de <NOMBREOPERACION> entre los valores <VALORletIABLE> y <VALORletIABLE> devuelve <RESULTADO>"
+
+			- Escribe en el texto <NOMBREOPERACION> el nombre de la operación que estés realizando, y sustituye el texto <VALORAletIABLE> por el valor que tenga almacenado cada una de las dos letiables, así como el texto <RESULTADO> por el resultado que arroje la operación. Aquí puedes ver un ejemplo de cómo debe quedar cada frase:
+
+				"El resultado de realizar una operación de suma entre los valores 1 y -2 devuelve -1"			
+
+			-------------------------------------------------------*/
+
+
+			let dato1 = 1;
+			let dato2 =	"1";
+			let dato3 =	2.22;
+			let dato5 =	-2.22;
+			let dato7 =	" -2 ";
+			let dato8 =	"-2";
+			let dato9 =	-2;
+			let dato10 = 33.33;
+
+			let resultado1 = dato1 + dato2;
+			let resultado2 = dato2 * dato8;
+			let resultado3 = dato3 / dato5;
+			let resultado5 = dato10 - dato8;
+
+			document.write("El resultado de realizar una operación de suma entre los valores " + dato1 + " y " + dato2 + " devuelve " + resultado1 +". Debido a que el síbolo \"+\" es un operador no sólo de suma sino también de concatenación entre strings, esta operación resulta en ámbos strings concatenados en vez de operados.<br>");
+
+			document.write("El resultado de realizar una operación de multiplicación entre los valores " + dato2 + " y " + dato8 + " devuelve " + resultado2 +".<br>");
+
+			document.write("El resultado de realizar una operación de división entre los valores " + dato3 + " y " + dato5 + " devuelve " + resultado3 +".<br>");
+
+			document.write("El resultado de realizar una operación de resta entre los valores " + dato10 + " y " + dato8 + " devuelve " + resultado5 +".<br>");
+
+			
+		</script>
+		
+	</body>
+</html>

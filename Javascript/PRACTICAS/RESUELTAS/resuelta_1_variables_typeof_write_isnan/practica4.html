@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Práctica</title>
+		<meta charset="UTF8"/>
+	</head>
+	<body>
+
+		<script>
+			/*-------------------------------------------------------
+
+			- Crea una aplicación que pregunte al usuario cuántas copas de vino ha bebido, así como cuántos kilogramos tiene de peso en dos preguntas independientes.
+
+			- Una vez el usuario haya respondido a las dos preguntas, multiplica los vasos de vino por los kilogramos de peso del usuario, y todo ello a su vez por 0.2
+
+			- Escibe en pantalla una frase como la que sigue:
+
+				"Usted ha ingerido un total de <CANTIDADVASOS> vasos de vino. Teniendo en cuenta que su peso es de <CANTIDADKILOS> kilogramos, el índice de alcohol en sangre que presenta es de <VALORRESULTADO>"
+
+			- Sustituye el texto <CANTIDADVASOS> por los vasos de vino introducidos por el usuario, el texto <CANTIDADKILOS> por los kilogramos introducidos por el usuario, y el texto <VALORRESULTADO> por el valor resultante de la triple multiplicación.	
+
+			-------------------------------------------------------*/
+
+			let copas = prompt("¿Cuámtas copas de vino ha bebido?", "Escriba aquí la cantidad...");
+
+			let peso = prompt("Cuánto pesa?", "Escriba aquí su peso...");
+
+			let resultado = copas * peso * 0.8;
+			
+			document.write(`Usted ha ingerido un total de ${copas} vasos de vino. Teniendo en cuenta que su peso es de ${peso} kilogramos, el índice de alcohol en sangre que presenta es de ${resultado}`);
+			
+		</script>		
+	</body>
+</html>

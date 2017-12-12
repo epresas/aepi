@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Práctica</title>
+		<meta charset="UTF8"/>		
+	</head>
+	<body>
+		<script>
+			/*-------------------------------------------------------
+
+			- Declara 13 variables y asígnaes a cada una los valores listados a continuación, tal y como se muestran. 
+
+				1
+				"1"
+				2.22
+				'2,22'
+				-2.22
+				"-2,22"
+				" -2 "
+				"-2"
+				-2
+				33.33
+				'33. 33'
+				'3 3 .33'
+				"hola"
+
+			- Mediante el método write(), escribe una frase en el documento por cada una de las variables, que indique lo siguiente:
+
+				"La variable <NOMBREVARIABLE> tiene un valor <VALORVARIABLE>, y su evaluación respecto a si es inoperable resulta en <OPERABILIDAD>"
+			
+			- Sustituye el texto <NOMBREVARIABLE> por el nombre de la variable, el texto <VALORAVARIABLE> por el valor que tenga almacenado dicha variable, y el texto <OPERABILIDAD> por el resultado de su operabilidad a través del método isNaN()
+
+			-------------------------------------------------------*/
+
+			let dato1 = 1;
+			let dato2 =	"1";
+			let dato3 =	2.22;
+			let dato4 =	'2,22';
+			let dato5 =	-2.22;
+			let dato6 =	"-2,22";
+			let dato7 =	" -2 ";
+			let dato8 =	"-2";
+			let dato9 =	-2;
+			let dato10 = 33.33;
+			let dato11 = '33. 33';
+			let dato12 = '3 3 .33';
+			let dato14 ="hola";
+
+			document.write("La variable dato1 tiene un valor " + dato1 + ", y su evaluación respecto a si es inoperable resulta en " + isNaN(dato1) + "<br>" );
+			document.write("La variable dato2 tiene un valor " + dato2 + ", y su evaluación respecto a si es inoperable resulta en " + isNaN(dato2) + "<br>" );
+			document.write("La variable dato3 tiene un valor " + dato3 + ", y su evaluación respecto a si es inoperable resulta en " + isNaN(dato3) + "<br>" );
+			document.write("La variable dato4 tiene un valor " + dato4 + ", y su evaluación respecto a si es inoperable resulta en " + isNaN(dato4) + "<br>" );
+			document.write("La variable dato5 tiene un valor " + dato5 + ", y su evaluación respecto a si es inoperable resulta en " + isNaN(dato5) + "<br>" );
+			document.write("La variable dato6 tiene un valor " + dato6 + ", y su evaluación respecto a si es inoperable resulta en " + isNaN(dato6) + "<br>" );
+			document.write("La variable dato7 tiene un valor " + dato7 + ", y su evaluación respecto a si es inoperable resulta en " + isNaN(dato7) + "<br>" );
+			document.write("La variable dato8 tiene un valor " + dato8 + ", y su evaluación respecto a si es inoperable resulta en " + isNaN(dato8) + "<br>" );
+			document.write("La variable dato9 tiene un valor " + dato9 + ", y su evaluación respecto a si es inoperable resulta en " + isNaN(dato9) + "<br>" );
+			document.write("La variable dato10 tiene un valor " + dato10 + ", y su evaluación respecto a si es inoperable resulta en " + isNaN(dato10) + "<br>" );
+			document.write("La variable dato11 tiene un valor " + dato11 + ", y su evaluación respecto a si es inoperable resulta en " + isNaN(dato11) + "<br>" );
+			document.write("La variable dato12 tiene un valor " + dato12 + ", y su evaluación respecto a si es inoperable resulta en " + isNaN(dato12) + "<br>" );
+			document.write("La variable dato14 tiene un valor " + dato14 + ", y su evaluación respecto a si es inoperable resulta en " + isNaN(dato14) + "<br><br><br>" );
+
+			document.write(`Las variables no operables son la "dato4", "dato6", "dato11", "dato12" y "dato14", ya que sus valores son incongruentes o no aptos para realizar un cálculo.`)
+
+		</script>		
+	</body>
+</html>

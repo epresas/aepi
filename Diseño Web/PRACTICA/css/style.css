@@ -1,0 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: #f3f3f3;
+}
+
+h2, h1 {
+    color: salmon;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight: 100;
+    text-align: center;
+    margin-bottom: 40px;
+}
+h1{
+    letter-spacing: 5px;
+}
+section{
+    padding: 80px 50px;
+    
+}
+article{
+    padding: 60px 50px;
+    
+}
+p{
+    font-family: sans-serif;
+    font-size: 1.2em;
+    line-height: 1.4em; 
+    margin-bottom: 40px;
+}
+
+nav a{
+    text-decoration: none;
+}
+nav li{
+    list-style: none;
+}
+.hero {
+    margin: 10px;
+    padding: 150px;
+    background: #ccc;
+}
+.subtitulo{
+    text-align: center;
+    margin-bottom: 50px;
+}
+/* header p{
+    text-align: center;
+    margin-bottom: 50px;
+} */

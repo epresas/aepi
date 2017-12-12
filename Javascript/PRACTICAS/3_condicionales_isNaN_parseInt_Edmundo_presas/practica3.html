@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Práctica</title>
+		<meta charset="UTF8"/>		
+	</head>
+	<body>
+
+		<script>
+			/*-------------------------------------------------------
+
+			PASO 3 DE 4
+
+			- En caso de que el usuario haya introducido la contraseña Qwerty, solicita al usuario la cantidad de dinero a apostar, y almacénala en una variable.
+
+			- Si la cantidad es un valor inoperable, muestra una alerta por pantalla con el siguiente texto:
+
+					Lo sentimos <NOMBREUSUARIO>, pero <CANTIDADUSUARIO> no es una cantidad correcta.
+
+			- Sustituye en el texto de la alerta <NOMBREUSUARIO> por el nombre que ha introducido, y <CANTIDADUSUARIO> por la cantidad que ha introducido.
+
+			-------------------------------------------------------*/
+			const password = "Qwerty";
+			const usuario = prompt("¿Cómo te llamas?","Ingrese su nombre");
+ 			if (usuario===null) {
+ 				alert("Por favor indique un nombre de acceso correcto. Reinicie la aplicación para escribirlo de nuevo.");
+ 			} else if (usuario==="") {
+ 				alert("Por favor indique un nombre de acceso correcto. Reinicie la aplicación para escribirlo de nuevo.");
+			}
+
+			let userPass = prompt("Introduce tu contraseña:");
+			if (userPass !== password) {
+				alert("Lo sentimos "+usuario+", pero la clave "+userPass+" es incorrecta. Por favor, reinicie la aplicación para escribirla de nuevo.");
+			}
+
+			let apuestaInicial = prompt("¿Cuánto dinero vas a apostar?", "Introduce cantidad");
+			if (isNaN(apuestaInicial)) {
+				alert("Lo sentimos "+usuario+", pero  "+apuestaInicial+" es una cantidad incorrecta.");
+			}
+		</script>
+		
+	</body>
+</html>

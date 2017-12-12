@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Práctica</title>
+		<meta charset="UTF8"/>		
+	</head>
+	<body>
+		<script>
+			/*-------------------------------------------------------
+
+				OBJETIVO FINAL:
+				Crear un diccionario online que pregunte al usuario una palabra en inglés (puede ser dog, house, book, computer o pencil) 
+				y la traduzca al español, usando la estructura condicional SWITCH. Efectivamente, sólo traducirá esas cinco palabras.
+
+
+				ESPECIFICACIONES:
+				- Debe traducir cada una de las palabras, tanto si el usuario la introduce con mayúsculas todo, con minúsculas todo, o sólo la primera con mayúscula.
+
+				- Tanto si el usuario no introduce ninguna palabra (es decir, acepta sin escribir ningún contenido en la ventana), 
+				como si cierra la ventana de solicitud de palabra, la aplicación debe escribir en el documento el siguiente mensaje:
+
+						"Por favor, introduzca una palabra para ser traducida. Reinicie la aplicación para escribirla."
+
+				- En caso de que introduzca una palabra, pero no sea ninguna de las cinco palabras que reconoce la aplicación, 
+				la aplicación debe esribir en el documento el siguiente mensaje:
+
+						"Palabra no registrada en el sistema. Reinicie la aplicación para volver a escribirla."
+
+				- En caso de que introduzca una de las cinco palabras reconocidas (en cualquiera de las formas expuestas previamente), 
+				la aplicación debe esribir en el documento el siguiente mensaje:
+
+						"La traducción de la palabra <PALABRAUSUARIO> es <TRADUCCION>"
+
+				- Sustituye el texto <PALABRAUSUARIO> por la palabra que ha introducido, y el texto <TRADUCCION> por su traducción.
+
+			-------------------------------------------------------*/
+			const palabraEnIngles = prompt("Ingresa una palabra en ingles: ");
+			let traduccion;
+			if (!palabraEnIngles) {
+				document.write("Por favor, introduzca una palabra para ser traducida. Reinicie la aplicación para escribirla.");
+			}
+			switch (palabraEnIngles) {
+				case "Dog":
+				case "DOG":
+				case "dog":
+					traduccion = "perro";
+					document.write("La traducción de la palabra "+palabraEnIngles+" es "+traduccion+"");
+					break;
+				case "House":
+				case "HOUSE":
+				case "house":
+				traduccion = "casa";
+				document.write("La traducción de la palabra "+palabraEnIngles+" es "+traduccion+"");
+					break;
+				case "book":
+				case "Book":
+				case "BOOK":
+				traduccion = "perro";
+				document.write("La traducción de la palabra "+palabraEnIngles+" es "+traduccion+"");
+					break;
+				case "pencil":
+				case "Pencil":
+				case "PENCIL":
+				traduccion = "lápiz";
+				document.write("La traducción de la palabra "+palabraEnIngles+" es "+traduccion+"");
+					break;
+				case "computer":
+				case "Computer":
+				case "COMPUTER":
+				traduccion = "perro";
+				document.write("La traducción de la palabra "+palabraEnIngles+" es "+traduccion+"");
+					break;			
+				default:
+				document.write("Palabra no registrada en el sistema. Reinicie la aplicación para volver a escribirla.");
+					break;
+			}
+		</script>		
+	</body>
+</html>

@@ -1,0 +1,98 @@
+Correo  profesor: german.alvarez@asociacionaepi.es
+5 pts - Ejercicios practicos: Asignados jueves entregados martes
+5 pts - Proyecto final
+
+Donde icluir etiqueta script: Final de body -->
+problemas de carga de html para ejecución
+SEO - la carga del head es menor
+
+* DOM Document Object Model: 
+js interactua con objetos, el conjunto de ellos forma el DOM 
+Objeto window - Objeto padre para js (ver imagen en estructura)
+todos los objetos contienen metodos y propiedades, metodos --> capacidades, propiedades --> como es? características
+window. es omitible
+
+Las variables en JS son del tipo de la información que contenga.
+
+Conversión de tipo:
+String a number:
+- typeOf() --> devuelve el tipo del dato ingresado.
+- Number() --> da el valor numerico equivalente del objeto pasado (null == 0)
+- parseInt() --> a entero (capa decimales no redondea)
+- parseFloat() --> al igual que Number respeta decimales.//No toma decisiones del tipo null == 0
+- isNaN() --> devuelve true si no es numerico o false si el valor ingresado es numerico
+
+Operadores:
+Aritmeticos: 
+    +       -       *       /       %
+    Aritmeticos combinados:
+    +=      -=      *=      /=
+
+Comparativos / relacionales: conforman expresiones comparativas en booleano
+>       >=      ==      ===     <=      <       !=      !==     nota:=== atiende al valor y al signo. Recomendado usar siempre
+
+Lógicos: conforman expresiones comparativas entre booleano que resultan en booleano
+&&      ||      !
+and     or      NOT
+
+Incremental / Decremental
+++      --
+
+Concatenación:
++
+
+Asignación:
+=
+
+Prioridades de operadores: ver pdf
+
+ESTRUCTURAS DE CONTROL:
+
+    Condicionales:
+
+    - If-else: 
+        if(expresion){
+            codigo
+        } else {
+            codigo
+        }
+
+
+condicional ternario: 
+(expresion) ? accion si true : accion si false;
+
+switch: es mas veloz que los if else pero es mas limitada. Evalua el valor de una variable entre una cantidad finita y limitada de casos 
+
+Tips validacion:
+* Que no entra un null: primero se determina que no este vacio, luego se trabaja con los valores convenientes 
+* false, undefined, null, 0 "" cuando un condicional regresa algo diferente a estos valores es que entra al bloque de codigo
+
+todo lo que va entre llaves se llama bloque
+
+ALcance de una variable: Una variable tiene alcance (scope) a nivel de bloque
+
+escalabilidad: facilidad para expandir las funcionalidades
+
+Bucles: Estructuras de control que ejecutan instrucciones una y otra vez mientras se cumpla una condicional
+    - for: for(1;2;3){
+        instrucciones
+    }
+        1 - declaracion de contador
+        2 - condicion de repeticion
+        3- factor de incremento
+    es recomendable por cuestiones de consumición de recursos el evitar declarar en lo posible variables dentro del Bucles
+    la palabra clave "continue" dentro de un bloque omite el resto de iteraciones
+    la palabra clave "break" aqui determina un abandono prematuro del bloque, haciendo caso omiso no solo del resto de instrucciones de la vuelta sino de las demas repeticiones
+
+############## ECMASCRIPT 6 #######################
+
+
+Tipos de declaracion de variables: (ordenados de mayor a menor segun la memoria que ocupan)
+-var >> No da error por lo que no se usará en la formacion, da lugar a redeclaraciones y otros errores
+-let --> ECMA6 // mas estricta que var
+-const --> ECMA6// constante, al igual que let es mas estricta, con diferencia que requiere asignación al declararse.
+
+############ PRACTICAS ###############################
+
+Lote 1 para martes 5/12
+Lote 2 para martes 12/12

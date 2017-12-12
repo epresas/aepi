@@ -1,0 +1,6 @@
+El objetivo de la práctica es realizar la estructura web en HTML5 de este site de abogados.
+
+Sólo deben rellenarse los tres archivos de html (inicio.html, equipo.html y servicios.html) acorde con el estándar de HTML5.
+
+Se incluyen los textos en la carpeta "materiales"
+

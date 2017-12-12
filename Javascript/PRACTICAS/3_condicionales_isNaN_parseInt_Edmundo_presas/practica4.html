@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Práctica</title>
+		<meta charset="UTF8"/>
+	</head>
+	<body>
+
+		<script>
+			/*-------------------------------------------------------
+
+			PASO 4 DE 4
+
+			- En caso de que el usuario haya introducido una cantidad correcta, solicita al usuario el número al que quiere apostar en el sorteo y
+			 almacénalo en una variable.
+
+			- Utiliza una estructura condicional SWITCH para evaluar si su respuesta ha sido 17 ó 22.
+
+			- En caso de que haya sido 17, escribe en el documento el siguiente mensaje:
+
+					¡Felicidades <NOMBREUSUARIO>! El número <NUMEROAPUESTA> es el número del segundo premio del mes, y el premio duplica tu apuesta. 
+					Acabas de ganar <PREMIOTOTAL> euros.
+
+			- Sustituye en el texto de la alerta <NOMBREUSUARIO> por el nombre que ha introducido, el texto <NUMEROAPUESTA> por el número al que ha apostado, 
+			y <PREMIOTOTAL> por la cantidad que ha apostado multiplicada por dos.
+
+			- En caso de que haya sido 22, escribe en el documento el siguiente mensaje:
+
+					¡Felicidades <NOMBREUSUARIO>! El número <NUMEROAPUESTA> es el número del primer premio del mes, y el premio triplica tu apuesta. 
+					Acabas de ganar <PREMIOTOTAL> euros.
+
+			- Sustituye en el texto de la alerta <NOMBREUSUARIO> por el nombre que ha introducido, el texto <NUMEROAPUESTA> por el número al que ha apostado, 
+			y <PREMIOTOTAL> por la cantidad que ha apostado multiplicada por tres.
+
+			- En caso de que haya instroducido cualquier otro valor diferente a 17 ó 22, escribe en el documento el siguiente mensaje:
+
+					No ha habido suerte. Inténtalo de nuevo.
+
+			-------------------------------------------------------*/
+
+			const password = "Qwerty";
+			const usuario = prompt("¿Cómo te llamas?", "Ingrese su nombre");
+			if (usuario === null) {
+				alert("Por favor indique un nombre de acceso correcto. Reinicie la aplicación para escribirlo de nuevo.");
+			} else if (usuario === "") {
+				alert("Por favor indique un nombre de acceso correcto. Reinicie la aplicación para escribirlo de nuevo.");
+			}
+
+			let userPass = prompt("Introduce tu contraseña:");
+			if (userPass !== password) {
+				alert("Lo sentimos " + usuario + ", pero la clave " + userPass + " es incorrecta. Por favor, reinicie la aplicación para escribirla de nuevo.");
+			}
+
+			let apuestaInicial = prompt("¿Cuánto dinero vas a apostar?", "Introduce cantidad");
+			if (isNaN(apuestaInicial)) {
+				alert("Lo sentimos " + usuario + ", pero  " + apuestaInicial + " es una cantidad incorrecta.");
+			}
+			
+			const numeroApuesta = prompt("¿A qué número quieres apostar?", "Ingresa un número");
+			switch (numeroApuesta) {
+				case "17":
+					alert("¡Felicidades "+usuario+"! El número "+numeroApuesta+" es el número del segundo premio del mes, y el premio duplica tu apuesta. Acabas de ganar "+(apuestaInicial*2)+" euros.");
+					break;
+
+				case "22":
+					alert("¡Felicidades "+usuario+"! El número "+numeroApuesta+" es el número del primer premio del mes, y el premio triplica tu apuesta. Acabas de ganar "+(apuestaInicial*3)+" euros.");
+
+					break;
+				default:
+					alert("No ha habido suerte. Inténtalo de nuevo.");
+					break;
+			}
+
+		</script>		
+	</body>
+</html>

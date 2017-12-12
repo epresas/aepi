@@ -1,0 +1,161 @@
+Blog Germán: cosasdigitales.com
+
+d3 data visualisation (investigar)
+hover - tympanus.net (recursos, hovers)
+allitebooks.com
+
+SEO:
+ Tráfico organico (investigar)
+
+
+UX (Experiencia de usuario):
+enlace de numero de telefono --> encerrar en un a con href tel:numero
+
+Clase 1:
+    Head: Sección de configuraciones, favicones, robots de indexacion, lo no visible por el usuario
+    Body: Sección de contenidos visibles
+
+    Etiquetas Head:
+        - Title: Nombre y pequeña descripción
+        - Meta: Identificación y función del site - No tiene cierre desde html 5 no se necesita la barra en las etiquetas de autocierre 
+            * description - concisa, un par de frases a lo sumo
+            * charset - codificación del documento
+            * viewport
+            * robots - determina como se van a comportar los robots con la pagina, pueden ser
+                index - indexar en motores de búsqueda ejemplo de no follow: avisos legales de los sitios de empresas,  al poner no-index no se indexa en motores de busqueda
+                follow - permitir u omitir los enlaces de la pagina
+        - favicon: originalmente era una imagen de 16x16px que solo salia en la pestaña acompañando al titulo. Actualmente se utiliza en los favoritos de los moviles, por lo que se utilizan en tamaños mayores
+                    se insertan con una etiqueta link rel="icon". Los favicones de apple tienen mayor tamaño y rel="apple-touch-icon"
+        - link: rel
+    Etiquetas Body:
+        -De encabezado:
+            * H1 - H6 --> Solo un H1 por pagina
+
+        - De parrafo:
+            strong: Contenido relevante
+            em: voz alterna
+            mark: resaltado
+            hr: quiebre tematico/filete/ no tiene cierre    
+            abbr: Abreviatura/atributo title crea un tooltip con lo que esté dentro           
+        
+            address: direcciones
+            small: menor importancia en la pagina, se usa para copyright
+            nav: conjuntos de enlaces de navegacion, no tiene que ser una sola por sitio, se debe componer de una ul con los enlaces (mas de 1)
+            button: No enlaza a contenido, realiza una funcionalidad
+
+    HTML5: (Orientado a las webs semánticas)
+
+    EVITAR DIVS EN TODA LA FORMACION
+
+    main: solo 1 por documento, etiqueta el contenido unico y original del documento
+    header: encabezados o grupos de titulos
+    section: Encajona secciones de contenidos
+    article: subseccion de la section, necesita cumplir una regla particular: suficientemente grande para tener sentido por si mismo
+    footer: puede haber tantas como unidades de contenido incluyan autoria, documentos adicionales, informacion legal
+    aside: Contenido con poca relacion con el resto del contenido en el documento, por ejemplo la barra lateral de enlaces relacionados.
+    figure: contenido grafico, imagenes, graficos, lo ornamental no es un figure, ya que no es contenido
+    figcaption: descripcion del figure (pie de foto)
+    blockquote: es una cita en bloque, que puede recibir o no tratamiento de estilo
+    q: cita breve en linea, dentro de un parrafo por ejemplo
+        las dos ultimas tienen un atributo CITE que permite colocar una url donde esta la fuente original de la cita, o el nombre y apellidos del autoria
+    cite: utilizada como etiqueta en vez de atributo, contiene el autor/fuente de una cita de forma que lo vea el usuario.
+    time: se encarga de identificar un punto cronologico (san valentin, navidad), si lo necesita debe incluir un atributo datatime="yyyy/mm/dd" (ayuda a que los robots de busqueda)
+
+    span: asi como el div es una etiqueta de bloque sin significado semantico para agrupar contenidos, el span es una etiqueta utilizada
+    para agrupar contenidos, pero en linea. Es util para luego aplicar estilos a ciertas secciones sin afectar el resto semanticamente
+
+    Validacion de HTML: W3C WWW Consortium W3C validator - Necesario para entregar practicas
+    Atributos globales: style - se pueden aplicar en todas las etiquetas
+    HTML color codes - www.html-color-codes.info
+
+    ###########################################    CSS     ###################################################################
+
+    Donde:
+        - En linea (no no)
+        - En head entre las etiquetas style
+        - Hojas externas (y)
+
+    Reglas:
+        - Selector: Dice a quien aplicar Reglas
+        - Declaracion: encerrada entre llaves
+        - Propiedad: lo que se va a cambiar, la ultima no necesita ; pero es recomendable que todos tengan
+        - Valor: va despues de la propiedad, separados entre :
+        - Es recomendable que se definan desde lo mas general a lo mas especifico, por ejemplo: estilos que definan encabezados
+        y luego especificar cosas particulares entre cada tipo de encabezado
+
+    Selectores combinados:
+        - Descendientes: colocar el selector separado por espacio de su padre
+        - Multiples: separamos selectores por comas. Tener cuidado con el significado semantico de los elementos para no romper la jerarquia
+        por ejemplo: el font-size para h1 y h2, rompería el significado jerarquico del encabezado
+
+    Selector global: *
+
+    NOTA: Al empezar todo el estilado, es recomendable resetear los etilos basicos dados por el HTML de la siguiente manera:
+    *{
+        padding:0;
+        margin:0;
+    }
+    
+
+    Sobreescritura de reglas: cuando varias reglas aplican a un elemento, prevalece el ultimo declarado en la hoja de estilos, o bien prevalece el selector
+    mas especifico, o en ultima instancia con la palabra !important (no recomendado)
+
+    Reglas de nomenclaturas:
+     - Las clases no deben tener caracteres especiales
+     - Las clases no deben tener espacios
+     - Las clases deberian ser descriptivos
+
+    Propiedades:
+    - Textos y fuentes:
+        * colores: color: valor_color
+          · Nominales: nombres predefinidos
+          · Hexadecimal: # y 3 o 6 caracteres hexadecimales (cuando se repiten todos los caracteres se puede abreviar a 3 caracteres)
+          · Equivalencia RGB: rgb(rojo,verde,azul)
+          · RGBA: Igual que el RGB pero la A indica la opacidad (incluida como cuarto parametro)
+
+        * letter-spacing: espacio entre letras, recibe pixeles (podria recibir otras pero no se recomienda)
+            letter-spacing:2px;
+        
+        * text-transform: tiene un rango de posibilidades de valor, determina una transformacion al texto de mayusculas/minusculas. Puede ser:
+            - uppercase
+            - lowercase
+            - capitalize
+        
+        * text-align: Alineacion horizontal del texto. Puede ser:
+            - left
+            - right
+            - center
+            - justify
+        
+        * font-weight: determina grosor de fuente (negrita). va de 100 a 900 en grupos de 100. El normal es de 400. No todas las familias de fuentes
+        tienen todos los pesos. tambien se puede decir bold light  normal pero es mas recomendable de forma numerica
+
+        * font-style: Determina el estilo de fuente. Puede ser:
+            - italic
+            - normal
+        
+        * font-size: Tamaño de fuente. Su unidad es el em (16px) el resto es referencia a ese estandar (1.2em). Antes se utilizaba el pixel pero es recomendable el em. 
+        * line-height: Alto de linea (interlineado)
+        * font-family: Determina la familia de tipografias. Tiene diferentes posibles valores. Por defecto tiene times new roman
+            - sans-serif
+            - helvetica
+            - arial, y mas
+        * text-decoration: Decoracion en el texto. Comunmente se usa subrayado o tachado. Se utiliza para quitar los subrayados de los enlaces hoy en dia con el valor Nominales
+            - underline
+            - line-through
+
+        * list-style: decoracion de listas (bullets y numeros)
+            - none
+            - disc
+            - square
+            - y mas (ver en consola)
+
+    - Fondos y espaciado:
+        * background: da color al fondo.
+
+    NOTA: Las secciones por lo general se separan con padding, mientras que el resto de elementos internos se separan con margin
+    
+    Modelo de caja: Sigue el flujo de html, donde se coloca todo en la esquina superior izquierda. Las cajas ocupan lo que ocupan sus contenidos. Hay que considerar:
+        - Padding: espacio de separacion del contenido con su contenedor
+        - Border: el borde visible de la caja
+        - Margin: el espacio entre la caja y los demas elementos del documento

@@ -1,0 +1,32 @@
+Se adjunta el objetivo en la imagen adjunta, asi como las imágenes y textos del producto en la carpeta "materiales".
+
+Tips y consejos:
+
+-    Elimina todos los paddings y márgenes iniciales con la siguiente regla de CSS:
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+-    Crea los estilos generales ó estándar del site, para después aplicar los estilos específicos (secciones, componentes...)
+
+-    Para poner la imagen de fondo al header superior (que se inserta a través de CSS y no de HTML ya que es ornamental/estilo, no contenido), pega esta propiedad y este valor en la regla de CSS de ese <header> (respeta la estructura universal: el css en su carpeta "css" y las imágenes en su carpeta "img"):
+
+background: url("../img/batman_background.jpg") no-repeat center / cover;
+
+-    Para poner la imagen de fondo a Catwoman, pega esta propiedad y este valor en la regla de esa sección:
+
+background: url("../img/catwoman_background.jpg") no-repeat right top / cover;
+
+-    Para incrustar el mapa de Google, pega este código de HTML donde quieres que se muestre: 
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.863467282354!2d-3.6705853852111483!3d40.43402206251261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42177823e4a775%3A0xb1126df333ecd046!2sAEPI+-+Asociaci%C3%B3n+Espa%C3%B1ola+de+Programadores+Inform%C3%A1ticos!5e0!3m2!1ses!2ses!4v1460966597481" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+-    Todo está en fuente sans-serif
+
+-    El <footer> contiene un conjunto de enlaces de navegación <nav> con una lista <ul>. Para que se muestren en horizontal en vez de uno sobre otro, aplica esta propiedad y este valor a esos puntos <li> de lista:
+
+display: inline-block;
+
+-    Trabaja para resolver un producto similar, no idéntico.
