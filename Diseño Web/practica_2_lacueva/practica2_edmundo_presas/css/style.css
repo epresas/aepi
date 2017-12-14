@@ -29,15 +29,26 @@ article{
     font-family: sans-serif;
 
 }
+iframe{
+    margin-bottom: 40px;
+}
+small{
+    margin-bottom: 20px;
+
+}
+nav{
+    margin-top: 20px;
+}
 article h3{
     font-size:1.5em;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 article p{
     font-size:0.7em;
     font-weight: 600;
     margin-bottom: 20px;
 }
+
 .bgLight{
     padding: 80px;
     background-color: #f9f6ed;
@@ -85,9 +96,9 @@ article p{
     margin-bottom: 40px;
     
 }
-bgDark header h2{
+.bgDark header h2{
     font-weight: 500;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-size: 2em;
 }
 .bgDark header p{
@@ -107,6 +118,7 @@ bgDark header h2{
     font-size: 1.2em;
 
 }
+
 .footerNav li{
     display: inline-block;
 }
