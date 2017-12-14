@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Práctica</title>
+		<meta charset="UTF8"/>		
+	</head>
+	<body>
+		<script>
+			/*-------------------------------------------------------
+
+			- Crea una aplicación que pregunte al usuario un número mediante el método prompt:
+
+				¿Hasta qué número, del 1 al 100, desea que se muestre en pantalla?
+
+			- Una vez almacenada la respuesta del usuario, crea un bucle que escriba en el documento una lista de números que vaya desde el 1 
+			hasta el número que ha introducido el usuario. 
+
+			- Para conseguir esto sólo debes diseñar la forma en que el bucle se detenga en la iteración que proceda. 
+			Esto se reduce a evaluar si el bucle se encuentra en la iteración indicada por el usuario, y si es correcto, 
+			hacer uso de la palabra clave que fuerza un abandono prematuro del mismo.
+
+			-------------------------------------------------------*/
+			const topeUsuario = prompt("¿Hasta qué número, del 1 al 100, desea que se muestre en pantalla?");
+			console.log(topeUsuario);
+			for (let i = 0; i < 100; i++) {
+				if (i===Number(topeUsuario)) {
+					// alert("tope");
+					break;	
+				}else{
+					document.write("<p>"+(i+1)+"</p>");
+
+				}
+				
+			}
+		
+
+		</script>		
+	</body>
+</html>

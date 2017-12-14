@@ -16,7 +16,27 @@
 			- Solución: en caso de que el usuario haya acertado la palabra secreta, utiliza la palabra clave 'break' después de la alerta de felicitación para obligar a la aplicación a abandonar el bucle sin que pregunte más veces. Comprueba cómo, efectivamente, al indicar la palabra correcta abandona el bucle y le agradece haber participado.
 
 			-------------------------------------------------------*/
+		alert("Tienes 5 oportunidades para hayar la palabra secreta, ¡Ánimo!.");
+		let palabraSecreta, numIntentos = 5;
+		for (let i = 0; i < 5; i++) {
+			palabraSecreta = prompt("¿Cuál es la palabra secreta?");
+			if (palabraSecreta === "Javascript") {
+				alert("¡Felicidades! Has hayado la palabra clave de esta semana, te ha tomado " + numIntentos + " intentos para adivinar la palabra.");
+				break;
+			} else {
+				numIntentos--;
+				alert("¡Lo sentimos! Esa no era la palabra clave de esta semana, todavía te quedan " + numIntentos + " intentos. ¡Ánimo!");
+				if (numIntentos === 0) {
+					alert("¡Lástima! te has quedado sin intentos. La palabra secreta era Javascript.");
 
+				}
+				continue;
+
+			}
+
+
+		}
+		alert("Gracias por haber participado.");
 
 
 			

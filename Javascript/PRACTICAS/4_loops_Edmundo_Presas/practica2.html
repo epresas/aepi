@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Práctica</title>
+		<meta charset="UTF8"/>		
+	</head>
+	<body>
+		<script>
+			/*-------------------------------------------------------
+
+			PASO 2 DE 4
+			
+			- Dentro de cada iteración del bucle, la aplicación debe comprobar si la palabra introducida es correcta. Para ello, una vez se ha solicitado al
+			usuario la palabra, evalúa (mediante una estructura condicional 'if') si el usuario ha introducido la palabra "Javascript".
+
+			- En caso de que el usuario haya introducido la palabra mencionada, la aplicación debe mostrar una alerta por pantalla como la que sigue:
+
+				¡Felicidades! Has hayado la palabra clave de esta semana.
+
+			- En caso de que el usuario haya introducido cualquier otra palabra, la aplicación debe mostrar una alerta por pantalla como la que sigue:
+
+				¡Lo sentimos! Esa no era la palabra clave de esta semana...
+
+			-------------------------------------------------------*/
+
+	alert("Tienes 5 oportunidades para hayar la palabra secreta, ¡Ánimo!.");
+	let palabraSecreta, numIntentos = 5;
+	for (let i = 0; i < 5; i++) {
+		palabraSecreta = prompt("¿Cuál es la palabra secreta?");
+		if (palabraSecreta === "Javascript") {
+			alert("¡Felicidades! Has hayado la palabra clave de esta semana, te ha tomado " + numIntentos + " intentos para adivinar la palabra.");
+			break;
+		} else {
+			numIntentos--;
+			alert("¡Lo sentimos! Esa no era la palabra clave de esta semana, todavía te quedan " + numIntentos + " intentos. ¡Ánimo!");
+			if (numIntentos === 0) {
+				alert("¡Lástima! te has quedado sin intentos. La palabra secreta era Javascript.");
+
+			}
+			continue;
+
+		}
+
+
+	}
+	alert("Gracias por haber participado.");
+
+			
+		</script>		
+	</body>
+</html>

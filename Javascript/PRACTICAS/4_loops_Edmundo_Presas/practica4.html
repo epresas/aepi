@@ -28,7 +28,29 @@
 			- Sustituye el texto <VUELTASRESTANTES> por el valor de la variable "vueltasRestantes".
 
 			-------------------------------------------------------*/
+		alert("Tienes 5 oportunidades para hayar la palabra secreta, ¡Ánimo!.");
+		let palabraSecreta, numIntentos = 5;
+		for (let i = 0; i < 5; i++) {
+			palabraSecreta = prompt("¿Cuál es la palabra secreta?");
+			if (palabraSecreta === "Javascript") {
+				alert("¡Felicidades! Has hayado la palabra clave de esta semana, te ha tomado " + numIntentos + " intentos para adivinar la palabra.");
+				break;
+			} else {
+				numIntentos--;
+				alert("¡Lo sentimos! Esa no era la palabra clave de esta semana, todavía te quedan " + numIntentos + " intentos. ¡Ánimo!");
+				if (numIntentos === 0) {
+					alert("¡Lástima! te has quedado sin intentos. La palabra secreta era Javascript.");
 
+				}
+				continue;
+
+			}
+
+
+		}
+		alert("Gracias por haber participado.");
+
+		//NOTA EDMUNDO: Perdona que esto se repita en las demas practicas.... originalmente lo concebí de esta manera antes de leer el resto de pasos. espero no suponga un problema.
 
 
 
