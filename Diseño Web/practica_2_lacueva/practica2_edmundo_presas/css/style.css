@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-size: 4em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+h2,h3{
+    font-family: sans-serif;
+}
+p{
+    font-family: sans-serif;
+    line-height: 1.4em;
+    margin-bottom: 20px;
+}
+article{
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-bottom: 50px;
+    padding: 50px;
+    background-color: #D0D0D0;
+    font-family: sans-serif;
+
+}
+article h3{
+    font-size:1.5em;
+    margin-bottom: 30px;
+}
+article p{
+    font-size:0.7em;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.bgLight{
+    padding: 80px;
+    background-color: #f9f6ed;
+    
+}
+.bgLight p{
+   text-align: justify;
+   margin-bottom: 30px;
+}
+.bgLight h2{
+   margin-bottom: 20px;
+   text-transform: uppercase;
+   font-size: 2em;
+   font-weight: 400;
+}
+.bgLight header p{
+  text-transform: uppercase;
+  font-size: .8em;
+  letter-spacing: .8px;
+  font-weight: 600;
+}
+
+.catwoman{
+    background: url("../img/catwoman_background.jpg") no-repeat right top / cover;
+    padding: 120px 0;
+    color: white;
+    text-align:center; 
+    font-size: 1.4em;
+    letter-spacing: 2px;
+}
+.centrado{
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 4em;
+    line-height: 2em;
+}
+.bgDark{
+    background-color:#E6E6E6;
+    padding:80px;
+}
+.bgDark header{
+    text-transform: uppercase;
+    margin-left: 90px;
+    margin-bottom: 40px;
+    
+}
+bgDark header h2{
+    font-weight: 500;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+.bgDark header p{
+    font-size: 0.8em;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    
+}
+.hero{
+    background: url("../img/batman_background.jpg") no-repeat center / cover;
+    color: white;
+    padding: 160px 0;
+}
+.hero p{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.2em;
+
+}
+.footerNav li{
+    display: inline-block;
+}
