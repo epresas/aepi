@@ -92,6 +92,35 @@ Bucles: Estructuras de control que ejecutan instrucciones una y otra vez mientra
 Arrays: Objeto que permite almacenar una coleccion de valores.
 imprimiendo el array como variable sin indice se imprimen todos los elementos separados por coma.
 
+Nota: JS lee, procesa y luego ejecuta las funciones, por eso el uso se puede invocar una funcion y luego declararla
+cuando una funcion que tiene parametros no se le envia argumentos en la invocacion, el valor es undefined
+
+Nota: si una funcion no tiene configurado un retorno, por ejemplo un if sin else, esta retorna undefined, por lo que si se utiliza en un if 
+ahorrarse el retorno de false.... ya de por si el UNDEFINED que retorna hace que no entre en el condicional
+
+
+selectores y eventos:
+    getElementById('Id') selecciona el elemento de acuerdo a su ID y devuelve 1 elemento solamente
+    se puede tratar el id de forma nominal asi que document.getElementById("valorId").evento === valorId.evento
+    getElementsByClassName(): devuelve un array con los elementos con la clase
+    getElementsByTagName(): devuelve un array con los elementos con ese tag
+
+    Los eventos se declaran en minusculas porque como se pueden utilizar tanto en el dom como en el script necesita ser case insensitive y de esta
+    forma es reconocible tanto por el dom como por el script
+
+
+OBJETOS:
+    objetos literales: su simbolo es la llave, tienen pares clave : valor... si un objeto no va a variar usar const (intuitivo segun su uso). Los objetos 
+nominales se dota de identificadores, hablamos de una propiedad cuando estamos ante un identificador cuyo valor es distinto a una funcion, cuando su valor es una funcion
+estamos ante un metodo.
+la propiedad puede ser getter (que obtiene el valor), o setter (actualizas asignandole un valor)
+
+los metodos a traves de THIS puede utilizar las demas propiedades o metodos del mismo objeto
+los identificadores pueden ser numericos, nominales y de String
+nominales: una palabra,
+numericos se acceden por notacion de corchete solamente
+de string: depende de la necesidad... por ejemplo si queremos que una propiedad se llame cli-ente (haria una resta) se utiliza "cli-ente"
+
 ############## ECMASCRIPT 6 #######################
 
 
@@ -99,6 +128,8 @@ Tipos de declaracion de variables: (ordenados de mayor a menor segun la memoria 
 -var >> No da error por lo que no se usará en la formacion, da lugar a redeclaraciones y otros errores
 -let --> ECMA6 // mas estricta que var
 -const --> ECMA6// constante, al igual que let es mas estricta, con diferencia que requiere asignación al declararse.
+
+parametros rest: al asignarle un valor al parametro, este se convierte en un valor por defecto cuando no recibe dicho parametro function name(par=val_por_defecto)
 
 ############ PRACTICAS ###############################
 

@@ -258,7 +258,6 @@ document.write("<p>Los celíacos representan un " + porcentajeCeliacos.toFixed(2
 // alert(cantCeliacos)
 
 
-*/
 //Recorrido por arrays bidimensionales
 for (let i = 0; i < 3; i++) {
     for (let j = 0; j < 3; j++) {
@@ -267,3 +266,55 @@ for (let i = 0; i < 3; i++) {
     }
     
 }
+
+//FUNCIONES PERSONALIZADAS
+function saludar(nombre, apellido) {
+    let saludo = ("HOLA " + nombre+""+apellido+"!");
+    return saludo;
+}
+saludar("Nacho");
+
+//Practica 14/12
+//
+// let fecha=prompt("Que fecha desea reservar?"),precio,tipoHabitacion,numCamas,fumaONo;
+
+function detalleReserva(fecha, precio, tipoHabitacion, numCamas, fumaONo="no fumadores") {
+    let texto="Su reserva para el día "+fecha+" está confirmada.<br>";
+    texto+= "- Precio total: "+precio+"€.<br>"
+    texto += "- Habitación " + tipoHabitacion + " con " + numCamas + " cama/s (" + fumaONo +").<br><hr>";
+    return texto;
+}
+let reserva1 = detalleReserva("14 de Enero",450,"doble",2);
+let reserva2 = detalleReserva("2 de Marzo",300,"doble",1,"fumadores");
+let reserva3 = detalleReserva("15 de Junio",150,"individual",1);
+let reserva4 = detalleReserva("9 de Septiembre",900,"triple",2);
+document.write(reserva1);
+document.write(reserva2);
+document.write(reserva3);
+document.write(reserva4);
+
+function sonMultiplos (val1,val2){
+    if (val1%val2===0) {
+        return true;//no defino el false y eso retorna undefined
+    }
+}
+//################### SELECTORES Y EVENTOS ######################################################
+// document.getElementById("myButton").textContent = "Clicked!";
+//Cuando un selector no encuentra el elemento retorna null
+//textContent = metodo que cambia el texto de un boton.
+document.getElementById("myButton").onclick = cambiaTexto;
+
+function cambiaTexto(){
+    document.getElementById("myButton").textContent = "Clicked!";
+}
+//al invocarla desde el metodo e incluir un parentesis la ejecuta de una vez, no se colocan porque no es una invocación sino asociar la funcion a un comportamiento u evento
+//ver DOCUMENTACION
+
+//######################### OBJETOS #################################################################
+
+objetos literales: su simbolo es la llave, tienen pares clave : valor... si un objeto no va a variar usar const (intuitivo segun su uso). Los objetos 
+nominales se dota de identificadores, hablamos de una propiedad cuando estamos ante un identificador cuyo valor es distinto a una funcion, cuando su valor es una funcion
+estamos ante un metodo.
+la propiedad puede ser getter (que obtiene el valor), o setter (actualizas asignandole un)
+*/
+
