@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <title>La cueva de Batman</title>
     <meta name="description" content="Experiencia única de la cueva de Batman en Madrid">
@@ -30,8 +30,8 @@
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
             dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
             non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Sed ut perspiciatis unde omnis iste natus error
-            sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
             architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
             sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
             quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam
@@ -39,50 +39,62 @@
             ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae
             consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
         </section>
-        <section class="catwoman">
+
+        <aside class="catwoman">
           <p>¿Alguna vez te has tomado un batido bien fresquito... <span class="centrado">con catwoman</span> ...poniéndote toppings de oreo y kit kat?</p>  
-        </section>
+        </aside>
+        <!-- se coloca aside en vez de section porque es un contenido que aunque esta relacionado con la tematica, si se extrae del site no afectaría -->
         <section class="bgDark">
            <header>
                 <h2>Tarifas</h2>
                 <p>Elige tu experiencia</p>
            </header>
+
            <article>
-                <h3>Experiencia básica</h3>
-                <p>35€ + IVA</p>
+                <!-- <header> -->
+                    <h3>Experiencia básica</h3>
+                    <p>35€ + IVA</p>
+                <!-- </header> -->
                 <ul>
                     <li>Cena con personajes</li>
                     <li>Concierto de Batman</li>
                     <li>Photocall</li>
                 </ul> 
            </article>
-           </header>
+
            <article>
-                <h3>Experiencia total</h3>
-                <p>50€ + IVA</p>
+                <!-- <header> -->
+                    <h3>Experiencia total</h3>
+                    <p>50€ + IVA</p>
+                <!-- </header> -->
                 <ul>
                     <li>Cena con personajes</li>
                     <li>Concierto de Batman</li>
                     <li>Photocall</li>
-                    <li>Meet & geek</li>
+                    <li>Meet &amp; geek</li>
                     <li>Álbum personalizado</li>
                 </ul> 
            </article>
+           
         </section>
         <section class="bgLight">
             <h2>¿Dónde estamos?</h2>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.863467282354!2d-3.6705853852111483!3d40.43402206251261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42177823e4a775%3A0xb1126df333ecd046!2sAEPI+-+Asociaci%C3%B3n+Espa%C3%B1ola+de+Programadores+Inform%C3%A1ticos!5e0!3m2!1ses!2ses!4v1460966597481"
-                width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
-            
-                    <p>Nos puedes encontrar en la <a href="#">Asociación Española AEPI</a></p> 
-                    <p>Calle Martínez Izquierdo,34. Madrid </p>
-                    <p>Venta de entradas en Carrefour, Fnac y Ticketmaster</p>
+            <address>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.863467282354!2d-3.6705853852111483!3d40.43402206251261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42177823e4a775%3A0xb1126df333ecd046!2sAEPI+-+Asociaci%C3%B3n+Espa%C3%B1ola+de+Programadores+Inform%C3%A1ticos!5e0!3m2!1ses!2ses!4v1460966597481"
+                    width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+                
+                <p>Nos puedes encontrar en la <a href="#">Asociación Española AEPI</a></p> 
+                <p>Calle Martínez Izquierdo,34. Madrid </p>
+                <p>Venta de entradas en Carrefour, Fnac y Ticketmaster</p>
+            </address>
            
         </section>
     </main>
     <footer class="bgDark">
         <img src="img/logoFooter.png" alt="Logo de Batman"><br>
-        <small>Copyright La Cueva de Batman 2016. Todos los derechos reservados</small>
+        <p>
+            <small>Copyright La Cueva de Batman 2016. Todos los derechos reservados</small>
+        </p>
         <nav class="footerNav">
             <ul>
                 <li><img src="img/facebook.png" alt="Logo Facebook"></li>

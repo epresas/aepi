@@ -67,6 +67,10 @@ Clase 1:
     Validacion de HTML: W3C WWW Consortium W3C validator - Necesario para entregar practicas
     Atributos globales: style - se pueden aplicar en todas las etiquetas
     HTML color codes - www.html-color-codes.info
+    HTML entities: ampersand y otro caracteres que estan fuera de cualquier codificacion
+
+
+    para enlaces a sitios multiidioma: crear directorio en root llamado en/ con una estructura similar pero en el idioma. Utilizar clases coherentes asi que un solo archivo de estilos
 
     ###########################################    CSS     ###################################################################
 

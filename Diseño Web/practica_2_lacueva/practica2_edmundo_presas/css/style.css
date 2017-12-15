@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
 }
+body{
+    font-family: sans-serif; /*de esta manera se hereda a los textos de todo el documento*/
+    /* background-color: rgb(245, 245, 245); */
+}
 
 h1 {
     font-family: sans-serif;
@@ -34,7 +38,7 @@ iframe{
 }
 small{
     margin-bottom: 20px;
-
+    
 }
 nav{
     margin-top: 20px;
@@ -42,6 +46,8 @@ nav{
 article h3{
     font-size:1.5em;
     margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 200;
 }
 article p{
     font-size:0.7em;
@@ -55,20 +61,20 @@ article p{
     
 }
 .bgLight p{
-   text-align: justify;
-   margin-bottom: 30px;
+    text-align: justify;
+    margin-bottom: 30px;
 }
 .bgLight h2{
-   margin-bottom: 20px;
-   text-transform: uppercase;
-   font-size: 2em;
-   font-weight: 400;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 2em;
+    font-weight: 400;
 }
 .bgLight header p{
-  text-transform: uppercase;
-  font-size: .8em;
-  letter-spacing: .8px;
-  font-weight: 600;
+    text-transform: uppercase;
+    font-size: .8em;
+    letter-spacing: .8px;
+    font-weight: 600;
 }
 
 .catwoman{
@@ -116,7 +122,10 @@ article p{
     text-align: center;
     text-transform: uppercase;
     font-size: 1.2em;
-
+    
+}
+address{
+    font-style: initial;
 }
 
 .footerNav li{
