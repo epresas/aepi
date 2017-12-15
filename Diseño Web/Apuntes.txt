@@ -89,6 +89,7 @@ Clase 1:
 
     Selectores combinados:
         - Descendientes: colocar el selector separado por espacio de su padre
+        - Descendientes directos: padre > hijo
         - Multiples: separamos selectores por comas. Tener cuidado con el significado semantico de los elementos para no romper la jerarquia
         por ejemplo: el font-size para h1 y h2, rompería el significado jerarquico del encabezado
 
@@ -157,9 +158,45 @@ Clase 1:
     - Fondos y espaciado:
         * background: da color al fondo.
 
+    - display: controla la visibilidad de la caja. Tiene 3 valores:
+        * block
+        * inline: cuando un elemento esta en linea, tiene sus ejes verticales bloqueados, por eso no pueden llevar padding/margin-top/bottom
+        * inline-block: permite poner los objetos en linea pero a su vez con las prestaciones del bloque (no tiene limitaciones verticales como el inline)
+
+    Ocultar elementos: Se puede hacer de varias formas:
+        - visibility : hidden - Sigue ocupando su espacio
+        - opacity : 0 - da transparencia maxima por lo que no se ve, pero sigue ocupando su espacio
+        - display : none - lo extrae del flujo (DOM)
+
     NOTA: Las secciones por lo general se separan con padding, mientras que el resto de elementos internos se separan con margin
     
     Modelo de caja: Sigue el flujo de html, donde se coloca todo en la esquina superior izquierda. Las cajas ocupan lo que ocupan sus contenidos. Hay que considerar:
         - Padding: espacio de separacion del contenido con su contenedor
         - Border: el borde visible de la caja
         - Margin: el espacio entre la caja y los demas elementos del documento
+        
+    Cajas de tipo bloque: no permite que ningun elemento se coloque a su lado, va de lado a lado.
+    Google fonts: Repositorio de fuentes, gratuita y referencia en diseño webs  
+        categorias: filtra por:
+            - Sin serifa: terminacion decorada, ideal para lectura
+            - serifa: terminacion de palo seco, mas visual
+            - display: cosas tipo cartel, las mas "sorprendentes", aptas para textos cortos 
+            - handwriting: caligrafia a mano alzada
+            - monospace: todos los caracteres ocupan el mismo espacio
+        
+        al buscar:
+            - ver la pagina de resultados por categorias
+            - en cualquiera escribir un texto que nos gustaria previsualizar
+            - clicar apply to all fonts (ayuda a desencadenar respuestas emocionales)
+            - Una vez elegida, se da al icono + (select this font), y se eligen las 2 funetes a Utilizar
+            - en el apartado descargas, aperecen las opciones, usualmente se puede hacer por incrustado (embed) que da un link con la url de la fuente,
+              y descarga directa, 
+        
+        al utilizar (embed):
+            - en html, en head pegar el link 
+            - en css, en font-family se pone entre comillas simples y si hay varias palabras en el nombre se ponen espacios, para el siguiente valor (fallback), se separa con coma y se pone una 
+              tipografia nativa que si soporte el navegador por si falla el servidor donde esta alojada la fuente, se tiene un estilo similar al ideado de repuesto
+            
+
+        estilos: cuando se elige una tipografia, la cantidad de estilos ayuda porque tiene las combinaciones de anchos e inclinaciones (bold, italic, regular)
+
