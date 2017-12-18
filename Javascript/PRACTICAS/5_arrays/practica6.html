@@ -17,26 +17,30 @@
 
 			// En la línea 20, sustituye del array alumnos a "Sergio" por un nuevo alumno, "Roberto".
 
-
+			alumnos[4]="Roberto";
+			// alert(alumnos);
 
 			// En la línea 24, imprime en pantalla el array para corroborar que el resultado es correcto. Imprime dos saltos de línea tras el array.
-
+			document.write("<p>"+alumnos+"</p><br><br>");
 
 
 			// En la línea 28, invierte el orden de los alumnos.
-
+			let arrayRev=alumnos.reverse();
 
 
 			// En la línea 32, imprime en pantalla el array para corroborar que el resultado es correcto. Imprime dos saltos de línea tras el array.
 
+			document.write("<p>"+ arrayRev+"</p><br><br>");
 
 
 			// En la línea 36, elimina el último de los alumnos del array.
 
+			let arrayPop = alumnos.pop();
 
 
 			// En la línea 40, imprime en pantalla el array para corroborar que el resultado es correcto. Imprime dos saltos de línea tras el array.
 
+			document.write("<p>"+ arrayPop+"</p><br><br>");
 
 			
 			// En la línea 44, añade al alumno "Carlos" al inicio del array

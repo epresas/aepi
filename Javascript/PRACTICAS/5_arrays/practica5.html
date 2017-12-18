@@ -22,7 +22,23 @@
 
 			-------------------------------------------------------*/
 
+						let tarta1 = Array.of("Tarta de fresa", 600, true, 15, 60);
+						let tarta2 = Array.of("Tarta sacher", 500, true, 10, 50);
+						let tarta3 = Array.of("Tarta selva negra", 800, false, 20, 75);
+						let tarta4 = Array.of("Tarta crocanti", 550, false, 15, 55);
+						let decoracion = "";
 
+						let tartas = Array.of(tarta1, tarta2, tarta3, tarta4);
+						for (let i = 0; i < tartas.length; i++) {
+							// alert(tartas[i]);
+							// alert(tartas[i][3]);
+							if (tartas[i][2]) {
+								decoracion = "si";
+							} else {
+								decoracion = "no";
+							}
+							document.write("<p>La tarta " + tartas[i][0] + " pesa un total de " + tartas[i][1] + " gramos, " + decoracion + " lleva decoración, es para " + tartas[i][3] + " comensales y cuesta " + tartas[i][4] + " euros.</p>");
+						}
 
 		</script>		
 	</body>
