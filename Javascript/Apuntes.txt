@@ -108,18 +108,42 @@ selectores y eventos:
     Los eventos se declaran en minusculas porque como se pueden utilizar tanto en el dom como en el script necesita ser case insensitive y de esta
     forma es reconocible tanto por el dom como por el script
 
+    los eventos se traen (event catching) en 2 ocasiones:
+        para anularlo 
+        para obtener informacion de el
+
 
 OBJETOS:
     objetos literales: su simbolo es la llave, tienen pares clave : valor... si un objeto no va a variar usar const (intuitivo segun su uso). Los objetos 
-nominales se dota de identificadores, hablamos de una propiedad cuando estamos ante un identificador cuyo valor es distinto a una funcion, cuando su valor es una funcion
-estamos ante un metodo.
-la propiedad puede ser getter (que obtiene el valor), o setter (actualizas asignandole un valor)
+    nominales se dota de identificadores, hablamos de una propiedad cuando estamos ante un identificador cuyo valor es distinto a una funcion, cuando su valor es una funcion
+    estamos ante un metodo.
+    la propiedad puede ser getter (que obtiene el valor), o setter (actualizas asignandole un valor)
 
-los metodos a traves de THIS puede utilizar las demas propiedades o metodos del mismo objeto
-los identificadores pueden ser numericos, nominales y de String
-nominales: una palabra,
-numericos se acceden por notacion de corchete solamente
-de string: depende de la necesidad... por ejemplo si queremos que una propiedad se llame cli-ente (haria una resta) se utiliza "cli-ente"
+    los metodos a traves de THIS puede utilizar las demas propiedades o metodos del mismo objeto
+    los identificadores pueden ser numericos, nominales y de String
+    nominales: una palabra,
+    numericos se acceden por notacion de corchete solamente
+    de string: depende de la necesidad... por ejemplo si queremos que una propiedad se llame cli-ente (haria una resta) se utiliza "cli-ente"
+
+AJAX y JSON
+
+    AJAX: Capacidad de los navegadores de comunicarse con el servidor sin recarga de pagina 
+
+        - Proceso:
+            * se declara una variable xmlhttp = XMLHttpRequest()
+            * 
+    JSON: Formato de intercambio de datos (JavaScript Object Notation)
+        - Solo tiene identificadores de strings-
+        - Solo acepta comillas dobles
+        - No tiene metodos
+    
+    en JS se parsea con JSON.parse("archivo.json") lo que lo convierte en un objeto utilizable
+
+    serialize: funcion de jquery que toma los atributos name del formulario con un = y el valor, varios valores unidos por un &
+    Objeto XHR -> Envio asincrono al servidor
+    En firefox: red/XHR
+
+
 
 ############## ECMASCRIPT 6 #######################
 
