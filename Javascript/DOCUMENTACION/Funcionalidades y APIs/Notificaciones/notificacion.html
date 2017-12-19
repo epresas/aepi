@@ -1,0 +1,28 @@
+<html>
+    <head>
+    <meta charset="utf-8">
+        <title>Notificaciones</title>
+        <meta name="robots" content="noindex,nofollow">
+        <script>        
+
+
+            function notificar() {
+
+                let cuerpo = prompt("¿Qué texto quieres mostrar en la notificación?");
+                let opciones = {
+                    body: cuerpo,
+                    icon: 'woho.gif'
+                }
+
+                let n = new Notification("Esta es tu propia notificación de escritorio", opciones);
+            }
+        
+
+        </script>
+    </head>
+    <body>
+
+    	<button onclick="notificar()">Mostrar notificación</button>
+
+    </body>
+</html> 

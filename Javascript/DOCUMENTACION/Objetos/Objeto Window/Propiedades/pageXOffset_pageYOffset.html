@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Objeto Window</title>
+		<meta charset="UTF8"/>
+
+		<script>			
+
+			function cantidadScrollX() {
+				alert(window.pageXOffset);
+			}
+
+			function cantidadScrollY() {
+				alert(window.pageYOffset);
+			}
+
+		</script>
+
+	</head>
+	<body>
+		<button onClick="cantidadScrollX()" style="position:fixed; top:10px; left:10px;">Ver cantidad de sroll en X</button>
+		<button onClick="cantidadScrollY()" style="position:fixed; top:80px; left:10px;">Ver cantidad de sroll en Y</button>
+		<h1 style="font-size:1000px; background:rgba(0,0,255,.3); margin:0;">¡SOY ENOOORME!</h1>
+	</body>
+</html>

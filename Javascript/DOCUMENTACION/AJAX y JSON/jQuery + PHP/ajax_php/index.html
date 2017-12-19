@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+	<head>
+		<title>Formulario Javascript</title>
+		<meta charset="UTF8"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+
+	<body>
+		<main>
+		    <div>
+		        <form action="gestor.php" method="post">
+
+		            <h1>&bull; ¿Hablamos? &bull;</h1>
+		  			<div class="underline"></div>
+		  			<span>&#9743;</span>
+
+		            <fieldset>
+
+		                <label>Nombre:
+		                	<input type="text" id="campoNombre" name="campoNombre">
+		                </label>
+		                <label>Teléfono:
+		                	<input type="text" id="campoTelefono" name="campoTelefono">
+		                </label>	                
+
+		            </fieldset>
+
+		            <fieldset>
+
+		                <h4>Horario de contacto</h4>
+		                <label>
+		                	<input type="radio" name="horario" value="mañanas">Mañanas
+		                </label>
+		                <label>
+		                	<input type="radio" name="horario" value="tardes">Tardes
+		                </label>
+		                <label>
+		                	<input type="radio" name="horario" value="indiferente">Indiferente
+		                </label>
+
+		                <h4>Nivel de satisfacción con la aplicación</h4>
+		                <input type="range" min="0" max="100" value="0" id="satisfaccion" name="satisfaccion">
+
+		            </fieldset>
+
+		            <label>
+	                	<input type="checkbox" id="politica" name="politica"> Acepto la política de datos
+	                </label>
+
+		            <input type="submit" value="Enviar con AJAX">
+
+		            <p class="respuesta"></p>
+
+		        </form>
+		    </div>
+		    <div id="alertas">
+		    	<p id="mensaje">Enviar con AJAX</p>
+		    </div>
+		</main>
+
+		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="js/scripts.js"></script>
+
+
+	</body>
+</html>

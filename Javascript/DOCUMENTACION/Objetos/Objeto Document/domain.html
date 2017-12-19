@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Objeto Document</title>
+		<meta charset="UTF8"/>
+		<script>
+
+			function mostrarDominio() {
+			    var dominio = document.domain;
+			    document.getElementById("mensaje").innerHTML = dominio;
+			}
+
+		</script>
+
+	</head>
+	<body>
+		<button onclick="mostrarDominio()">Mostrar dominio</button>
+		<p id="mensaje"></p>
+	</body>
+</html>

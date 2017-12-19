@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FUNCIONES / EVENTOS</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+	
+
+	function compruebaArgumentos0( arg1, arg2, arg3 ){
+
+		return 'Si no pasamos un argumento, recibe undefined: ' + arg1 + ', ' + arg2 + ', ' + arg3;
+	}
+
+	console.log(compruebaArgumentos0('valor 1', 'valor 2'));
+
+
+
+
+
+	function compruebaArgumentos1( arg1, arg2, arg3 = "valor por defecto"){
+
+		 return 'Podemos asignar un valor por defecto así: ' + arg1 + ', ' + arg2 + ', ' + arg3;
+	}
+
+	console.log(compruebaArgumentos1('valor 1', 'valor 2'));
+
+
+
+
+
+	function compruebaArgumentos2( arg1, arg2, arg3 = "valor por defecto"){
+
+		 return 'Que respetará el valor enviado como argumento siempre que exista: ' + arg1 + ', ' + arg2 + ', ' + arg3;
+	}
+
+	console.log(compruebaArgumentos2('valor 1', 'valor 2', 'valor 3'));
+
+
+	
+
+
+			
+</script>
+
+</body>
+</html>

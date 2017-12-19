@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Métodos strings</title>
+		<meta charset="UTF8"/>	
+	</head>
+	<body>
+		<script>
+
+			let mensaje = "Hay usuarios que buscan joder, metiendo jodidos tacos en los putos mensajes.";
+
+			let contiene = mensaje.search(/joder/gi);
+
+			document.write("El método search() permite detectar una expresión regular en un string, devolviendo la posición en la que se encuentra, ó -1 si es inexistente.<br><br>Por ejemplo, la evaluación respecto a la palabra 'joder' en el mensaje que sigue: " + mensaje + "<br><br>Resulta en: " + contiene + "<br><br>");
+
+			document.write("Podemos crear una función que analice de forma encapsulada strings y expresiones, oteniendo:<br><br>")
+
+			buscaExpresion(/joder/gi, mensaje);
+
+
+
+
+
+
+
+
+
+
+			function buscaExpresion(expr, string){
+			   if (string.search(expr) != -1) {			   	
+			      midstring = " sí contiene ";
+			   }
+			   else {
+			      midstring = " no contiene ";
+			   }
+			   document.write (string + "<strong>" + midstring + expr.source + "</strong>");
+			}
+
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Objeto Document</title>
+		<meta charset="UTF8"/>
+		<script>
+
+			function cambiarFondo() {
+			    document.querySelector(".colorRojo").style.backgroundColor = "red";
+			}
+
+		</script>
+
+	</head>
+	<body>
+
+		<p class="colorRojo">Este párrafo tiene la clase "colorRojo"</p>
+		<p class="colorRojo">Este párrafo también tiene la clase "colorRojo"</p>
+		<p class="colorVerde">Este párrafo tiene la clase "colorVerde"</p>
+		<p class="colorAzul">Este párrafo tiene la clase "colorAzul"</p>
+		<button onclick="cambiarFondo()">Cambiar fondo</button>
+	</body>
+</html>

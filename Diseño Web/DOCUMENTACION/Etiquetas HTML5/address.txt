@@ -1,0 +1,19 @@
+<address>
+	Escrito por <a href="mailto:webmaster@example.com">Jon Doe</a>.<br> 
+	Visítanos en: Example.com<br>
+	Box 564, Disneyland<br>
+	USA
+</address>
+
+
+
+<address>
+    Contacta con el autor en: <a href="http://www.somedomain.com/contact">www.somedomain.com</a>.<br>
+    ¿Errores? Dínoslo: <a href="mailto:webmaster@somedomain.com">contact webmaster</a>.<br>
+    O ven a vernos:<br>
+    Mozilla Foundation<br>
+    1981 Landings Drive<br>
+    Building K<br>
+    Mountain View, CA 94043-0801<br>
+    USA
+  </address>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+  <meta charset="UTF-8">
+  <title>Objetos personalizados en Javascript</title>
+</head>
+
+<body>
+	<script>
+
+
+	class Factura {
+
+	  constructor(subtotal, impuesto) {
+	    this._subtotal = subtotal;
+	    this._impuesto = impuesto;
+	  }
+
+	  get total() {
+	  	return this.totalFactura();
+	  } 
+
+	}
+
+
+	
+
+	Factura.prototype.totalFactura = function() {					// extensión del prototipo
+		return this._subtotal + this._impuesto;
+	}
+
+	const miFactura = new Factura(1000, 210);
+
+	let valorFactura = miFactura.total;
+
+	document.write("El total de la factura es " + valorFactura + " euros");
+
+
+	</script>
+</body>
+
+</html>

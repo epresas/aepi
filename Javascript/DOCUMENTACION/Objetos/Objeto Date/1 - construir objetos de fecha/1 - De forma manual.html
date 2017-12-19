@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Fechas</title>
+		<meta charset="UTF8"/>		
+	</head>
+	<body>
+
+		<h3>Todas las formas diferentes de construir un objeto de fecha manualmente</h3>
+
+		<script>	
+
+		// Sin parámetros (hora actual)
+		document.write("Un objeto de fecha actual: " + new Date() );
+
+		// Pasándole parámetros (fecha personalizada)
+		document.write("<br><br>");
+		document.write("<br><br>Un objeto de fecha pasada mediante parámetros: " + new Date(2010, 5) );
+		document.write("<br><br>Un objeto de fecha pasada mediante parámetros: " + new Date(2010, 5 , 1) );
+		document.write("<br><br>Un objeto de fecha pasada mediante parámetros: " + new Date(2010, 5 , 1, 17) );
+		document.write("<br><br>Un objeto de fecha pasada mediante parámetros: " + new Date(2010, 5 , 1, 17, 20) );
+		document.write("<br><br>Un objeto de fecha pasada mediante parámetros: " + new Date(2010, 5 , 1, 17, 20, 15) );
+
+		// Pasándole string (fecha personalizada)
+		document.write("<br><br>");
+		document.write("<br><br>Un objeto de fecha pasada mediante string: " + new Date('2010/6/1') );
+		document.write("<br><br>Un objeto de fecha pasada mediante string: " + new Date('2010/6/1 17:20:15') );
+		document.write("<br><br>Un objeto de fecha pasada mediante string: " + new Date('June 1, 2010') );
+		document.write("<br><br>Un objeto de fecha pasada mediante string: " + new Date('June 1, 2010 17:20:15') );
+
+
+		// Pasándole milisegundos pasados desde el 1 de enero de 1970 (fecha personalizada)
+		document.write("<br><br>");
+		document.write("<br><br>Un objeto de fecha pasada mediante milisegundos: " + new Date(1488446824197) );
+
+		</script>	
+
+	</body>
+</html>

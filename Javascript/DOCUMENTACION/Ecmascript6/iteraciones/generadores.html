@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+       <head>
+              <meta charset="UTF-8">
+              <title>ECMASCRIPT6</title>
+              <script>
+
+              function* numerosPausados() {      // funcion generadora que retorna un GENERADOR
+                yield 1;                         // avanza en los retornos a través del método next()
+                yield true;
+                yield 824526;
+                yield ['Paella', 'Pizza'];
+                yield {nombre: 'Germán', celiaco: false};
+              }
+
+              let iteraciones = numerosPausados();
+
+              console.log( iteraciones.next() );
+              console.log( iteraciones.next() );
+              console.log( iteraciones.next() );
+              console.log( iteraciones.next() );
+              console.log( iteraciones.next() );
+              console.log( iteraciones.next() );
+
+
+
+              </script>
+       </head>
+       <body>
+       </body>
+</html>

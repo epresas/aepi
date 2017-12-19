@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Objeto Location</title>
+		<meta charset="UTF8"/>
+
+		<script>
+
+			function verProtocolo() {
+			    let protocolo = location.protocol;
+			    let texto = "El protocolo del documento es: " + protocolo;
+			    document.getElementById("resultado").innerHTML = texto;
+			}
+
+		</script>
+
+	</head>
+	<body>
+		<button onclick="verProtocolo()">Ver protocolo</button>
+		<p id="resultado"></p>
+	</body>
+</html>

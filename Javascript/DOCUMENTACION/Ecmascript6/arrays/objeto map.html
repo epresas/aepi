@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+       <head>
+              <meta charset="UTF-8">
+              <title>ECMASCRIPT6</title>
+              <script>
+
+                     let datos1 = ["Nombre", "Ivan"];
+                     let datos2 = ["Apellido", "Sáez"];
+                     let datos3 = ["Edad", 25];
+                     let datos4 = ["Cuidad", "Lérida"];
+                     let datos5 = ["Celiaco", false];
+                     let nombreAlumno = [datos1, datos2, datos3, datos4, datos5];
+
+                     let mapaAlumno = new Map(nombreAlumno);          // Convierte un objeto iterable en un mapa clave:valor
+
+                     let longitud = mapaAlumno.size;   
+                     document.write("El nuevo mapa tiene un total de " + longitud + " pares.<br>");
+
+                     let apellido = mapaAlumno.get("Apellido");                      
+                     document.write("El apellido del alumno es: " + apellido + ".<br>");
+
+                     let checkTelefono = mapaAlumno.has("Telefono");                  
+                     document.write("¿Tiene teléfono? " + checkTelefono + ".<br>");
+
+                     mapaAlumno.set("Telefono", "916505050");     
+                     checkTelefono = mapaAlumno.has("Telefono");    
+                     let valorTelefono = mapaAlumno.get("Telefono");          
+                     document.write("¿Y ahora? " + checkTelefono + " (su número es ahora el " + valorTelefono + ").<br>");
+
+                     var clavesIterable = mapaAlumno.keys();
+                     let primeraClave = clavesIterable.next().value;
+                     let segundaClave = clavesIterable.next().value;
+                     document.write("Puedo iterar en orden sus claves: " + primeraClave + ", " + segundaClave + ".<br>");
+
+                     var valoresIterables = mapaAlumno.values();
+                     let primerValor = valoresIterables.next().value;
+                     let segundoValor = valoresIterables.next().value;
+                     document.write("Y sus valores: " + primerValor + ", " + segundoValor + ".<br>");
+
+                     mapaAlumno.clear();
+                     longitud = mapaAlumno.size;  
+                     document.write("¡Vaya! Nos hemos cargado el mapa (longitud actual: " + longitud + ")");
+
+
+
+                     
+
+
+
+              </script>
+       </head>
+       <body>
+       </body>
+</html>

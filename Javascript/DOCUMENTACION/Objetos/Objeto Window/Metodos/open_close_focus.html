@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>validar campo de telefono</title>
+		<script language="javascript">
+
+			let ventana;
+
+			function abrirVentana(){
+				ventana = open("","Una nueva ventana","height=100,left=100,width=300,toolbar=yes,top=100");
+				ventana.document.write("<p>Esta es mi ventana, con 100 píxeles de ancho y sin barra de herramientas</p>");
+			}
+
+			function cerrarVentana(){
+				ventana.window.close();
+			}
+
+		</script>
+	</head>
+	<body>
+		<button onClick="abrirVentana()">Abrir nueva ventana</button>
+		<button onClick="cerrarVentana()">Cerrar la nueva ventana</button>
+	</body>
+</html>

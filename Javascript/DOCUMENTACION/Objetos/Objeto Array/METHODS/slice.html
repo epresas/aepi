@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Objeto Array</title>
+		<meta charset="UTF8"/>
+
+		<script>
+
+			let fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+			let citricos = fruits.slice(0,2);// asigna a citricos un Array nuevo, que contiene los elementos de fruit desde la posición 0 hasta la 1
+			let temporada = fruits.slice(2); // asigna a temporada un Array nuevo, que contiene los elementos de fruit a partir de la posición 2
+			
+			document.write(fruits + "<BR>");
+			document.write(citricos + "<BR>");
+			document.write(temporada);
+
+			/*
+				
+				Si sólo indicamos un parámetro (caso 2), el nuevo array contiene todos los elementos desde esa posición (2) hasta el final.
+				Si indicamos dos parámetros (caso 1), el nuevo array contendrá desde la posición del primer parámetro (inclusive), hasta la posición anterior al segundo parámetro.
+
+			*/
+
+
+		</script>
+
+	</head>
+	<body>
+	</body>
+</html>

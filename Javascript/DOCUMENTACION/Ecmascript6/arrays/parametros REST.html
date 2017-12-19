@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+       <head>
+              <meta charset="UTF-8">
+              <title>ECMASCRIPT6</title>
+              <script>
+
+                     function muestraSoloTextos(...args) {     // operador de propagación - convierte en array
+
+                            document.write("Recibidos " + args.length + " valores totales. Los textuales son:<br><br>");
+                            
+                            for (valor of args) {
+
+                                   if (typeof(valor) === 'string') {
+
+                                          document.write(valor + "<br>");
+                                   }
+                            }
+                     }
+
+                     muestraSoloTextos(1, 'Hey', 5, 'false', '¡Batman!'); 
+
+
+
+              </script>
+       </head>
+       <body>
+       </body>
+</html>

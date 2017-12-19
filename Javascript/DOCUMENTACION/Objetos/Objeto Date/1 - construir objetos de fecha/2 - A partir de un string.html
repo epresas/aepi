@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Fechas</title>
+		<meta charset="UTF8"/>		
+	</head>
+	<body>
+
+		<form action="gestor.php" method="post" onsubmit="return validarFormulario()">
+
+			Fecha de nacimiento: <input type="text" id="fechaNacimiento"/>
+			<input type="submit" value="Enviar"/>
+
+		</form>
+
+
+		<script>		
+
+		function validarFormulario() {
+
+		    var nacimiento = document.getElementById("fechaNacimiento").value;  
+
+	    	//para un objeto Date() necesito el formato en aaaa/mm/dd, así que previamente separo cada sección por cada /
+	    	var seccionesFecha = nacimiento.split("/");        
+
+			/*	    	
+	    	//puedo comprobar qué ha quedado almacenado en cada índice
+			alert("La primera sección del split es: " + seccionesFecha[0] );
+			alert("La segunda sección del split es: " + seccionesFecha[1] );
+			alert("La tercera sección del split es: " + seccionesFecha[2] ); 
+			*/			
+
+			//tras separar cada parte de nacimiento, lo reordeno en el nuevo objeto fecha y lo asigno a la variable de objeto fecha
+			var objetoFechaNacimiento = new Date(seccionesFecha[2],seccionesFecha[1]-1,seccionesFecha[0]);  
+
+			//y puedo hacer uso de las primeras funcionalidades de un objeto fecha
+			alert("El formato de lectura de un objeto fecha es:\n" + objetoFechaNacimiento + " (naciste en el año " + objetoFechaNacimiento.getFullYear() + ")");
+
+		}
+
+		</script>	
+
+	</body>
+</html>

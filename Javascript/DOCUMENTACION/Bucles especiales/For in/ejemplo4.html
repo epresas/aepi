@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+  <meta charset="UTF-8">
+  <title>Bucle for - in</title>
+
+</head>
+<body>
+
+
+
+<script>
+
+	class Lote {
+
+	    set id(arg) {
+	        this._id = arg;
+	    }
+
+	    get id() {
+	        return this._id;
+	    }
+
+	    set tipo(arg) {
+	        this._tipo = arg;
+	    }
+
+	    get tipo() {
+	        return this._tipo;
+	    }
+	}
+
+
+	var nuevoLote = new Lote();
+	nuevoLote.id = "0000AA";
+	nuevoLote.tipo = "Sacher";
+
+	var resultado = recorre_objeto_propiedades(nuevoLote, "LOTE DE TARTAS");
+
+	document.write(resultado);
+
+	
+
+	function recorre_objeto_propiedades(objeto, nombreObjeto) {
+
+		let resultado = "Los nombres de las propiedades del objeto " + nombreObjeto + " son:<br><br>";
+
+		for (let i in objeto) {
+
+			if (typeof objeto[i] != "function") {
+				resultado += nombreObjeto + "." + i + "<br>";
+			}
+		}
+		return resultado;
+	}
+
+
+</script>
+</body>
+</html>

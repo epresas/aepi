@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+  <meta charset="UTF-8">
+  <title>Objetos personalizados en Javascript</title>
+</head>
+
+<body>
+	<script>
+
+
+	class Factura {
+
+	  constructor(subtotal, impuesto) {
+	    this._subtotal = Number(subtotal);
+	    this._impuesto = Number(impuesto);
+	  }
+
+	  get total() {
+	  	return this.totalFactura();
+	  }
+
+	  totalFactura() {
+	  	return this._subtotal + this._impuesto;
+	  }
+
+	  static diferencia(arg1, arg2) {	
+	  	return arg1.total - arg2.total;
+	  }
+	}
+
+	const miFactura1 = new Factura('1000', '210');
+	const miFactura2 = new Factura('5000', '1050');
+
+	const diferencia = Factura.diferencia(miFactura2, miFactura1);
+
+	document.write("Puedo usar un método estático para integrar instancias independientes: " + diferencia + "€ de diferencia")
+
+	</script>
+</body>
+
+</html>

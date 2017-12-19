@@ -1,0 +1,48 @@
+<html>
+    <head>
+    <meta charset="utf-8">
+        <title>Page view</title>
+        <meta name="robots">        
+    </head>
+    <body>
+
+    <video id="video" autoplay controls>
+        <source src="village.mp4" type="video/mp4">
+    </video>
+    <script>        
+         
+            var video = document.getElementById("video");
+
+            function gestionarVista() {
+
+                if (document["hidden"]) {
+
+                    video.pause();
+
+                } else {
+
+                    video.play();
+                }
+            }
+
+            if (typeof document.addEventListener === "undefined" || typeof document["hidden"] === "undefined") {
+
+                alert("¡Vaya! Tu navegador no soporta la API Page Visibility...");
+
+            } else {
+
+                document.addEventListener("visibilitychange", gestionarVista);
+
+                video.addEventListener("pause", function(){
+                    document.title = 'Pausado...';
+                });
+
+                video.addEventListener("play", function(){
+                    document.title = '¡Reproduciendo!'; 
+                });
+            }
+        
+
+        </script>
+    </body>
+</html> 

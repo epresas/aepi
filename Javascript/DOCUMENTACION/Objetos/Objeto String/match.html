@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Métodos strings</title>
+		<meta charset="UTF8"/>	
+	</head>
+	<body>
+		<script>
+
+			let cadena = "Tres tristes tigres comían trigo en un trigal";
+			let coincidencias = cadena.match(/tr/g); 
+
+			document.write("Si buscamos en el string <strong>'" + cadena + "'</strong> las letras 'tr', obtendremos este array: " + coincidencias + ".<br><br>");
+
+			let coincidencias2 = cadena.match(/tr/gi);
+
+			document.write("Si las buscamos de forma case-INsensitive, obtendremos este otro: " + coincidencias2 + ".<br><br>");
+
+			document.write("Y al ser arrays, podemos acceder a cada uno de sus índices de forma independiente: " + coincidencias2[0])
+
+
+		</script>
+		
+	</body>
+</html>

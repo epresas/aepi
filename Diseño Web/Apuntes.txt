@@ -172,8 +172,20 @@ Clase 1:
     
     Modelo de caja: Sigue el flujo de html, donde se coloca todo en la esquina superior izquierda. Las cajas ocupan lo que ocupan sus contenidos. Hay que considerar:
         - Padding: espacio de separacion del contenido con su contenedor
-        - Border: el borde visible de la caja
+        - Border: el borde visible de la caja: tienen direcciones (top, bottom, etc), y para cada uno tiene 3 propiedades:
+            * width
+            * style (solid, dashed etc)
+            * color
+            tambien se pueden abreviar de 2 formas diferentes: colocando en la misma linea separadas de espacio width style y color,
+            no existe combinacion por coordenadas pero border solo es general el resto es por lado
         - Margin: el espacio entre la caja y los demas elementos del documento
+        Coordenadas para padding y margin: individualmente se pueden dar, siguen el siguiente orden:
+        padding/margin/border -> una sola cantidad: se aplica en todos lados
+                                 2 cantidades: el primero es vertical (top-bottom) el segundo horizontal (left-right)
+                                 4 cantidades: siguiendo las agujas del reloj desde arriba a la derecha (top, right, bottom, left)   
+
+        NOTA SOBRE FIREBUG:
+        el azul es contenido, el morado padding, el amarillo margin y el negro border 
         
     Cajas de tipo bloque: no permite que ningun elemento se coloque a su lado, va de lado a lado.
     Google fonts: Repositorio de fuentes, gratuita y referencia en diseño webs  
@@ -197,6 +209,65 @@ Clase 1:
             - en css, en font-family se pone entre comillas simples y si hay varias palabras en el nombre se ponen espacios, para el siguiente valor (fallback), se separa con coma y se pone una 
               tipografia nativa que si soporte el navegador por si falla el servidor donde esta alojada la fuente, se tiene un estilo similar al ideado de repuesto
             
-
+        al utilizar (local):
+            - convertir en los demas formatos (online converter), google fonts helper tiene las fuentes de google fonts con todos sus estilos y tipografias  y genera el bloque de css @font-face (parte superior del css)
+            descargar las fuentes y pegarlas en el directorio fonts en la raiz (de personalizar la ubicacion tambien hay que hacerlo en el codigo de css en la parte src url)
+            @font-face{
+                font-family: 'nombre';
+                font-style: normal;
+                font-weight: 200;
+                src:url()
+            }
         estilos: cuando se elige una tipografia, la cantidad de estilos ayuda porque tiene las combinaciones de anchos e inclinaciones (bold, italic, regular)
 
+        modificacion de tamaños: A traves de:
+            - width, height: aceptan medidas relativas y absolutas
+        
+        flotaciones: permiten cambiar el eje de direccion de los elementos  
+            - El valor por defecto de float es none (para seguir el flujo)
+            - un elemento en linea se centra con text-align pero un elemento en bloque no, para ello su padding lateral seria auto,
+              un elemento en inline-block no se puede centrar.
+        NOTA: Al final de los elementos flotantes, se recomienda un div .clearfix cuya regla css tenga un clear:both;
+            todos los elementos flotados estan fuera del flujo de HTML por lo que es propenso a comportamientos irracionales cuando tiene elementos flotados, de esta 
+            manera, el contenedor que contiene dichos elementos los ve
+
+        Al columnar:
+        para dar ancho y considerar los margin/padding de los elementos hay que considerar ese exceso, se hace asi:
+        calc(porcentaje_ancho_columna - exceso_pixeles_aire);
+    
+        Para hacer un menu:
+        display entre li
+        aire a los enlaces dentro de los li (haciendolos tipo inline block para que aplique verticalmente)
+        flotar segun se desee (el ul para no romper el flujo)
+
+        TRANSICIONES
+        transition: property duration timing-function delay (se puede hacer individualmente separando con guion cada palabra)
+            - property es que propiedades son transicionadas (se pueden incluir varias con espacio o all para todas), al separar con comas se pueden personalizar los tiempos de duracion y delay de cada propiedad
+            - duration es el tiempo que tarda en hacer la transicion (acompañando de s - segundos)
+            - timing-function determina la forma que se aplicara la aceleracion de la transicion. Por defecto es ease-in. Tambien pueden aplicarse funciones propias (google cubic bezier - generador de curvas de bezier para funciones de aceleracion) y se aplica en donde iria el timing function
+            - delay es opcional e indica en segundos el tiempo que tarda en aplicarse la transicion y para quitar el efecto que aplica, por defecto es 0.
+
+        FONDOS: Permite insertar una imagen ornamental. No puede tener contenido. Por defecto se repite en el eje x e y para crear un patron y cubrir areas mayores al tamaño de la imagen
+        shortcut: background: color image-url('ruta') repeat position / size attachment --> la barra se coloca ya que size y position pueden recibir valores absolutos multiples y de esa manera se dividen a quien corresponde
+            - color:
+            - image:
+            - repeat: por defecto se repite en ambos ejes (repeat), pero puede no repetirse (no-repeat) o en ejes individuales (repeat-x o repeat-y)
+            - position: puede recibir 1 o 2 posiciones :
+                * center: se coloca equidistantemente en x y y
+                * top/bottom 
+                * valores absolutos (pixeles, porcentajes)
+            - size: acepta valores:
+                * cover: determina que la imagen tomara el tamaño minimo necesario para cubrir el area de la caja
+                * contain: se asegura que la imagen se muestra en su totalidad con independencia del area // poco utilizado ya que puede dejar areas vacias
+                * medidas absolutas:
+            - attachment: permite  darle valores 
+                * fixed: la imagen se queda fina y el contenido puede moverse con el scroll
+                * parallax: da sensacion de acompañamiento del contenido (ver documentacion)
+            NOta: al cargar imagen de fondo colocar un color de fallback que ayude en caso de que la imagen no se cargue
+
+    ICONOS VECGTORIALES (SVG): (Articulo german) flaticon (web)
+
+    Flaticon: se colocan como clases en elementos i (el italico para html5 esta en desuso porque semanticamente no se da tratamiento estetico a un contenido)
+    por defecto tienen tamaño de 1em = 16px, si es iconfont se trata como una fuente para el color. Pero para que coja el tamaño como una fuente se utiliza el ::before
+
+    linea.io - iconos SVG

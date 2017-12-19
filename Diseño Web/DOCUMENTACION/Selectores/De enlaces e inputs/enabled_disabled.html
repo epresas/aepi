@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+	
+	<head> 		
+		<meta charset="UTF-8"/>
+		<title>Pseudo Selectores</title>
+		<style>
+
+			input:enabled {
+			  border: 1px solid grey;
+			}
+			input:disabled {
+			  border: 1px solid rgba(0,0,0,0.1);
+			  color: rgba(0,0,0,0.3);
+			  background: rgba(0,0,0,0.05);
+			  cursor: not-allowed;
+			}
+
+		</style>
+	</head>
+	<body>	
+
+		<form action="url_of_form">
+		      <label for="FirstField">First field (enabled):</label> <input type="text" id="FirstField" value="Lorem"><br />
+		      <label for="SecondField">Second field (disabled):</label> <input type="text" id="SecondField" value="Ipsum" disabled="disabled"><br />
+		      <input type="button" value="Submit" />
+	    </form>
+		
+
+
+	</body>
+
+	
+
+
+</html>

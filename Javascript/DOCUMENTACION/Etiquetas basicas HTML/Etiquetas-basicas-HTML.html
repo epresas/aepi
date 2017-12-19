@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>ETIQUETAS BÁSICAS DE HTML</title>
+		<meta charset="utf-8">
+	</head>
+
+	<body>
+
+		<!-- 
+		ESTO ES UN COMENTARIO
+		
+		Puedes meter tantas líneas de comentario como quieras, entre los símbolos de apertura y cierre que ves arriba y abajo. 
+
+		Como ves, todo el contenido visible del HTML se encuentra dentro de la etiqueta <body>
+		-->
+		<h1>Esto es una cabecera de nivel 1</h1>
+
+		<h2>Esto es una cabecera de nivel 2</h2>
+
+		<p>Esto es un párrafo con contenido demostrativo: Lorem Ipsum dolor sit. Expetenda tincidunt in sed, ex partem placerat sea, porro commodo ex eam. His putant aeterno interesset at. Usu <strong>y esta parte del contenido es importante, por lo que sale en negrita por la etiqueta strong</strong> ea mundi tincidunt, omnium virtute aliquando ius ex. Ea aperiri sententiae duo. Usu nullam dolorum quaestio ei, sit vidit facilisis ea. Per ne impedit iracundia neglegentur. Consetetur neglegentur eum ut, vis animal legimus inimicus id.</p>
+
+		<p class="valorClase" id="valorId">Y este es otro párrafo que, como ves en el código, tiene en su aperura dos atributos: un atributo "class" con valor "valorClase", y otro atributo "id" con valor "valorId". Todas las etiquetas pueden tener, si es necesario, uno de estos atributos, o ambos.</p>
+
+		<h2>Esto es otra cabecera de nivel 2</h2>
+
+		<h3>Esto es otra cabecera de nivel 3 (hay desde el h1 hasta el h6, según su importancia)</h3>
+
+		<p>Este párrafo es para indicarte que ahora, comienza una lista:</p>
+
+		<ul>	<!-- ¡CUIDADO! Una lista no sólo tiene los puntos de lista, como ves aquí también se abre y cierra con <ul> -->
+			<li>Esto es un punto de lista.</li>
+			<li>Esto es otro punto de lista.</li>
+			<li>Y esto, otro más.</li>
+			<li>Una lista puede tener tantos puntos de lista como desees.</li>
+		</ul>
+
+		<p>Cada párrafo genera un salto de línea que los separa, pero también podemos hacer saltos de línea mediante la etiqueta br, como aquí: <br><br><br><br>
+
+		Cada br genera un salto de línea</p>
+
+		<p><strong>¡Recuerda!:</strong> todas las etiquetas de dentro del body (menos las de imagen) deben abrirse y cerrarse.</p>
+
+		<h3>Ahora viene un formulario:</h3>
+
+		<form action="gestor.php" method="post">
+
+	        Campo 1: <input type="text" id="dato1">
+	        <br>
+	        Campo 2: <input type="text" id="dato2">
+	        <br>
+	        <input type="submit" value="Enviar el formulario">
+
+	    </form>
+
+	    <p>Como ves, la etiqueta de formularios es 'form', y tiene un atributo obligatorio 'action', con el valor del nombre del archivo donde se enviará la información que se rellene en cada campo, y otro atributo obligatorio 'method' con el método de envío (que puede ser POST o GET). Por dentro, los formularios tienen los campos de introducción de datos (input) y un botón de envío, que es un input final de tipo "submit"</p>
+	</body>
+</html>

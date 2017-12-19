@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+  <meta charset="UTF-8">
+  <title>Objetos literales en Javascript</title>
+</head>
+
+<body>
+	<script>
+	
+		var factura = {
+		    numero: 201,
+		    cliente: 'Transportes Chemita',
+		    divisa: 'eur',
+		    subtotal: 350.25,
+		    IVA: 75.55,
+		    total: function(descuento = 0){
+			  return this.subtotal + this.IVA - descuento;
+		    }
+		}
+
+		var totalFactura = factura.total();
+		var totalFacturaDescuento = factura.total(10);
+
+		console.log('La factura asciende a ' + totalFactura + ', y podemos aplicar un descuento obteniendo ' + totalFacturaDescuento);
+
+	</script>
+</body>
+
+</html>

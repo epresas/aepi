@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Métodos strings</title>
+		<meta charset="UTF8"/>	
+	</head>
+	<body>
+		<script>
+
+			let textoQuijote="El lector del Quijote no puede resistir al deseo de aventurarse por una senda que le lleva a descubrir una nueva forma de entroncar vida y literatura.";
+
+			document.write("Partiremos de una cadena que habla del Quijote:<br>" + textoQuijote + "<br><br>");
+
+			document.write("La posición o índice en que se encuentra el caracter 'Q' es " + textoQuijote.indexOf("Q") + "<br>");
+			document.write("La posición o índice en que se encuentra el caracter 'p' es " + textoQuijote.indexOf("p") + "<br>");
+			document.write("La posición o índice en que se encuentra el caracter 'P' es " + textoQuijote.indexOf("P") + " (es decir, no existe) <br>");
+			document.write("La posición o índice en que se encuentra el caracter 'd' es " + textoQuijote.indexOf("d") + "...<br>");
+
+			// Podemos indicar como segundo parámetro opcional, la posición desde la que queremos buscar el caracter:
+			document.write("...pero la posición o índice de ese mismo caracter 'd' desde la posición 20 es " + textoQuijote.indexOf("d", 20) + "<br>");
+
+
+		</script>
+		
+	</body>
+</html>

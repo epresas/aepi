@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	</head>
+
+	<body>
+
+		<div id="padre">
+			<p>Yo soy un hijo</p>
+			<p>Yo soy un hijo</p>
+			<p>Yo soy un hijo</p>
+			<p>Yo soy un hijo</p>
+			<p>Yo soy un hijo</p>
+			<p>Yo soy un hijo</p>
+			<p>Yo soy un hijo</p>
+		</div>
+
+		<button>Insertar más hijos</button>
+
+		<script>
+
+
+		
+
+
+			document.getElementsByTagName('button')[0].onclick = function() {
+
+				let padre = document.getElementById('padre');
+
+				let parrafo = document.createElement('p');
+				let texto = document.createTextNode('Yo soy un hijo nuevo');
+				parrafo.appendChild(texto);
+
+				padre.appendChild(parrafo);
+
+			}
+			
+		</script>
+
+	</body>
+</html>

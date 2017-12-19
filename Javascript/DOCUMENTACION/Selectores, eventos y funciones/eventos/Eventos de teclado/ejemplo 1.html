@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Key events</title>            
+	</head>
+	<body>
+		<p>Presiona cualquier tecla (¡también la de escape!)</p>
+		<div id="info"></div>
+
+		<script>
+
+		document.onkeyup = muestraInformacion;
+						 
+		function muestraInformacion(evento) {
+		 
+		  let mensaje = "Tipo de evento: " + evento.type + "<br>" +
+		                "Código de tecla (keyCode): " + evento.keyCode + "<br>" +
+		                "<br>--------------------------------------<br>";
+		 
+		  document.getElementById('info').innerHTML += mensaje;
+
+		  if (evento.keyCode === 27) {
+
+		  	alert('¡Hey! ¡Acabas de presionar ESCAPE!');
+		  }
+		  
+		}
+
+		</script>
+
+       </body>
+</html>

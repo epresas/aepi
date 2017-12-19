@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Objeto Document</title>
+		<meta charset="UTF8"/>
+
+		<script>
+
+			function hayarURL() {
+			    var x = document.baseURI;
+			    document.getElementById("mensaje").innerHTML = x;
+			}
+
+		</script>
+
+	</head>
+	<body>
+		<p id="mensaje"></p>
+		<button onclick="hayarURL()">Haya la URL</button>
+	</body>
+</html>

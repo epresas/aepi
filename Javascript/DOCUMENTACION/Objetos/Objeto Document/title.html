@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Propiedades del Objeto Document</title>
+		<meta charset="UTF8"/>
+		<script>
+
+			function mostrarTitulo() {
+			    var titulo = document.title;
+			    document.getElementById("mensaje").innerHTML = titulo;
+			}
+
+		</script>
+
+	</head>
+	<body>
+		<button onclick="mostrarTitulo()">Mostrar título del documento</button>
+		<p id="mensaje"></p>
+	</body>
+</html>

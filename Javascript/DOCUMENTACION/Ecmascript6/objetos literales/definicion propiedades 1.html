@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+  <meta charset="UTF-8">
+  <title>Ecmascript 6</title>
+</head>
+
+<body>
+<script>
+
+	let objetoLiteral = { numero: 123, altura: 'grande' };
+
+	console.log( Object.getOwnPropertyDescriptor(objetoLiteral, 'numero') );		// retorna caracteristicas de una propiedad
+	console.log( Object.getOwnPropertyDescriptor(objetoLiteral, 'altura') );
+
+	document.write("Recorriendo objeto con propiedades ordinarias:<br>");
+
+	for (valor in objetoLiteral) {
+		document.write(valor + "<br>");
+	}
+
+
+
+
+</script>
+</body>
+
+</html>

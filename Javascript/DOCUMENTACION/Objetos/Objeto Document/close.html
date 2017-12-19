@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Objeto Window</title>
+		<meta charset="UTF8"/>
+
+
+		<script>
+
+			function inyectaSinClose() {
+			    document.write("Al no haber 'close()', la carga de la página no se detiene");
+			}
+
+			function inyectaConClose() {
+			    document.write("Al haber 'close()', la carga de la página se detiene");
+			    document.close();
+			}
+
+
+
+		</script>
+
+	</head>
+	<body>
+		<button onclick="inyectaSinClose()">Inyectar en el documento sin close()</button>
+		<button onclick="inyectaConClose()">Inyectar en el documento con close()</button>
+
+	</body>
+</html>

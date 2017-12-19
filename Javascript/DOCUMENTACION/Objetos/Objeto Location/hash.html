@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Objeto Location</title>
+		<meta charset="UTF8"/>
+
+		<script>
+
+			function hashActual(){
+				document.getElementById("preResultado").innerHTML = location.hash;
+			}
+
+			function cambiaHash() {
+			    location.hash = "productos";
+			    var texto = "El ancla del documento ahora es: " + location.hash;
+			    document.getElementById("resultado").innerHTML = texto;
+			}
+
+		</script>
+
+	</head>
+	<body onload="hashActual()">
+		<button onclick="cambiaHash()">Modificar hash de la URL</button>
+		<p>El hash actual (si lo hay), es: <span id="preResultado"></span></p>
+		<p id="resultado"></p>
+	</body>
+</html>

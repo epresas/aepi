@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+       <head>
+              <meta charset="UTF-8">
+              <title>ECMASCRIPT6</title>
+              <script>
+
+              let string = "Ecmascript6 mola";              
+
+              let contiene1 = string.includes("cma");
+              document.write("¿Contiene el string <strong>'" + string + "'</strong> las letras 'cma'?: " + contiene1 + "<br>");
+
+              let contiene2 = string.includes("cma", 2);
+              document.write("¿Y contiene 'cma' a partir del segundo caracter?: " + contiene2 + "<br>");
+
+              let comienzo = string.startsWith('Ec');
+              document.write("¿Comienza con 'Ec'?: " + comienzo + "<br>");
+
+              let final = string.endsWith('batman');
+              document.write("¿Termina con 'batman'?: " + final + "<br>");
+
+              let repe = string.repeat(5);
+              document.write("¡Repitámoslo! " + repe + "<br>");
+
+
+
+              </script>
+       </head>
+       <body>
+       </body>
+</html>

@@ -1,0 +1,100 @@
+<html lang="es">
+	<head>
+		<title>TRANSFORMACIONES</title> 
+		<meta charset="utf-8">
+
+		<style type="text/css">
+		*{margin:0; padding:0; font-family: sans-serif;}
+		div{ border: 5px solid; width: 260px; margin:10px; background-color:yellow; font-size: 20px; text-align:center;
+		padding-top: 20px; word-wrap:break-word; }
+		h2{margin: 15px 0 -15px 40px;} img {padding:10px; }
+		#contentBox1 {border-radius: 40px; margin-left:40px; transition: all .5s;}
+		#contentBox1:hover { transform:  skewX(-20deg);}
+
+		</style> 
+	</head>
+
+	<body>
+		<!--ROTATE-->
+		<h2>CSS transform: rotate</h2>
+		<div style="float:left; border-style:none; border-width:0; background-color:white;">
+			<div style="border-radius: 40px;">
+				<img src="http://static.wixstatic.com/media/06c6a8_a38ac395e5b94a9a8b64950501910535.png" >
+			</div>
+		</div>
+		<div style="float:left; border-style:none; border-width:0; background-color:white;">
+			<div style="border-radius: 40px; margin-top: 50px; transform:  rotate(45deg);">
+				<img src="http://static.wixstatic.com/media/06c6a8_a38ac395e5b94a9a8b64950501910535.png" >
+			</div>
+		</div>
+		<p style="clear: both; "></p>
+
+
+		<!--SCALE-->
+		<h2 style="margin-top:80px;">CSS transform: scale</h2>
+		<div style="float:left; border-style:none; border-width:0; background-color:white;">
+			<div style="border-radius: 40px;">
+				<img src="http://static.wixstatic.com/media/06c6a8_a38ac395e5b94a9a8b64950501910535.png" >
+			</div>
+		</div>
+		<div style="float:left; border-style:none; border-width:0; background-color:white;">
+			<div style="border-radius: 40px; margin-top: 50px; transform:  scale(0.5);">
+				<img src="http://static.wixstatic.com/media/06c6a8_a38ac395e5b94a9a8b64950501910535.png" >
+			</div>
+		</div>
+		<p style="clear: both; "></p>
+
+
+		<!--SKEWX-->
+		<h2>CSS transform: skewX</h2>
+		<div style="float:left; border-style:none; border-width:0; background-color:white;">
+			<div style="border-radius: 40px;">
+				<img src="http://static.wixstatic.com/media/06c6a8_a38ac395e5b94a9a8b64950501910535.png" >
+		</div>
+		</div>
+		<div style="float:left; border-style:none; border-width:0; background-color:white;">
+			<div style="border-radius: 40px; margin-left: 40px; transform:  skewX(-30deg);">
+				<img src="http://static.wixstatic.com/media/06c6a8_a38ac395e5b94a9a8b64950501910535.png" >
+			</div>
+		</div>
+		<p style="clear: both; "></p>
+
+
+		<!--SKEWY-->
+		<h2>CSS transform: skewY</h2>
+		<div style="float:left; border-style:none; border-width:0; background-color:white;">
+			<div style="border-radius: 40px;">
+				<img src="http://static.wixstatic.com/media/06c6a8_a38ac395e5b94a9a8b64950501910535.png" >
+			</div>
+		</div>
+		<div style="float:left; border-style:none; border-width:0; background-color:white;">
+			<div style="border-radius: 40px; margin-left: 40px; transform:  skewY(-20deg);">
+				<img src="http://static.wixstatic.com/media/06c6a8_a38ac395e5b94a9a8b64950501910535.png" >
+			</div>
+		</div>
+		<p style="clear: both; "></p>
+
+
+		<!--TRANSLATE-->
+		<h2>CSS transform: translate</h2>
+		<div style="float:left; border-style:none; border-width:0; background-color:white;">
+		<div style="border-radius: 40px;">
+			<img src="http://static.wixstatic.com/media/06c6a8_a38ac395e5b94a9a8b64950501910535.png" >
+		</div>
+		</div>
+		<div style="float:left; border-style:none; border-width:0; background-color:white;">
+			<div style="border-radius: 40px; margin-left: 40px; transform:  translate(20px, 70px);">
+				<img src="http://static.wixstatic.com/media/06c6a8_a38ac395e5b94a9a8b64950501910535.png" >
+			</div>
+		</div>
+		<p style="clear: both; "></p>
+
+
+		<!--COMBINADO CON HOVER-->
+		<h2>CSS transform con hover</h2>
+		<div style="float:left; border-style:none; border-width:0; background-color:white;">
+			<div id="contentBox1" ><img src="http://static.wixstatic.com/media/06c6a8_a38ac395e5b94a9a8b64950501910535.png" ></div>
+		</div>
+		<p style="clear: both; "></p>
+	</body>
+</html>

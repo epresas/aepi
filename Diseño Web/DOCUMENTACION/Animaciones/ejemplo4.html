@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+	
+	<head> 		
+		<meta charset="UTF-8"/>
+		<title>Animaciones</title>
+		<style>
+
+		div {
+		  margin:100px;
+		  width: 200px;
+		  height: 200px;
+		  background-color: coral;
+		  animation: cuadrado-a-circulo 2s .5s infinite linear alternate;
+		}
+		 
+		@keyframes cuadrado-a-circulo {
+		  0%  {
+		    border-radius:0 0 0 0;
+		    background:coral;
+		  }
+		  25%  {
+		    border-radius:50% 0 0 0;
+		    background:darksalmon;
+		  }
+		  50%  {
+		    border-radius:50% 50% 0 0;
+		    background:indianred;
+		  }
+		  75%  { 
+		    border-radius:50% 50% 50% 0;
+		    background:lightcoral;
+		  }
+		  100% {  
+		    border-radius:50%;
+		    background:darksalmon;
+		  }
+		}
+
+		</style>
+	</head>
+	<body>	
+		<div></div>
+	</body>
+</html>

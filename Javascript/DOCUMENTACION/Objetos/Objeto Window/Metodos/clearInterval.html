@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Objeto Window</title>
+		<meta charset="UTF8"/>
+
+
+		<script>
+
+			let miIntervalo = setInterval(
+
+				function(){ 
+					miTemporizador() 
+				},1000
+			);
+
+			let incremento = 0;
+
+			function miTemporizador() {
+			    incremento++;
+			    document.getElementById("tiempo").innerHTML = incremento;
+			}
+
+			function pararIntervalo() {
+			    clearInterval(miIntervalo);
+			}
+
+
+
+			/*
+			OTRA FORMA IDÉNTICA DE HACERLO: 
+
+			let incremento = 0;
+
+			let miIntervalo = setInterval(
+
+				function(){ 
+					incremento++;
+			    	document.getElementById("tiempo").innerHTML = incremento;
+				},1000
+			);
+
+			function pararIntervalo() {
+			    clearInterval(miIntervalo);
+			}
+			*/
+
+		</script>
+
+	</head>
+	<body>
+		<p>El intervalo que sucede cada 1.000 milisegundos se ha repetido <span id="tiempo">0</span> veces.</p>
+		<button onclick="pararIntervalo()">Parar el intervalo</button>
+
+	</body>
+</html>

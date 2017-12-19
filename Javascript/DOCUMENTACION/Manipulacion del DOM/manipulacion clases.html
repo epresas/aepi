@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<style>
+			.tachado {
+				text-decoration: line-through;
+			}
+
+			.grande {
+				font-size: 2em;
+			}
+		</style>
+	</head>
+
+	<body>
+
+
+		<p id="s1">Cambiar tachado</p>
+		<p id="s2">Poner grande</p>
+		<p id="s3" class="grande">Poner pequeño</p>
+		
+		<br><br>
+		<button>Manipular clases</button>
+
+		<script>
+
+		document.getElementsByTagName('button')[0].onclick = function(){
+
+			document.getElementById("s1").classList.toggle("tachado");
+			document.getElementById("s2").classList.add("grande");
+			document.getElementById("s3").classList.remove("grande");
+
+		}
+
+		</script>
+
+	</body>
+</html>

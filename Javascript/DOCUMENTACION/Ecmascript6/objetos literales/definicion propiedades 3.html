@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+  <meta charset="UTF-8">
+  <title>Ecmascript 6</title>
+</head>
+
+<body>
+<script>
+
+	let objetoLiteral = { numero: 123 };
+
+	Object.defineProperty(objetoLiteral, 'altura', {
+	    value: 'grande',
+	    enumerable: false,								// impide iterar esta propiedad
+		configurable: false,							// impide reconfigurar estas características
+		writable: false									// impide sobreescribir su valor
+	});
+
+
+
+
+	document.write("Recorriendo objeto con propiedad no enumerable:<br>");
+
+	for (valor in objetoLiteral) {
+		document.write(valor + "<br>");
+	}
+
+
+
+
+	document.write("<br>Valor anterior de la propiedad: " + objetoLiteral.altura + "<br>");
+	objetoLiteral.altura = "pequeño";
+	document.write("Valor de la propiedad tras sobreescritura " + objetoLiteral.altura + "<br><br>");
+
+
+
+
+
+	var alturaEnumerable = objetoLiteral.propertyIsEnumerable('altura');
+	document.write("¿Es la altura enumerable?: " + alturaEnumerable + "<br><br>");
+
+
+
+
+
+	Object.defineProperty(objetoLiteral, 'altura', { 
+		enumerable: true 								// ¡ops! mira la consola
+	});
+
+
+
+		
+
+
+</script>
+</body>
+
+</html>

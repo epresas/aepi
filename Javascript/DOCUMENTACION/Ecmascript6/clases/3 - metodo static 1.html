@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+  <meta charset="UTF-8">
+  <title>Objetos personalizados en Javascript</title>
+</head>
+
+<body>
+	<script>
+
+
+	class CualquierCosa {
+
+	  static empiezaFrase() {						// no necesitan instanciarse
+	    return 'Este método estático es llamado';
+	  }
+
+	  static terminaFrase() {
+	    return this.empiezaFrase() + ' desde otro método estático (¡sin instancia alguna!)';
+	  }
+
+	}
+
+	let frase1 = CualquierCosa.empiezaFrase(); 
+	document.write(frase1 + "<br>");
+
+	let frase2 = CualquierCosa.terminaFrase(); 
+	document.write(frase2);
+
+	</script>
+</body>
+
+</html>

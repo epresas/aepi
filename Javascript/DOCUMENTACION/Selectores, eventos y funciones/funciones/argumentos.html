@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FUNCIONES / EVENTOS</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+<button id="nombrar">Hazme click para ver nombre</button><br>
+
+
+<script type="text/javascript">
+
+	
+	// declaracion con argumentos
+	function verNombre(arg1, arg2) {
+		alert("Tu nombre es " + arg1 + " " + arg2);
+	}
+
+
+	document.getElementById('nombrar').onclick = function(){
+		let dato1 = prompt("¿Nombre?");
+		let dato2 = prompt("¿Apellido?");
+		verNombre(dato1, dato2);
+	}
+
+			
+</script>
+
+</body>
+</html>

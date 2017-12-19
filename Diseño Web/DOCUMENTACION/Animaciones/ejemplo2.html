@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+	
+	<head> 		
+		<meta charset="UTF-8"/>
+		<title>Animaciones</title>
+		<style>
+
+		div{
+			width:200px;
+			height:200px;
+			margin:0 auto;
+			border:1px solid black;
+			background:red;
+			opacity: 0;
+		}
+
+		.element {
+		  animation: aparece 4s 1s infinite linear alternate,
+		  			 gira 4s 1s infinite linear alternate;
+		}
+
+
+		@keyframes aparece {
+
+			from {
+				opacity: 0;
+			}
+
+			to {
+				opacity: 1;
+			}
+		}
+
+		@keyframes gira {
+
+			from {
+				transform: rotate(0deg);
+			}
+
+			to {
+				transform: rotate(180deg);
+			}
+		}
+
+		</style>
+	</head>
+	<body>	
+		<div class="element"></div>
+	</body>
+</html>

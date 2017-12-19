@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+  <meta charset="UTF-8">
+  <title>Bucles</title>
+
+</head>
+<body>
+
+
+<script>
+
+	let array = [7, 'Hi there!', true];
+	let obj = {valor1: 7, valor2: 'Hi there!', valor3: true};
+
+	document.write('<h2>Recorriendo array</h2>');
+
+	for (let i in array) {			//propiedades
+	   document.write(i + "<br>");
+	}
+
+	document.write('<br><br>');
+
+	for (let i of array) {			//valores
+	   document.write(i + "<br>");
+	}
+
+
+
+
+
+	document.write('<h2>Recorriendo objeto</h2>');
+
+	for (let i in obj) {			
+	   document.write(i + " -> " + obj[i] + "<br>");
+	}
+
+	document.write('<br><br>');
+
+	for (let i of obj) {			// no aplicable
+	   document.write(i + "<br>");
+	}
+
+	
+
+</script>
+</body>
+</html>

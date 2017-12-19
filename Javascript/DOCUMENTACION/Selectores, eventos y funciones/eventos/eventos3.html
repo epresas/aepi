@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Eventos</title>
+		<meta charset="UTF8"/>	
+		<style>div {border:1px solid black; padding: 100px 50px; display:inline-block; margin:100px;}</style>			
+	</head>
+
+	<body>
+
+	    <div id="contenidos" class="elprimero">
+    		¡Hazme click!
+    	</div>
+
+
+    	<div id="otrosContenidos">
+    		¡Pasa por encima!
+    	</div>  	   
+
+
+
+
+    	<script>
+
+    		document.getElementById("contenidos").onclick = estila;
+    		document.getElementById("otrosContenidos").onmouseenter = agranda;
+
+	    	function agranda() {	    		
+			    document.getElementById("otrosContenidos").style.fontSize='50px';
+			}
+
+			function estila() {	    		
+			    document.getElementById("contenidos").style.backgroundColor='pink';
+			}
+
+    	</script>   
+
+
+	</body>
+</html>

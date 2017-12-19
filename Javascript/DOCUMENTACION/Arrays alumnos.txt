@@ -1,0 +1,9 @@
+let alumno1 = Array.of(265, 'José', 'Álvarez', 16, '28005', false);
+let alumno2 = Array.of(382, 'María', 'Gómez', 15, '28036', true);
+let alumno3 = Array.of(425, 'Sergio', 'Santamaría', 17, '28012', false);
+let alumno4 = Array.of(342, 'Rafael', 'Cantos', 14, '28010', false);
+let alumno5 = Array.of(446, 'Sara', 'Gómez', 15, '28010', false);
+let alumno6 = Array.of(452, 'Ivan', 'Sánchez', 16, '28010', true);
+let alumno7 = Array.of(754, 'Lydia', 'Somonte', 13, '28010', false);
+let alumno8 = Array.of(345, 'Carlos', 'Pacheco', 14, '28010', false);
+let alumno9 = Array.of(678, 'Rubén', 'Punset', 15, '28010', false);

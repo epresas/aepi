@@ -1,0 +1,36 @@
+<html>
+    <head>
+    <meta charset="utf-8">
+        <title>Objeto Navigator</title>
+        <script>
+
+        if (navigator.connection) {           
+    
+              let type  = navigator.connection.type;
+              document.write("El tipo de conexión que tienes en este momento es: " + type);
+
+              /*
+                cellular
+                bluetooth
+                ethernet
+                wifi
+                wimax
+                other
+                none
+                mixed
+                unknown
+             */
+          }
+
+          else{
+            document.write("Tu navegador no soporta la API de conexión (cosa lógica desde un PC)")
+          }
+
+
+        </script>
+
+    </head>
+    <body>
+
+    </body>
+</html> 

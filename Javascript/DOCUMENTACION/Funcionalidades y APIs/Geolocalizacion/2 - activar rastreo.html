@@ -1,0 +1,51 @@
+<html>
+    <head>
+    <meta charset="utf-8">
+        <title>Geolocalizacion</title>
+        <script>
+
+        let idRastreo;
+
+        function iniciarRastreo(pos) {
+
+            let coordenadas = pos.coords;
+
+            let texto = "La latitud del dispositivo es: " + coordenadas.latitude + " grados.<br><br>";
+            texto += "La longitud del dispositivo es: " + coordenadas.longitude + " grados.<br><br>";
+            texto += "La exactutud de longitud y latitud es de +- " + coordenadas.accuracy + " metros.<br><br>";
+            texto += "La altitud del dispositivo es: " + coordenadas.altitude + " metros respecto al mar.<br><br>";
+            texto += "El dispositivo está viajando hacia la dirección " + coordenadas.heading + " grados.<br><br>";
+            texto += "El dispositivo está viajando a " + coordenadas.speed + " metros por segundo.<br><hr><br>";
+
+            document.getElementById('resultado').innerHTML += texto;
+        }
+
+        function procesarError(err) {
+
+            document.write('¡OPS! Ha habido un error: (' + err.code + '): ' + err.message);
+        }
+
+        function abortarRastreo(){
+            navigator.geolocation.clearWatch(idRastreo);
+            document.getElementById('resultado').innerHTML += '<h1>Abortado</h1>';
+        }
+
+        function solicitarPermisos(){
+            let opcionesRastreo = { timeout: 30000 };
+            idRastreo = navigator.geolocation.watchPosition(iniciarRastreo, procesarError, opcionesRastreo);
+        }
+
+
+
+        
+
+        </script>
+    </head>
+    <body>
+
+        <button onclick="solicitarPermisos()">Activar y rastrear localización</button>
+        <button onclick="abortarRastreo()">Abortar rastreo</button>
+        <p id="resultado"></p>
+
+    </body>
+</html> 

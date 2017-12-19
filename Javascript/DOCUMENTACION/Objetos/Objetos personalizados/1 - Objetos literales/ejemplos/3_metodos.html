@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+  <meta charset="UTF-8">
+  <title>Objetos literales en Javascript</title>
+</head>
+
+<body>
+	<script>
+
+		var factura = {
+		    numero: 201,
+		    cliente: 'Transportes Chemita',
+		    divisa: 'eur',
+		    subtotal: 350.25,
+		    IVA: 75.55,
+		    total: function(){
+			  return this.subtotal + this.IVA;
+		    }
+		}
+
+		var numeroFactura = factura.numero;
+		var totalFactura = factura.total();  // los métodos, por su capacidad de recibir parámetros, requieren paréntensis en su ejecución
+
+		console.log('La factura ' + numeroFactura + ' tiene un importe de ' + totalFactura);
+
+	</script>
+</body>
+
+</html>

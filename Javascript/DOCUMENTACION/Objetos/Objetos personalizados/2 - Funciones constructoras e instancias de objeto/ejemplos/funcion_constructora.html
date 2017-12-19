@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+  <meta charset="UTF-8">
+  <title>Objetos personalizados en Javascript</title>
+</head>
+
+<body>
+	<script>
+
+
+	function Factura(par1, par2, par3, par4, par5) {
+		this.numero = par1;
+		this.cliente = par2;
+		this.divisa = par3;
+		this.subtotal = par4;
+		this.IVA = par5;
+		this.total = function(){
+			return this.subtotal + this.IVA;
+		}
+	}
+
+	var factura1 = new Factura(854, "Bar Colón", "eur", 659, 138.39);
+	var factura2 = new Factura(855, "Pub María", "eur", 48, 10.08);
+
+	
+
+	var numeroFactura = factura1.numero;
+	var monedaFactura = factura1.divisa;
+	var totalFactura = factura1.total();
+
+	console.log('La factura ' + numeroFactura + ' es de ' + totalFactura + ' eur.');
+
+
+	</script>
+</body>
+
+</html>

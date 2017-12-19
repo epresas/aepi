@@ -1,0 +1,10 @@
+<p><small>Copyright 2016 - Todos los derechos reservados</small></p>
+
+
+
+<footer>
+ <address>
+  Contacto: <a href="mailto:hs@example.com">John Doe</a>.
+ </address>
+ <p><small>© Copyright 2058, Empresa Ficticia</small></p>
+</footer>

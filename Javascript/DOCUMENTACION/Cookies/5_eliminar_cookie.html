@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+       <head>
+              <meta charset="UTF-8">
+              <title>COOKIES de usuario</title>
+              <script>
+
+                     //eliminación de una cookie
+                     let comienzo = document.cookie.indexOf("micookie");
+
+                     if( comienzo == -1 ) {
+                            alert("¡Ops! No hay ninguna cookie que se llame 'micookie' :(");  
+
+                     }
+                     else {
+                            alert("La cookie 'micookie' ya está presente");
+                            document.cookie="micookie=mivalor;expires=Thu,01-Jan-1980 00:00:01 GMT";
+                            alert("La cookie 'micookie ha sido eliminada");       
+                     }
+
+              </script>
+       </head>
+       <body>
+       </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FUNCIONES / EVENTOS</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+	var valor = prompt("¿Qué valor quieres comprobar que sea par");
+
+	if ( esPar(valor) ) {
+
+		document.write("La función de comprobación retorna " + esPar(valor) + ", por lo que es par");
+
+	}else{
+
+		document.write("La función de comprobación retorna " + esPar(valor) + ", por lo que no es par");
+	}
+
+	function esPar(arg) {
+
+		if ( arg % 2 === 0) {
+			return true;
+		}
+	}
+
+
+
+
+	document.write("<br><br>¡Ojo! Si la función no tiene return, obtendremos un valor como en que sigue: " + sinReturn());
+
+	function sinReturn() {
+		//esta función no retornará nada
+	}
+
+	
+
+
+
+
+</script>
+
+</body>
+</html>

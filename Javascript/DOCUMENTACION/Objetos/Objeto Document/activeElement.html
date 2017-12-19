@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Objeto Document</title>
+		<meta charset="UTF8"/>
+
+		<script>
+
+			function elementoActivo() {
+			    var activo = document.activeElement.tagName;
+			    document.getElementById("mensaje").innerHTML = activo;
+			}
+
+		</script>
+
+	</head>
+	<body onclick="elementoActivo()">
+		<p id="mensaje">Haz click en cualquier elemento</p>		
+		<input type="text" value="Campo de texto"/>
+		<button>Botón</button>
+		<textarea>Textarea</textarea>
+	</body>
+</html>

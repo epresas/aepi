@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Vibracion</title>
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex,nofollow">
+        <style type="text/css">button{width: calc(100% - 40px);padding: 20px 0; margin: 20px}</style>
+
+
+    </head>
+    <body>
+        <button id="vibra2000">Vibrar 2 segundos</button>
+        <button id="vibra4000">Vibrar 4 segundos independientes</button>
+
+
+    <script>
+        
+        document.getElementById("vibra2000").addEventListener("click", function() {
+            navigator.vibrate(2000);
+        });
+
+        document.getElementById("vibra4000").addEventListener("click", function() {
+            navigator.vibrate([2000, 200, 2000]);
+        });
+
+        /*
+
+        Pruébalo en tu móvil:
+        www.cosasdigitales.com/documentacion/vibracion/
+        
+        */
+
+    </script>
+
+    </body>
+</html> 

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+	
+	<head> 		
+		<meta charset="UTF-8"/>
+		<title>Selectores</title>
+		<style>
+
+		/*
+		    elemento[atributo^="valor"] 	selecciona elementos cuyo valor del atributo indicado comienza con la cadena de texto indicada.
+
+			a[href^="mailto:"] { ... }		- Selecciona todos los enlaces que apuntan a una dirección de correo electrónico 
+
+
+
+		    elemento[atributo$="valor"] 	selecciona elementos cuyo valor del atributo indicado termina con la cadena de texto indicada.
+
+		    a[href$=".html"] { ... }		- Selecciona todos los enlaces que apuntan a una página HTML 
+
+
+
+		    elemento[atributo*="valor"] 	selecciona elementos cuyo valor del atributo indicado es o contiene la cadena de texto indicada.
+
+		    h1[class*="capitulo"] { ... }	- Selecciona todos los títulos h1 cuya clase sea o contenga la palabra "capitulo"
+
+		*/
+
+			article[class^="module"]{
+				margin-left:100px;
+			}
+
+		</style>
+	</head>
+	<body>	
+
+		<article class="module1">One</article>
+		<article class="module2">Two</article>
+	    <article class="module3">Three</article>
+	    <article class="module4">Four</article>
+	    <article class="diferente">Five</article>
+	    <p class="module6">Six</p>
+	    <article class="module7">Seven</article>
+	    <article class="module8">Eight</article>
+
+	</body>
+
+	
+
+
+</html>

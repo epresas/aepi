@@ -1,0 +1,43 @@
+<html>
+    <head>
+    <meta charset="utf-8">
+        <title>Geolocalizacion</title>
+        <script>        
+
+        function procesarPosicion(pos) {
+
+            let coordenadas = pos.coords;
+
+            document.write("La latitud del dispositivo es: " + coordenadas.latitude + " grados.<br><br>");
+            document.write("La longitud del dispositivo es: " + coordenadas.longitude + " grados.<br><br>");
+            document.write("La altitud del dispositivo es: " + coordenadas.altitude + " metros respecto al mar.<br><br>");
+            document.write("La exactutud de longitud y latitud es de +- " + coordenadas.accuracy + " metros.<br><br>");
+            document.write("El dispositivo está viajando hacia la dirección " + coordenadas.heading + " grados.<br><br>");
+            document.write("El dispositivo está viajando a " + coordenadas.speed + " metros por segundo.<br><br>");
+
+        }
+
+        function procesarError(err) {
+
+            document.write('¡OPS! Ha habido un error: (' + err.code + '): ' + err.message);
+        }
+
+        function solicitarPermisos(){
+
+            let opcionesGeolocalizacion = {
+              enableHighAccuracy: true, // Retorna una posición más precisa (más lento y mayor uso de energía)
+              timeout: 5000, // Máximo período de tiempo que se le permite tomar al dispositivo para retornar a una posición.
+              maximumAge: 0 // Edad máxima de una posible posición "cacheada" que es aceptable retornar. Si es 0, el dispositivo no puede usar posiciones "cacheadas".
+            };
+        
+        	navigator.geolocation.getCurrentPosition(procesarPosicion, procesarError, opcionesGeolocalizacion);
+        }
+
+        </script>
+    </head>
+    <body>
+
+    	<button onclick="solicitarPermisos()">Activar y procesar localización</button>
+
+    </body>
+</html> 

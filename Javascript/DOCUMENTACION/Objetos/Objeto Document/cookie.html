@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Objeto Document</title>
+		<meta charset="UTF8"/>
+
+		<script>
+
+			function verCookies() {
+			    var lasCookies = document.cookie;
+			    document.getElementById("mensaje").innerHTML = "Las cookies de este documento son:<br> " + lasCookies;
+			}
+
+		</script>
+
+	</head>
+	<body>
+		<p id="mensaje"></p>
+		<button onclick="verCookies()">Ver cookies relacionadas con este documento</button>
+	</body>
+</html>

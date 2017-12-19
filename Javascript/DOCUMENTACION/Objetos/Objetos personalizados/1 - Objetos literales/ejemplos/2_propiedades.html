@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+  <meta charset="UTF-8">
+  <title>Objetos literales en Javascript</title>
+</head>
+
+<body>
+	<script>
+
+		var factura = {
+		    numero: 201,
+		    cliente: 'Transportes Chemita',
+		    divisa: 'eur',
+		    subtotal: 350.25,
+		    IVA: 75.55
+		}
+
+		var numeroFactura = factura.numero;
+		var monedaFactura = factura.divisa;
+		var subtotalFactura = factura.subtotal;
+		console.log('La factura ' + numeroFactura + ' es de ' + subtotalFactura + ' ' + monedaFactura);
+
+		factura.numero = 202;   // Sustituimos el antiguo valor de su propiedad "numero"
+		numeroFactura = factura.numero;
+		console.log('La factura ' + numeroFactura + ' es de ' + subtotalFactura + ' ' + monedaFactura);
+
+	</script>
+</body>
+
+</html>

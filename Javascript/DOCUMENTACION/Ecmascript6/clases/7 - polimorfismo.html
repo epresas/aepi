@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+  <meta charset="UTF-8">
+  <title>Objetos personalizados en Javascript</title>
+</head>
+
+<body>
+<script>
+
+      // "polimorfismo" en POO se refiere a la posibilidad de enviar mensajes sintácticamente iguales a objetos de tipos distintos. El único requisito que deben cumplir los objetos que se utilizan de manera polimórfica es saber responder al mensaje que se les envía, sobreescribiendo comportamientos compartidos por otros más específicos.
+
+
+      class Factura {
+
+        constructor (numero, total) {
+        this._numero = numero;
+        this._total = Number(total);
+      }
+
+      muestraDatos(){
+        return "Número de factura " + this._numero + ", total (" + this._total + "€)";
+        }
+
+      }
+
+
+
+      class Vencimiento extends Factura{
+
+        constructor (numero, total, fecha) {
+          super(numero, total);   // el método super() llama a los valores de su clase padre
+          this._fecha = fecha;
+        }
+
+        muestraDatos(){
+          let diaPago = this._fecha.getDate();
+          return "El vencimiento " + this._numero + ", se paga el día " + diaPago + " (" + this._total + "€)";
+        }
+
+      }
+
+
+
+      var miFactura = new Factura('FR16-2541', 200);
+      var miVencimiento = new Vencimiento('VE16-98', 100, new Date(2018,0,25));
+
+      document.write(miFactura.muestraDatos() + "<br><br>");
+      document.write(miVencimiento.muestraDatos() + "<br><br>");
+
+</script>
+</body>
+
+</html>

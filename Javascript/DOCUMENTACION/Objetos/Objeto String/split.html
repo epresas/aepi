@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Métodos strings</title>
+		<meta charset="UTF8"/>	
+	</head>
+	<body>
+		<script>
+
+			document.write("El método split() crea arrays a partir de strings, siguiendo un patrón para dividir cada posición resultante:<br><br>");
+
+			let cadenaVerso = "Oh brave new world that has such people in it.";
+			let cadenaMeses = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec";
+
+			let espacio = " ";
+			let coma = ",";
+			let letra = "a";
+
+			dividirCadena(cadenaVerso, espacio);
+			dividirCadena(cadenaVerso, letra);
+			dividirCadena(cadenaMeses, coma);
+
+
+
+
+
+
+
+			function dividirCadena(cadenaADividir,separador) {
+			   let arregloDeCadenas = cadenaADividir.split(separador);
+			   document.write('<p>La cadena original es: "' + cadenaADividir + '"');
+			   document.write('<br>El separador es: "' + separador + '"');
+			   document.write("<br>El array tiene " + arregloDeCadenas.length + " elementos: ");
+
+			   for (let i=0; i < arregloDeCadenas.length; i++) {
+			      document.write(arregloDeCadenas[i] + " / ");
+			   }
+			}
+
+			
+
+			
+
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,36 @@
+        body {
+            background: #F2F3EB;
+            font-family: 'PT Sans', Arial, sans-serif;
+        }
+        h1 {
+            color: #474544;
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: 7px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        h4 {
+            margin: 36px 0 10px;
+            letter-spacing: 1px;
+            font-weight: lighter;
+        }
+        h4:first-of-type {
+            margin: 0 0 10px;
+        }
+        .underline {
+            border-bottom: solid 2px #474544;
+            margin: 0 auto 10px;
+            width: 80px;
+        }
+        form {
+            overflow: hidden;
+            width: 400px;
+            margin: 10px auto;
+            border: 1px solid black;
+            padding: 40px
+        }
+        input{
+            width: 80%;
+            margin: 10px 10%;
+        }

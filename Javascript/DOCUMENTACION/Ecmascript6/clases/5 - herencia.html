@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+  <meta charset="UTF-8">
+  <title>Objetos personalizados en Javascript</title>
+</head>
+
+<body>
+<script>
+
+	class Factura {
+
+		constructor(subtotal, impuesto) {
+		    this._subtotal = Number(subtotal);
+		    this._impuesto = Number(impuesto);
+		}
+
+		calcularTotalFactura() {
+		  	return this._subtotal + this._impuesto;
+		}
+	}
+
+
+	class Vencimiento extends Factura {		// clase hija
+
+		mostrarDetallesVencimiento(arg) {
+
+			let total = (this._subtotal + this._impuesto) / arg;
+			return "Una factura de " + this.calcularTotalFactura() + "€ sale a " + total + "€ en cada uno de los " + arg + " pagos";
+		}
+	}	
+
+
+	let facturaConVencimiento = new Vencimiento('1000', '210');
+	let calculo = facturaConVencimiento.mostrarDetallesVencimiento(3);
+	
+	document.write(calculo);
+
+	let facturaSinVencimiento = new Factura('1000', '200');
+	let calculo2 = facturaSinVencimiento.mostrarDetallesVencimiento(3);	// error, las instancias de Factura carecen de vencimientos
+
+</script>
+</body>
+
+</html>

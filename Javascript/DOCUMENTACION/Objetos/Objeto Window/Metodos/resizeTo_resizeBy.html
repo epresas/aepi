@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Objeto Window</title>
+		<meta charset="UTF8"/>
+
+		<script>
+
+			let miventana;
+
+			function abrirVentana() {
+			    miventana = open("", "Mi nueva ventana", "width=200, height=100");
+			    miventana.document.write("<p>¡Puedo escribir en la nueva ventana!</p>");
+			}
+
+			function nuevasMedidas() {
+			    miventana.resizeBy(100, 150);
+			    miventana.focus();
+
+			    //miventana.resizeTo(250, 250);
+			    //miventana.focus();
+			}
+
+		</script>
+
+	</head>
+	<body>
+		<button onClick="abrirVentana()">Abrir nueva ventana</button>
+		<button onClick="nuevasMedidas()">Cambiar medidas nueva ventana</button>
+	</body>
+</html>

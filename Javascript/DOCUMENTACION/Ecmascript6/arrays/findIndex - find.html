@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+       <head>
+              <meta charset="UTF-8">
+              <title>ECMASCRIPT6</title>
+              <script>
+
+                     // find() recibe como argumento una función e itera sobre un Array, hayando el primer elemento que la haga retornar true.
+                     let textos = ["Corto", "Cortito", "Más largo", "El más largo de todos", "Corto"];
+
+                     function buscaLargo(arg) {
+                            if (arg.length > 10) {
+                                   return arg;
+                            }
+                     }
+
+                     let valorLargo = textos.find( buscaLargo );              
+                     let indiceLargo = textos.findIndex( buscaLargo );
+                     document.write("El primer valor largo es este: " + valorLargo + " (su índice es el " + indiceLargo + ")");
+
+
+              </script>
+       </head>
+       <body>
+       </body>
+</html>

@@ -1,0 +1,7 @@
+Este es un archivo de ejemplo.
+
+La API de procesamiento de archivos permite su lectura.
+
+Todos los caracteres son registrados, incluso los saltos de línea.
+
+Tampoco hay problema con los caracteres especiales: ñ - € - ó - & - %

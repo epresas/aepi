@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Fechas</title>
+		<meta charset="UTF8"/>		
+	</head>
+	<body>
+ 
+	<script>
+
+
+		var objFecha = new Date();
+
+		document.write("Vamos a alterar la fecha actual, aunque podríamos hacerlo con cualquier objeto de fecha. Si la mostramos como objeto, la fecha de tu PC es la siguiente: "+ objFecha +".<br><br>");	
+
+
+		var anho = objFecha.getFullYear();
+		var anhoPasado = anho - 18;
+
+		document.write("Podemos visualizar el año actual ("+ anho +"), ó calcular qué año era hace 18 años ("+ anhoPasado +").<br><br>");
+
+
+
+		var pasado1 = objFecha.setFullYear(anhoPasado);	// pasado1 no es un objeto fecha, recoge sólo los milisegundos
+		var objPasado1 = new Date(pasado1); // objPasado1 sí es un objeto de fecha
+
+		document.write("Para crear un objeto de fecha con ese año, podemos crear OTRO OBJETO DE FECHA DIFERENTE y pasarle los milisegundos como argumento, que es una de las formas de construir un objeto de fecha: "+ objPasado1 +".<br><br>");
+
+
+
+
+		var objFecha2 = new Date();
+		var objPasado2 = new Date(objFecha2.setFullYear( objFecha2.getFullYear() - 18) );
+
+		document.write("Hay muchas formas de combinar esta arquitectura de creación de objetos de fecha modificados: " + objPasado2);
+		
+
+	</script>	
+
+	</body>
+</html>

@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+       <head>
+              <meta charset="UTF-8">
+              <title>COOKIES de usuario</title>
+              <script>
+
+                     //crear cookie expiracion
+                     let comienzo = document.cookie.indexOf("cookieTiempoVariable");
+                     
+                     if( comienzo == -1 ) {
+
+                            alert("No hay cookie llamada 'cookieTiempoVariable'");
+                            let expira = prompt("¿Cuántos segundos quieres que se mantenga la cookie?");
+
+                            let fechaActual = new Date();
+                            fechaActual.setSeconds( fechaActual.getSeconds() + parseInt(expira));
+
+                            document.cookie = "cookieTiempoVariable=valor;expires="+fechaActual.toUTCString();
+                     }
+                     else {
+                            alert("Aún hay una cookie 'cookieTiempoVariable' en tu equipo así que, ¡Bienvenid@ de nuevo!");
+                     }
+
+
+              </script>
+       </head>
+       <body>
+       </body>
+</html>

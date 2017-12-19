@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>COOKIES de usuario</title>
+    <script>
+
+    comprobarCookie("alumnonuevo");
+
+    function comprobarCookie(nombrecookie) {  // si no existe una cookie por el nombre, la crea
+
+      let valorCookie = buscarCookie(nombrecookie);   
+
+      if (valorCookie) {
+
+        alert("¡Bienvenido@ de nuevo!, " + valorCookie);
+
+      } else {    
+
+        let nombreUsuario = prompt("Introduce tu nombre para el valor de la cookie");
+
+        crearCookie(nombrecookie, nombreUsuario, 365);
+      }
+    }
+
+
+
+
+
+    function crearCookie(nombreCookie, valorCookie, diasExpiracion) {     // crea una cookie con los tres valores necesarios
+
+      let objFecha = new Date();
+
+      objFecha.setTime(objFecha.getTime() + (diasExpiracion*24*60*60*1000));
+
+      let expiracion = "expires=" + objFecha.toUTCString();  
+
+      document.cookie = nombreCookie + "=" + valorCookie + "; " + expiracion;
+    }
+
+
+
+    function buscarCookie(nombreCookie) {
+
+      let inicioCookie = nombreCookie + "=";
+
+      let arrayCookies = document.cookie.split(';');   
+
+      for(let i = 0; i < arrayCookies.length; i++) {
+
+        let estaCookie = arrayCookies[i];
+
+        while (estaCookie.charAt(0) == ' ') {       // elimina el posible espacio previo de la cookie (sanear)
+          estaCookie = estaCookie.substring(1);
+        } 
+        if (estaCookie.indexOf(inicioCookie) == 0) {                              // detecta si esta es la cookie buscada 
+          return estaCookie.substring(inicioCookie.length, estaCookie.length);    // y retorna sólo su valor
+        }
+      }
+    }                    
+
+  </script>
+  </head>
+  <body>
+  </body>
+</html>

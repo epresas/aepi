@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+  <meta charset="UTF-8">
+  <title>Objetos personalizados en Javascript</title>
+</head>
+
+<body>
+<script>
+
+
+      var _subtotal = Symbol('subtotal');   // elemento único de tipo Symbol, con valor inaccesible desde el exterior
+      var _impuesto = Symbol('impuesto');
+
+      class Factura {
+
+        constructor(subtotal, impuesto) {
+          this[_subtotal] = Number(subtotal);
+          this[_impuesto] = Number(impuesto);        
+        }
+
+        total() {
+          return this[_subtotal] + this[_impuesto];
+        }
+      }
+      
+
+
+    let miFactura = new Factura(1000, 210);
+    let totalFactura = miFactura.total();
+    let subtotalFactura = totalFactura._subtotal;
+    let impuestoFactura = totalFactura._impuesto;
+
+    document.write("El total de la factura asciende a " + totalFactura + " eruos, pero las las bases de cálculo (propiedades) son ahora privadas e innacesibles: " + subtotalFactura + ", " + impuestoFactura);
+
+    console.log(totalFactura[_subtotal]);        // ReferenceError: _subtotal is not defined
+
+
+
+
+
+</script>
+</body>
+
+</html>

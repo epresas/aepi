@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	</head>
+
+	<body>
+
+
+		<div id="padre">
+			<p>Yo soy un hijo</p>
+			<p>Yo soy un hijo</p>
+			<p>Yo soy un hijo</p>
+			<p>Yo soy un hijo</p>
+			<p>Yo soy un hijo</p>
+			<p>Yo soy un hijo</p>
+			<p>Yo soy un hijo</p>
+		</div>
+
+		<button>Seleccionar de forma relacional</button>
+
+		<script>
+			document.getElementsByTagName('button')[0].onclick = function() {
+
+				let padre = document.getElementById('padre');
+
+				let hijosTotales = padre.children.length;				
+
+				padre.firstElementChild.textContent = "¡Soy el primero de " + hijosTotales + " hijos totales!";
+
+				padre.lastElementChild.textContent = "¡Soy el ultimo!";
+
+				padre.children[3].textContent = "¡Soy el cuarto!";
+
+			}
+			
+		</script>
+
+	</body>
+</html>

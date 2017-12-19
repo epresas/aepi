@@ -1,0 +1,37 @@
+<html>
+    <head>
+    <meta charset="utf-8">
+        <title>File API</title>
+        <style>div{width:600px;font-size:2em;padding:30px 0;text-align:center;font-size:sans-serif;border:1px dashed;}</style>
+    </head>
+    <body>
+
+        <div id="archivos">¡Arrastra aquí varios archivos!</div>
+        <p id="lista"></p>
+
+        <script>
+
+        let contenedor = document.getElementById("archivos");
+
+        contenedor.ondragover = function(evento) {
+            contenedor.innerHTML = "¡Suelta ahora!";
+            evento.preventDefault();
+        };
+
+        contenedor.ondrop = function(evento) {
+            contenedor.innerHTML = "Archivos procesados";            
+            evento.preventDefault();
+
+            let objArchivos = evento.dataTransfer.files;
+            let resultado = "<ul>";
+
+            for (let i = 0; i < objArchivos.length; i++) {
+                resultado += `<li>Archivo <b><em>${objArchivos[i].name}</em></b> - ${objArchivos[i].type} (peso ${objArchivos[i].size}b)</li>`;
+            }
+
+            document.getElementById('lista').innerHTML = resultado + "</ul>";
+        };
+
+        </script>
+    </body>
+</html> 

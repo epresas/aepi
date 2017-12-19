@@ -1,0 +1,15 @@
+<dl>
+
+	<dt>CSS</dt>
+	<dd>A set of standards for styling documents presented on the 
+	World Wide Web.</dd>
+
+	<dt>PHP</dt>
+	<dd>A server-side scripting language suited to dynamic HTML document 
+	generation for the web.</dd>
+
+	<dt>JavaScript</dt>
+	<dd>A client-side scripting language used for manipulating HTML documents 
+	within a browser.</dd>
+
+</dl>

@@ -11,6 +11,8 @@
 
 		<!-- Estilos -->
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/iconfonts/flaticon.css">
+
 
 		<!-- Tipografias -->
 		<link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed|Dosis:400,600|Open+Sans" rel="stylesheet">
@@ -34,22 +36,28 @@
 	</head>
 
 	<body>
-		<nav>
-			<ul>
-				<li>
-					<a href="#">Inicio</a>
-				</li>
-				<li>
-					<a href="#">Nosotros</a>
-				</li>
-				<li>
-					<a href="#">Productos</a>
-				</li>
-				<li>
-					<a href="#">Contacto</a>
-				</li>
-			</ul>
-		</nav>
+
+		<div class="menu">
+			<a href="index.html">
+				<img src="img/logotipo-yummy-bakery.png" alt="Logotipo de la empresa">
+			</a>
+			<nav>
+				<ul>
+					<li>
+						<a href="#">Inicio</a>
+					</li>
+					<li>
+						<a href="#">Nosotros</a>
+					</li>
+					<li>
+						<a href="#">Productos</a>
+					</li>
+					<li>
+						<a href="#">Contacto</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
 		<main>
 			<header class="hero">
 
@@ -76,21 +84,21 @@
 					Ea aperiri sententiae duo. Usu nullam dolorum quaestio ei, sit vidit facilisis ea. Per ne impedit iracundia neglegentur.
 					Consetetur neglegentur eum ut, vis animal legimus inimicus id.
 				</p>
-				
+				<a href="#" class="conocenos">Conócenos</a>
 			</section>
 			
 			
-			<section>
+			<section class="productos">
 				<header>
 
-					<h2>Productos</h2>
+					<h2> Productos</h2>
 					<p class="subtitulo">Te ofrecemos una completa gama de productos de panadería, con la máxima calidad y para toda la familia.</p>
 
 				</header>
 				
 				<article>
 					<header>
-						<h3>Productos ecológicos</h3>				
+						<h3>Productos ecológicos<i class="flaticon-food"></i></h3>				
 						<p>Disfruta en familia de los productos más sanos. </p>
 					</header>
 					
@@ -104,7 +112,7 @@
 				
 				<article>
 					<header>
-						<h3>Productos estándar</h3>				
+						<h3>Productos estándar<i class="flaticon-food"></i></h3>				
 						<p>¿Un pan para cada día? Lo tenemos.</p>
 					</header>
 					
@@ -118,7 +126,7 @@
 				
 				<article>
 					<header>
-						<h3>Productos de la tierra</h3>				
+						<h3>Productos de la tierra<i class="flaticon-food"></i></h3>				
 						<p>Del campo a tu mesa.</p>
 					</header>
 					
@@ -130,9 +138,11 @@
 					<a href="#">Conoce más</a>
 				</article>
 
+				<div class="clearfix"></div>
+
 			</section>
 			
-			<section>
+			<section class="team">
 				<header>
 
 					<h2>Nuestros expertos panaderos</h2>			
@@ -142,29 +152,30 @@
 				
 				<ul>
 					<li>
-						<figure>
-							<img src="img/panaderia-yummy-miembro-equipo.png" alt="Foto de Raúl">
+						<figure class="profile">
+							<img  src="img/panaderia-yummy-miembro-equipo.png" alt="Foto de Raúl">
 							<figcaption>
 								<p>Raúl el del horno</p>
 							</figcaption>
 						</figure>
 					</li>
 					<li>
-						<figure>
-							<img src="img/panaderia-yummy-miembro-equipo2.png" alt="Foto de María">
+						<figure class="profile">
+							<img  src="img/panaderia-yummy-miembro-equipo2.png" alt="Foto de María">
 							<figcaption>
 								<p>María, nuestra repostera</p>
 							</figcaption>
 						</figure>
 					</li>
 					<li>
-						<figure>
-							<img src="img/panaderia-yummy-miembro-equipo3.png" alt="Foto de Iván">
+						<figure class="profile">
+							<img  src="img/panaderia-yummy-miembro-equipo3.png" alt="Foto de Iván">
 							<figcaption>
 								<p>Iván, el panadero</p>
 							</figcaption>
 						</figure>
 					</li>
+					<div class="clearfix"></div>
 				</ul>
 			</section>
 			

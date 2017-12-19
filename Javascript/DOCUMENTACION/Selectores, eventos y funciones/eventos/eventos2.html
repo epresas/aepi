@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Eventos</title>
+		<meta charset="UTF8"/>	
+		<style>div {border:1px solid black; padding: 100px 50px; display:inline-block; margin:100px;}</style>			
+	</head>
+
+	<body>
+
+	    <div onclick="muestraMensaje()">
+    		¡Hazme click!
+    	</div>
+
+    	<div onmouseover="agranda(this)">
+		    ¡Y pasa también por aquí!
+		</div>
+
+
+
+    	<script>
+
+	    	function muestraMensaje(){
+	    		alert("Vengo desde una función del script! YAY!");
+	    	}
+
+
+	    	function agranda(elemento) {	    		
+			    elemento.style.fontSize='100px';
+			}
+
+    	</script>    
+
+
+	</body>
+</html>

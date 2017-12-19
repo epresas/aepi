@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	</head>
+
+	<body>
+		<p>¿Qué estilos tiene este div?</p>
+		<div id="test" style="background-color: lightblue;">Test Div</div>
+		
+		<br><br>
+
+		<p>Los estilos actuales del elemento son: </p>
+		<span id="demo"></span>
+		
+		<script>
+		    let elem = document.getElementById("test");
+		    let txt = "";
+		    let cssObj = window.getComputedStyle(elem, null);
+
+		    for (let i = 0; i < cssObj.length; i++) { 
+		        cssObjProp = cssObj.item(i)
+		        txt += cssObjProp + " = " + cssObj.getPropertyValue(cssObjProp) + "<br>";
+		    }
+		    document.getElementById("demo").innerHTML = txt;
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+	
+	<head> 		
+		<meta charset="UTF-8"/>
+		<title>Pseudo selectores</title>		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+
+		<style>
+
+			.breadcrumbs {
+				margin: 200px;
+				text-align: center;
+			}
+
+			.breadcrumbs li {
+				display: inline-block;
+				list-style: none;
+				text-align: center;
+				text-transform: uppercase;
+			}
+
+			.breadcrumbs li::after {
+			    content: " / ";
+			    margin: 0 10px;
+			    opacity: .4;
+			}
+
+			.breadcrumbs li:last-of-type::after {
+			    content: "";    /* el último no incluye separador */
+			}
+
+			.breadcrumbs li a {
+				color: initial;
+			}
+			
+
+		</style>
+
+	</head>
+
+	<body>
+
+	<nav class="breadcrumbs">
+	    <ul>
+	        <li>
+	            <a href="/">Inicio</a>
+	        </li>
+	        
+	        <li>
+	            <a href="productos">Productos</a>
+	        </li>
+
+	        <li>Bienestar</li> 
+	    </ul>
+	</nav>
+
+	</body>
+</html>

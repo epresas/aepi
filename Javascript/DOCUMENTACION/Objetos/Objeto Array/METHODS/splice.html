@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Objeto Array</title>
+		<meta charset="UTF8"/>
+
+		<script>
+
+			let fruits = ["Banana", "Orange", "Apple", "Mango", "Watermelon", "Strawberry"];
+			document.write(fruits + "<br><br>");
+
+
+
+
+
+			// El método SPLICE permite eliminar la cantidad de elementos deseados de un Array, a partir de la posición deseada:
+
+			fruits.splice(2, 1); 	// El primer parámetro define desde qué posición se comienza a eliminar, y el segundo define cuántos elementos se eliminarán
+			document.write(fruits + "<br><br>");
+
+
+
+
+
+			// Además, el método SPLICE permite añadir los elementos deseados a un Array, a partir de la posición deseada:
+
+			fruits.splice(3, 0, "Lemon", "Kiwi"); 	// Dejando el segundo parámetro a cero, y pasando tantos parámetros como deseemos después, los añadirá como nuevos elementos pasados al array a partir de la posición indicada en el primer parámetro.
+			document.write(fruits + "<br><br>");
+
+
+
+
+		</script>
+
+	</head>
+	<body>
+	</body>
+</html>

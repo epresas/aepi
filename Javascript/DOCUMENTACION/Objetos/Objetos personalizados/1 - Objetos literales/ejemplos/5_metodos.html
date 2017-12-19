@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+  <meta charset="UTF-8">
+  <title>Objetos literales en Javascript</title>
+</head>
+
+<body>
+	<script>
+
+		var factura = {
+		    numero: 201,
+		    cliente: 'Transportes Chemita',
+		    divisa: 'eur',
+		    subtotal: 350.25,
+		    IVA: 75.55,
+		    total: calculaTotal
+		}
+
+		function calculaTotal (incremento = 0) {
+		    return this.subtotal + this.IVA - incremento;
+		}
+
+		console.log( factura.total(10) );
+
+	</script>
+</body>
+
+</html>

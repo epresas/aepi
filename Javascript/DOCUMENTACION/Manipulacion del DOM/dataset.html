@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	</head>
+
+	<body>
+
+
+		<p data-sufijo="malo" data-color="green">Yo soy un párrafo</p>
+		<p data-sufijo="bueno" data-color="blue">Yo soy un párrafo</p>
+		<p data-sufijo="pichí pichá" data-color="red">Yo soy un párrafo</p>
+
+
+		<button>Acceder a dataset</button>
+
+		<script>
+			document.getElementsByTagName('button')[0].onclick = function() {
+
+				let parrafos = document.getElementsByTagName('p');
+
+				for (let i = 0; i < parrafos.length; i++) {
+
+					let valorTexto = parrafos[i].dataset.sufijo;
+					let valorColor = parrafos[i].dataset.color;
+					
+					parrafos[i].textContent += " " + valorTexto;
+					parrafos[i].style.color = valorColor;
+				}
+
+			}
+			
+		</script>
+
+	</body>
+</html>

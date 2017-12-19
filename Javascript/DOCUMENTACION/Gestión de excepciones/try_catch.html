@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Gestión de excepciones</title>
+		<meta charset="UTF8"/>	
+	</head>
+
+	<body>
+
+		<button>MUESTRA MENDAJE</button>
+
+		<script type="text/javascript">
+			
+
+			document.getElementsByTagName('button')[0].onclick = function(){
+
+				try {
+					muestraMensaje("Hola");
+				}
+
+				catch(e) {
+				    document.write("¡Ha habido una excepción!<br><br>");
+				    document.write("Tipo de excepción: " + e.name + "<br>");
+				    document.write("Mensaje de la excepción: " + e.message);	
+				}
+			}	
+
+
+			function muestramensaje(arg) {
+				alert(arg);
+			}
+
+		</script>
+
+	</body>
+</html>

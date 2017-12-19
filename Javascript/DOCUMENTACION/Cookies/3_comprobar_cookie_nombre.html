@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+       <head>
+              <meta charset="UTF-8">
+              <title>COOKIES de usuario</title>
+              <script>
+
+
+                     //comprobar cookie por nombre
+                     let comienzo = document.cookie.indexOf("cookieparaformacion");
+
+                     if( comienzo == -1 ) {
+                            alert("No hay cookie 'cookieparaformacion', procedemos ahora a crearla en tu equipo.");
+                            document.cookie = "cookieparaformacion=valor;expires=Sat,31-Dec-2099 00:00:01 GMT";
+                     }
+                     
+                     else {
+                            alert("Ya hay una cookie 'cookieparaformacion' en tu equipo así que, ¡Bienvenid@ de nuevo!");
+                     }
+
+              </script>
+       </head>
+       <body>
+       </body>
+</html>

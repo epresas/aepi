@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+       <head>
+              <meta charset="UTF-8">
+              <title>ECMASCRIPT6</title>
+              <script>
+
+              let unTexto = "Recórreme";
+              let iteracion = unTexto[Symbol.iterator](); 
+
+              document.write("[Symbol.iterator] trabaja como un índice que habilita fácilmente la iteración para un objeto iterable.<br><br>");    
+
+
+
+              document.write("Adapta el tipo del objeto (string, array...) a su forma iterativa: " + iteracion + " .<br><br>");
+               
+
+
+              let siguiente = iteracion.next(); 
+              let valor = siguiente.value;
+              let conclusion = siguiente.done;
+              document.write("Retornando en cada paso un objeto con su valor, y si ha concluido: " + valor + ", " + conclusion);
+
+              console.log( iteracion.next() );                       
+              console.log( iteracion.next() );                   
+              console.log( iteracion.next() );                   
+              console.log( iteracion.next() );                   
+              console.log( iteracion.next() );                   
+              console.log( iteracion.next() );                   
+              console.log( iteracion.next() );                   
+              console.log( iteracion.next() );                   
+              console.log( iteracion.next() );    
+
+
+              var numeros = [1, 2, 3];
+              var iteradorNumeros = numeros[Symbol.iterator]();
+              console.log( iteradorNumeros.next() );
+              console.log( iteradorNumeros.next() );
+              console.log( iteradorNumeros.next() );
+              console.log( iteradorNumeros.next() );
+
+              </script>
+       </head>
+       <body>
+       </body>
+</html>

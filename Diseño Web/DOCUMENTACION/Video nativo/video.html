@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+	
+	<head> 		
+		<meta charset="UTF-8"/>
+		<title>Vídeo nativo</title>		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+
+		<style>
+
+			#video {
+				width: 600px;
+				margin-left: 50%;
+				margin-top: 200px;
+				transform: translate(-300px);
+			}		
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<video id="video" poster="src/bg-video.jpg" controls autoplay muted>
+			<source type="video/webm" src="src/video.webm"></source>
+			<source type="video/ogg" src="src/video.ogv"></source>
+			<source type="video/mp4" src="src/video.mp4"></source>
+			<p>¡Ops! Tu navegador no soporta vídeo nativo HTML5</p>
+		</video>
+
+	</body>
+</html>

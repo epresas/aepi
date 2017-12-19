@@ -1,0 +1,45 @@
+<article>
+
+  <p>
+    La película de Disney <em>La sirenita</em> se estrenó en 1989.
+  </p>
+
+  <aside>
+    La recaudación durante su estreno se sitúa en 87 millones de euros.
+  </aside>
+
+  <p>
+    El largometraje relata las aventuras de Ariel y sus amigos...
+  </p>
+
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<article>
+
+        <header>
+                <h1>Todo sobre la proteína<h1>
+                <p>por Lola Rodríguez</p> 
+        </header>
+
+        <h2>La proteína sintética</h2>
+        <p>La proteína sintética es comunmente utilizada para ganar musculatura...</p>
+        <p>Su obtención se realiza mediante una mezcla de...</p>
+
+        <aside>
+                Todos los tipos de proteína son bajos en calorías.
+        </aside>
+
+</article>

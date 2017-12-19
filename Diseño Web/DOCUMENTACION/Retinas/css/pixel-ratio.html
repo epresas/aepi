@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+	
+	<head> 		
+		<meta charset="UTF-8"/>
+		<title>RETINA CSS</title>
+
+		<style type="text/css">
+
+			body {
+				position: absolute;
+				width: 100%;
+				top: 0;
+				left: 0;
+				background: url('1x.jpg') no-repeat center center;
+			}
+			
+			@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+				
+				body {
+					background: url('2x.jpg') no-repeat center / cover;
+				}
+			}
+
+
+		</style>
+		
+	</head>
+	<body>	
+
+
+	</body>
+</html>

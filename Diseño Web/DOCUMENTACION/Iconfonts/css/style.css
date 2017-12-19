@@ -1,0 +1,37 @@
+.flaticon-sign-in:before  { 
+  font-size: 5em; 
+}
+
+.flaticon-medal:before { 
+  font-size: 3em; 
+  display: block;
+  margin: 50px
+}
+
+.flaticon-question:before { 
+  color: blue;
+}
+
+.flaticon-add:before { 
+  font-size: 12em;
+  text-shadow: 2px 2px 2px grey
+}
+
+.flaticon-sync:before { 
+  font-size: 3em; 
+  display: block;
+  margin: 50px
+}
+
+.flaticon-warning-1:before { 
+  text-align: center;
+  display: block;
+  font-size: 4em;
+  color: red;
+}
+
+.flaticon-warning:before { 
+  font-size: 3em; 
+  display: block;
+  margin: 50px
+}

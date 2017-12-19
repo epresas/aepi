@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Objeto Window</title>
+		<meta charset="UTF8"/>
+
+		<script>
+
+		function comprobarPropia() {
+
+	        if (window.top != window.self)  {
+
+		        document.getElementById("mensaje").innerHTML = "Esta ventana no es la ventana padre principal. ¿Quizás soy una ventana abierta mediante el script?";
+
+		    } else { 
+
+		        document.getElementById("mensaje").innerHTML = "Esta ventana sí es la ventana padre principal.";
+		    } 
+		}
+
+		</script>
+
+	</head>
+	<body>
+		<p>Al ejecutar la función, si la ventana padre es desde la que se ejecuta el script, aparece un mensaje. En caso contrario (es decir, si hay alguna ventana padre ó creadora de un nivel superior a la ventana desde la que se ejecuta el script), sale otro.</p>
+		<button onClick="comprobarPropia()">Comprobar ventana actual</button>
+		<p id="mensaje"></p>
+	</body>
+</html>

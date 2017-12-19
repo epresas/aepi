@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Métodos strings</title>
+		<meta charset="UTF8"/>	
+	</head>
+	<body>
+		<script>
+
+			let mensaje = "Este es un string que vamos a cortar";
+			let mensaje2 = mensaje.slice(3);
+			let mensaje3 = mensaje.slice(5, -2);
+			
+			document.write("String previo a slice(): " + mensaje + "<br><br>");
+			document.write("String tras slice(3), sin sus primeros 3 caracteres: " + mensaje2 + "<br><br>");
+			document.write("String tras otro slice(5,-2), con el segundo parámetro negativo (sin los primeros cinco caracteres ni los últimos dos): " + mensaje3 + "<br><br>");
+
+
+		</script>
+		
+	</body>
+</html>

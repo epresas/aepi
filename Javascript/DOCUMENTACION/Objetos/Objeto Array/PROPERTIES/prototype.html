@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Objeto Array</title>
+		<meta charset="UTF8"/>
+
+		<script>
+
+			Array.prototype.descripcion = "Esta es una descripción que podremos usar cuando queramos, como una nueva propiedad.";
+
+			let fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+			documen.write(fruits" + <br><br>");
+			document.write(fruits.descripcion);
+
+			/*
+			
+				Mediante Array.prototype podremos crear nuevas propiedades y métodos que utilizar en una aplicación. 
+
+				En este ejemplo, hemos extendido el prototipo de un Array, creando la propiedad "descripcion". Al gual que podemos utilizar la propiedad length para que devuelva la longitud del Array, ahora podemos utilizar la nueva propiedad "descripcion" para que devuelva el string que le hemos asignado a la misma en la línea 9.
+
+				Estas extensiones de prototipo podrán tener el nombre que deseemos (naturalemnte no puede ser el nombre de una propiedad o método ya existente, como "unshift").
+
+
+			*/
+
+		</script>
+
+	</head>
+	<body>
+	</body>
+</html>

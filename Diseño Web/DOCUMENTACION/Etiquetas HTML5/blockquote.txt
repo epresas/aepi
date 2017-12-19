@@ -1,0 +1,4 @@
+<blockquote cite="http://developer.mozilla.org">
+  <p>HTML5 tiene un impacto grande en la carga semántica del documento</p>
+  <p>La estructura documental cambia radicalmente frente a su cuarta revisión</p>
+</blockquote>

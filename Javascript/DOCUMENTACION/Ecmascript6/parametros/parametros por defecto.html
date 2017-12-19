@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+       <head>
+              <meta charset="UTF-8">
+              <title>ECMASCRIPT6</title>
+              <script>
+
+              function listarMenu(arg1, arg2 = 'patatas', arg3 = 'verduras') { 
+
+                     return arg1 + " con " + arg2 + " y " + arg3 + "<br>"; 
+              } 
+
+
+
+              let menuLunes = listarMenu("Filete", "ensalada");
+              document.write("Lúnes: " + menuLunes);
+
+
+
+              let menuMartes = listarMenu("Merluza", undefined, "ensalada");
+              document.write("Martes: " + menuMartes);
+
+
+
+              let menuMiercoles = listarMenu("Macarrones", "tomate");
+              document.write("Miércoles: " + menuMiercoles)
+
+
+
+              </script>
+       </head>
+       <body>
+       </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Mouse event</title>            
+	</head>
+	<body>
+		<p>Haz click dentro del recuadro, con cualquier botón del ratón:</p>
+
+		<section class="detector" style="border:1px solid; width:50%; height:100px;"></section>
+		<p class="resultado"></p>
+
+		<script>
+
+			document.getElementsByClassName('detector')[0].onclick = procesaEvento;
+
+			function procesaEvento(evento) {
+
+			    let ejeX = evento.screenX;
+			    let ejeY = evento.screenY;
+			    let boton = evento.button;
+			    let pulsado = "";
+
+			    switch (boton) {
+		            case 0:
+		                pulsado = 'izquierdo';
+		            break;
+
+		            case 1:
+		                pulsado = 'central';
+		            break;
+
+		            case 2:
+		                pulsado = 'derecho';
+		            break;
+
+		            default:
+		                pulsado = 'desconcido';
+		            break;
+		        }
+
+		        let string = "Has hecho click a " + ejeX + " píxeles del eje X de la pantalla y a " + ejeY + " del eje Y de la pantalla, y con el botón " + pulsado + ", que corresponde al código " + boton + " de los botones de tu ratón<br><br>";
+
+
+
+			    let objetivo = evento.target;
+		        let estilo = objetivo.style.width;
+
+		        string += "¡Ah! Y gracias a la propiedad 'target' del evento, sabemos que donde hayas hecho click tiene este ancho: " + estilo;
+
+		        document.getElementsByClassName('resultado')[0].innerHTML = string;
+			}
+
+
+
+		</script>
+
+       </body>
+</html>

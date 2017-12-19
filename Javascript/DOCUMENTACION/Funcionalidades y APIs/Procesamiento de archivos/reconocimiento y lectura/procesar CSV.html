@@ -1,0 +1,50 @@
+<html>
+    <head>
+    <meta charset="utf-8">
+        <title>File API</title>
+        <style>table,th,td{border: 1px solid;border-collapse:collapse;padding:15px;border-spacing: 5px;}tr:nth-child(even){
+    background-color: #eee;}</style>
+    </head>
+    <body>
+
+        <input type="file" id="csvFileInput" accept=".csv">
+        <p id="resultado"></p>
+
+        <script>
+
+        document.getElementById('csvFileInput').onchange = function() {
+
+            let objArchivo = document.getElementById('csvFileInput').files[0];
+            let lector = new FileReader();
+            lector.readAsText(objArchivo);
+
+            lector.onload = function(evento) {
+
+                let objCSV = evento.target.result;
+                let cadaLinea = objCSV.split(/\r\n|\n/);
+
+                let arrayLineas = [];
+
+                while (cadaLinea.length) {
+                    arrayLineas.push( cadaLinea.shift().split(',') );
+                }
+
+                let tabla = document.createElement("table");
+
+                for (let i = 0; i < arrayLineas.length; i++) {
+
+                    let fila = tabla.insertRow(-1);
+
+                    for (let j = 0; j < arrayLineas[i].length; j++) {
+
+                        let celda = fila.insertCell(-1);
+                        celda.appendChild( document.createTextNode(arrayLineas[i][j]) );
+                    }
+                }
+                document.getElementById("resultado").appendChild(tabla);
+            }
+        };
+
+        </script>
+    </body>
+</html> 

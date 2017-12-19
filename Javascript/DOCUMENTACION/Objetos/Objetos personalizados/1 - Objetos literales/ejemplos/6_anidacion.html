@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+  <meta charset="UTF-8">
+  <title>Objetos literales en Javascript</title>
+</head>
+
+<body>
+	<script>
+
+		var factura = {
+		    numero: 650,
+		    cliente: 'Transportes Madrid SL',
+		    vencimientos: {
+		      1: new Date(2017,5,20),
+		      2: new Date(2017,7,25),
+		      3: new Date(2017,9,21)
+		    }
+		}
+
+		var numeroFactura = factura.numero;
+		var primerVencimiento = factura.vencimientos[1];
+		console.log('El segundo vencimiento de la factura ' + numeroFactura + ' será el ' + primerVencimiento.getDate() );
+
+	</script>
+</body>
+
+</html>

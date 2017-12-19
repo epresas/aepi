@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+  <meta charset="UTF-8">
+  <title>Bucle for - in</title>
+
+</head>
+<body>
+
+
+
+<script>
+
+	var resultado = recorre_objeto(document, "DOCUMENT");
+
+	document.write(resultado);
+
+	function recorre_objeto(objeto, nombreObjeto) {
+
+	   var resultado = "Los métodos y propiedades del objeto " + nombreObjeto + " son:<br><br>";
+
+	   for (let i in objeto) {
+	   	
+	      resultado += nombreObjeto + "." + i + " = " + objeto[i] + "<br>";
+	   }
+	   return resultado;
+
+	}
+
+</script>
+</body>
+</html>

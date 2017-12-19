@@ -1,0 +1,38 @@
+<html>
+    <head>
+    <meta charset="utf-8">
+        <title>File API</title>
+        <style>img{width:300px;}img[src="#"]{display:none}</style>
+    </head>
+    <body>
+
+        <input type="file" id="archivo">
+        <img id="miniatura" src="#">
+
+        <script>
+
+        document.getElementById('archivo').onchange =  procesarImagen;
+
+        function procesarImagen(){
+
+            let objImagen   = document.querySelector('#archivo').files[0];
+            let tipoArchivo = objImagen.type;
+
+            if ( ! tipoArchivo.match('image.*') ) {
+
+                console.error("ERROR: ¡Cenutrio! Este archivo no es una imagen, no se previsualizará...");
+            }
+
+            let miniatura = document.querySelector('img');        
+            let lector    = new FileReader();
+
+            lector.onloadend = function() {
+                miniatura.src = lector.result;            
+            }
+
+            lector.readAsDataURL(objImagen);
+        }
+
+        </script>
+    </body>
+</html> 

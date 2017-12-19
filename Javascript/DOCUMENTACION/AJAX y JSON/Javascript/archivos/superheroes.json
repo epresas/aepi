@@ -1,0 +1,39 @@
+{
+  "nombrePandilla": "La liga de super héroes",
+  "cuidad": "Madrid",
+  "nacimiento": 2016,
+  "baseSuperSecreta": "Móstoles",
+  "miembros": [
+    {
+      "nombre": "Pegaman",
+      "edad": 29,
+      "identidadSecreta": "Ivan Pérez",
+      "superpoderes": [
+        "Adhesión vertical",
+        "Chorros viscosos",
+        "Parkour avanzado"
+      ]
+    },
+    {
+      "nombre": "Mujer voladora",
+      "edad": 39,
+      "identidadSecreta": "Sara García",
+      "superpoderes": [
+        "Vuelos altos",
+        "Súper velocidad",
+        "Fuerza sobrenatural"
+      ]
+    },
+    {
+      "nombre": "Llama justiciera",
+      "edad": 1000000,
+      "identidadSecreta": "N/A",
+      "superpoderes": [
+        "Inmortalidad",
+        "Inmunidad al calor",
+        "Rayos calientes",
+        "Teletransportación"
+      ]
+    }
+  ]
+}

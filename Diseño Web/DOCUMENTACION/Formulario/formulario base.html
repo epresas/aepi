@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FORMULARIO</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		label{
+			display: block;
+			margin: 10px
+		}
+	</style>
+</head>
+<body>
+
+
+	<form action="gestordedatos.php" method="post">
+
+		<fieldset>
+			<legend>Datos personales</legend>
+
+			<label>
+				Nombre y apellidos: 
+				<input type="text" name="nombre" required>
+			</label>
+
+			<label>
+				DNI: 
+				<input type="text" name="dni" placeholder="Intoduzca su DNI aquí...">
+			</label>
+
+			<label>
+				Teléfono: 
+				<input type="tel" name="telefono">
+			</label>
+
+			<label>
+				Código postal: 
+				<input type="number" name="cp">
+			</label>
+
+			<label>
+				Fecha de nacimiento: 
+				<input type="date" name="nacimiento">
+			</label>
+
+			<label>
+				Email: 
+				<input type="email" name="email">
+			</label>
+
+			<span>Sexo:</span>
+			<label>
+				<input type="radio" name="sexo"> N/A 
+			</label>
+			<label>
+				<input type="radio" name="sexo" checked> Mujer 
+			</label>
+			<label>
+				<input type="radio" name="sexo"> Hombre 
+			</label>
+
+		</fieldset>
+
+		<fieldset>
+			<legend>Gustos y aficiones</legend>
+
+			<label for="aficiones">Aficiones</label>
+
+			<select id="aficiones">
+				<option>Seleccionar</option>
+				<option selected>Javascript</option>
+				<option>Netflix</option>
+				<option>Papa John's pizza</option>				
+			</select>
+
+			<label>
+				<input type="checkbox" name="vegano"> Soy vegano/a 
+			</label>
+
+			<label for="comentarios">Comentarios</label>
+			<textarea id="comentarios"></textarea>
+
+			<label for="satisfaccion">Nivel de satisfacción</label>
+			<input type="range" id="satisfaccion" min="0" max="100" step="1">
+
+
+		</fieldset>
+
+		<fieldset>
+			<legend>Datos de la cuenta</legend>
+
+			<label>
+				ID Usuario: <input type="text" name="idusuario" value="5496515" disabled>
+			</label>
+
+			<label>
+				Nick: <input type="text" name="nombreusuario">
+			</label>
+
+			<label>
+				Contraseña: <input type="password" name="contrasena">
+			</label>
+
+			<label>
+				CV (opcional): <input type="file" name="curriculum">
+			</label>
+
+		</fieldset>
+
+		<input type="submit" value="Enviar información">	
+
+	</form>
+
+
+</body>
+</html>

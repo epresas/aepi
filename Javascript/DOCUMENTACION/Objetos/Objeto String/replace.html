@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Métodos strings</title>
+		<meta charset="UTF8"/>	
+	</head>
+	<body>
+		<script>
+
+			let mensaje = "Hay usuarios que buscan joder, metiendo jodidos tacos en los putos mensajes.";
+
+
+			document.write("Partimos de un mensaje no adecuado, como el que sigue: " + mensaje + "<br><br>");
+
+			document.write("El método replace() permite indicar como primer parámetro un substring literal que buscará y reemplazará por otro que deseemos, quedando así: <br><br>");	
+
+			let mensajeModerado0 = mensaje.replace("putos", "*******");
+
+			document.write(mensajeModerado0 + "<br><br><br>");	
+
+			document.write("También acepta, en vez de un string, una expresión regular. Podemos así sustituir todos los substrings que hagan match con la misma, obteniendo: <br><br>");		
+
+			let mensajeModerado1 = mensaje.replace(/joder|putos/gi, "*******");
+
+			document.write(mensajeModerado1 + "<br><br><br>");
+
+			document.write("O también, con una única expresión regular algo más completa, podemos cubrir un espectro de matches mucho más amplio, obteniendo: <br><br>");		
+
+			let mensajeModerado2 = mensaje.replace(/(jod\S+)|(put\S+)/gi, '********'); //cubre todas las palabras completas que comienzan con "jod" y "put"
+
+			document.write(mensajeModerado2 + "<br><br><br>");	
+
+
+
+
+
+		</script>
+		
+	</body>
+</html>

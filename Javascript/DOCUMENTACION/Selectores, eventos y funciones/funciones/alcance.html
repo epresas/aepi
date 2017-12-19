@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Alcance variables</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+<script type="text/javascript">
+
+
+	let alcance_publico = "PÚBLICO";	// variable global o pública
+
+	function alcance1() {
+		let alcance_privado = "PRIVADO";	// variable privada	
+		console.log("Dentro de una función tenemos acceso a las variables privadas declaradas en su interior: " + alcance_privado);
+		console.log("Y al declarar una variable global fuera de cualquier función, es accesible para todas ellas: " + alcance_publico);
+	}
+
+	alcance1();
+
+
+
+
+	function alcance2() {
+		document.write("Pero no tenemos acceso a las variables privadas declaradas en otras funciones: " + alcance_privado + "<br>");
+	}
+
+	alcance2();
+
+
+
+
+
+			
+</script>
+
+</body>
+</html>

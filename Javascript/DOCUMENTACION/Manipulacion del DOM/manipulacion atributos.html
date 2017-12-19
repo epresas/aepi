@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	</head>
+
+	<body>
+
+		<a href="http://www.google.es" title="Enlace a Google" id="valorID">Enlace</a>
+
+		<br><br>
+
+		<button>Cambiar enlace</button>
+
+		<script>	
+
+
+			document.getElementsByTagName('button')[0].onclick = function() {
+
+				let enlace = document.getElementsByTagName('a')[0];
+
+				enlace.setAttribute('href', 'http://www.yahoo.es');
+				enlace.setAttribute('title', 'Enlace a Yahoo');
+				enlace.removeAttribute('id');
+
+			}
+			
+		</script>
+
+	</body>
+</html>

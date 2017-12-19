@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+       <head>
+              <meta charset="UTF-8">
+              <title>ECMASCRIPT6</title>
+              <script>
+
+                     var miSet = new Set();
+
+                     miSet.add(1);
+                     miSet.add(5);
+                     miSet.add("Texto a lo loco");
+                     let datos = {nombre: 'Nadia', edad: 21};
+                     miSet.add(datos);
+
+                     document.write("Mi set tiene " + miSet.size + " elementos.<br>");
+                     document.write("¿Tiene mi set el valor '1'?: " + miSet.has(1) + "<br>");
+                     document.write("¿Y el valor 'Texto'?: " + miSet.has('Texto') + "<br>");
+                     document.write("¿Y el valor 'Texto a lo loco'?: " + miSet.has('Texto a lo loco') + "<br>");
+                     document.write("¿Y algo llamado 'datos'?: " + miSet.has(datos) + "<br><br>");
+
+                     miSet.delete("Texto a lo loco");
+
+                     document.write("Y ahora, ¿tiene el valor 'Texto a lo loco'?: " + miSet.has('Texto a lo loco') + "<br>");
+                     document.write("Claro, porque sólo le quedan " + miSet.size + " elementos.<br>");
+
+
+
+
+
+
+              </script>
+       </head>
+       <body>
+       </body>
+</html>

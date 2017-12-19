@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Objeto Window</title>
+		<meta charset="UTF8"/>
+
+		<script>
+
+			let miventana;
+
+			function abrirVentana() {
+			    miventana = window.open("", "Mi nueva ventana", "width=200, height=100");
+			    miventana.document.write("<p>¡Muéveme!</p>");
+			}
+
+			function moverVentana() {
+
+			    miventana.moveBy(250, 250);
+			    miventana.focus();
+
+			    //miventana.moveTo(250, 250);
+			    //miventana.focus();
+			}
+
+		</script>
+
+	</head>
+	<body>
+		<button onclick="abrirVentana()">Abrir ventana</button>
+		<button onclick="moverVentana()">Mover ventana</button>
+	</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Objeto Window</title>
+		<meta charset="UTF8"/>
+
+		<script>
+
+			let ventana;
+
+			function abrirVentana(){
+				ventana = open("","Ventana nueva","height=600,left=100,width=300,toolbar=yes,resizable=no");
+				ventana.document.write("<p>Ésta ventana 600 píxeles de alto.</p>");
+			}
+
+			function cerrarVentana(){
+				ventana.window.close();
+			}
+
+			function compruebaClosed() {
+			    if (!ventana) {		// si el valor es undefined ya que no ha sido aún abierta
+
+			        document.getElementById("mensaje").innerHTML = "La ventana de script nunca ha sido abierta. La variable 'ventana' aún tiene el valor por defecto undefined";
+
+			    } else {
+			          if (ventana.closed) {		// si fué cerrada ya, el valor es true
+			              document.getElementById("mensaje").innerHTML = "La ventana de script ya fué cerrada. La propiedad 'closed' de la variable 'ventana' tiene valor " + ventana.closed;
+			          } else {	// si aún no fué cerrada, el valor es false
+			              document.getElementById("mensaje").innerHTML = "La ventana de script no fué cerrada. La propiedad 'closed' de la variable 'ventana' tiene valor " + ventana.closed;
+			          }
+			    }
+			}
+
+		</script>
+
+	</head>
+	<body>
+		<p id="mensaje"></p>
+		<button onClick="compruebaClosed()">Comprobar estado ventana</button>
+		<button onClick="abrirVentana()">Nueva ventana</button>
+		<button onClick="cerrarVentana()">Cerrar ventana</button>
+	</body>
+</html>

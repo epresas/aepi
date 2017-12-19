@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+  <meta charset="UTF-8">
+  <title>Objetos literales en Javascript</title>
+</head>
+
+<body>
+	<script>
+
+		var factura = {
+		    numero: 650,
+		    cliente: 'Transportes Madrid SL',
+		    vencimientos: {
+		      1: {
+		            fecha: new Date(2017,5,20),
+		            importe: 216
+		      },
+		      2: {
+		            fecha: new Date(2017,7,25),
+		            importe: 216
+		      },
+		      3: {
+		            fecha: new Date(2017,9,21),
+		            importe: 218
+		      }
+		    }
+		}
+
+
+
+		factura.pagada = false;
+		factura.imprimir = function(){
+			  document.write('La factura ' + this.numero + ' corresponde al cliente ' + this.cliente);
+		    }
+
+		
+		factura.imprimir();
+
+	</script>
+</body>
+
+</html>

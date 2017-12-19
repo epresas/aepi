@@ -1,0 +1,36 @@
+<html>
+    <head>
+    <meta charset="utf-8">
+        <title>getUserMedia API</title>
+    </head>
+    <body>
+
+        <button id="foto">¡Sácate unas fotos!</button>
+
+        <video id="video" width="640" height="480"></video>
+        <canvas id="canvas" width="640" height="480"></canvas>
+
+        <script> 
+
+            let video = document.getElementById('video');
+            let canvas = document.getElementById('canvas');
+            let context = canvas.getContext('2d');
+
+            if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+
+                navigator.mediaDevices.getUserMedia({ video: true, audio: false }).then( function(reproduccion) {
+                    video.src = window.URL.createObjectURL(reproduccion);
+                    video.play();
+                });
+            }            
+
+            document.getElementById("foto").onclick = function() {
+                video = document.getElementById('video');
+                context.drawImage(video, 0, 0, 640, 480);
+            }
+
+        </script>
+
+    </body>
+</div>
+</html> 

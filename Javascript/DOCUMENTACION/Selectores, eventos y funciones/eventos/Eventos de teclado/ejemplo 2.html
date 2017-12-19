@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Key events</title>            
+	</head>
+	<body>
+		<p>Escribe cualquier cosa en este campo, en minúsculas (y luego pulsa escape):</p>
+		<form>
+			<input id="campo" type="text" placeholder="Sí, aquí...">
+		</form>
+
+		<div id="info"></div>
+
+		<script>
+
+			document.getElementById('campo').onkeyup = saneaContenido;
+							 
+			function saneaContenido(evento) {
+
+			  let contenido = document.getElementById('campo').value;
+			  let contenidoSaneado = contenido.toUpperCase();
+
+			  document.getElementById('campo').value = contenidoSaneado;
+
+			  document.getElementById('info').innerHTML += "¡Saneado!<br>";			 
+			 
+			  if (evento.keyCode === 27) {
+
+			  	let borrar = confirm('¡Hey! ¡Acabas de presionar ESCAPE con este campo!\n\n¿Deseas borrar su contenido?');
+
+			  	if (borrar) {
+
+			  		document.getElementById('campo').value = "";
+			  		document.getElementById('info').innerHTML += "¡Borrado!<br>";			 
+			  	}
+			  }			  
+			}
+
+		</script>
+
+       </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Objeto Window</title>
+		<meta charset="UTF8"/>
+
+		<script>
+
+		function scrollVentanaBy() {
+		    window.scrollBy(100, 50);
+		}
+
+		function scrollVentanaTo() {
+		    window.scrollTo(500, 0);
+		}
+
+		</script>
+
+	</head>
+	<body>
+		<button style="position:fixed; top:10px; left:10px;" onclick="scrollVentanaBy()">Ejecutar scrollBy</button>
+		<button style="position:fixed; top:80px; left:10px;" onclick="scrollVentanaTo()">Ejecutar scrollTo</button>
+
+
+		<h1 style="font-size:1000px; margin:0;">¡SOY ENOOORME!</h1>
+	</body>
+</html>

@@ -1,0 +1,55 @@
+<html>
+    <head>
+    <meta charset="utf-8">
+        <title>File API</title>
+    </head>
+    <body>
+
+        <textarea id="contenido" placeholder="Escribe algo aquí"></textarea> <br>
+
+        <button id="crear">Crear archivo</button> <br>
+
+        <p id="detalles"></p>
+
+        <a id="enlace" download="partida.js">Descargar archivo</a> 
+
+
+
+        <script>
+
+        var fichero;
+
+        document.getElementById('crear').onclick = function(){
+
+            let contenido = "alert('YAY')";
+
+            let fichero = new Blob([contenido], {type: 'application/javascript'});  
+
+            /*
+            Blob: objeto de tipo "fichero de datos planos inmutables" (datos no necesariamente en Javascript)
+
+            Tipos MIME (selección) 
+                text/plain
+                text/css
+                application/javascript
+                image/png
+                image/jpeg
+                image/gif
+            */
+
+            document.getElementById('detalles').textContent = `Archivo de tipo "${fichero.type}", con un peso de ${fichero.size}b`;
+
+            if (fichero) { // Si ya se creó uno estaríamos reemplazándolo. Por ello previamente revocamos URL.
+
+                window.URL.revokeObjectURL(fichero);
+            }
+
+            let ruta = window.URL.createObjectURL(fichero);
+
+            let enlace = document.getElementById('enlace');            
+            enlace.href =  ruta;
+        }
+
+        </script>
+    </body>
+</html> 

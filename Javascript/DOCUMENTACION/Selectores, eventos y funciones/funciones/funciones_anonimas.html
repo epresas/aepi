@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FUNCIONES / EVENTOS</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+<button id="unBoton">HAZME CLICK</button>
+
+<script type="text/javascript">
+
+		//funcion anonima 1
+		(function () {
+		  alert('Esta función no tiene nombre y se ejecutara inmediatamente');
+		}());
+
+
+		//funcion anonima 2
+		document.getElementById('unBoton').onclick = function () {
+		  document.write('Esta función no tiene nombre y se ejecutara sólo con este evento. Al no tener nombre, no es reusable.');
+		};
+		
+</script>
+
+
+
+	
+
+
+</body>
+</html>

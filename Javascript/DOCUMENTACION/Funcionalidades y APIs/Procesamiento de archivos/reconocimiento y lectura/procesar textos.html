@@ -1,0 +1,36 @@
+<html>
+    <head>
+    <meta charset="utf-8">
+        <title>File API</title>
+        <style>pre{width:600px;margin:50px auto;padding:20px;font-family:sans-serif;border:1px dashed;}</style>
+    </head>
+    <body>
+
+        <input type="file" id="archivo">
+        <pre id="contenido">Esperando archivo...</pre>
+
+        <script>
+
+        document.getElementById('archivo').onchange = leerArchivo;        
+
+        function leerArchivo() {
+
+            var objArchivo = document.getElementById('archivo').files[0];
+
+            if ( ! objArchivo.type.match('text.*') ) {
+
+                console.error("ERROR: ¡Cenutrio! Este archivo no es una imagen, no se previsualizará...");
+            }
+            
+            var lector = new FileReader();
+
+            lector.onload = function() {
+                document.getElementById('contenido').textContent = lector.result;
+            }
+
+            lector.readAsText(objArchivo);   
+        }
+
+        </script>
+    </body>
+</html> 

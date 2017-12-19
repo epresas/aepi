@@ -1,0 +1,22 @@
+<html>
+    <head>
+    <meta charset="utf-8">
+        <title>Fullscreen API</title>
+    </head>
+    <body>
+
+        <img src="granuja.jpg" width="500" alt="">
+
+        <script>
+            var objetivo = document.querySelector("img");
+            
+            objetivo.onclick = function() {  
+
+                if (objetivo.mozRequestFullScreen) {
+
+                    objetivo.mozRequestFullScreen();
+                } 
+            }
+        </script>
+    </body>
+</html> 

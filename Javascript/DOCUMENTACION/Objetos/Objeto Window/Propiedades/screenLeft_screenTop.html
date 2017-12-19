@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Objeto Window</title>
+		<meta charset="UTF8"/>
+
+		<script>
+
+		function ventanaConPosicion() {
+		    let miVentana = window.open("", "Mi ventana con posición","height=300,width=600,left=100,top=150");
+		    miVentana.document.write("Valor de screenLeft: " + miVentana.screenLeft + " píxeles</br>");
+		    miVentana.document.write("Valor de screenTop: " + miVentana.screenTop + " píxeles</br>");
+		    miVentana.document.write("Debido a que en IE y Firefox screenTop y screenLeft no funcionan, utilizo screenX y screenY:<br>");
+
+		    let winLeft, winTop;
+		    /*--- COMPROBACIÓN DE COMPATIBILIDAD ---*/
+		    if (miVentana.screenLeft === undefined) {
+		    	winLeft = miVentana.screenX;
+		    }
+		    if (miVentana.screenTop === undefined) {
+		    	winTop = miVentana.screenY;
+		    }
+
+
+    		miVentana.document.write("Valor de screenLeft (tras comprobar compatibilidad del navegador): " + winLeft + " píxeles</br>");
+		    miVentana.document.write("Valor de screenTop (tras comprobar compatibilidad del navegador): " + winTop + " píxeles</br>");
+		}
+
+		</script>
+
+	</head>
+	<body>
+		<button onClick="ventanaConPosicion()">Nueva ventana con posición</button>
+	</body>
+</html>

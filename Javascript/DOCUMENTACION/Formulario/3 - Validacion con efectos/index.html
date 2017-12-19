@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+	<head>
+		<title>Formulario Javascript</title>
+		<meta charset="UTF8"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+
+	<body>
+		<main>
+		    <div>
+		        <form action="gestor.php" method="post" onsubmit="return validarFormulario()">
+
+		            <h1>&bull; ¿Hablamos? &bull;</h1>
+		  			<div class="underline"></div>
+		  			<span>&#9743;</span>
+
+		            <fieldset>
+
+		                <label>Nombre:
+		                	<input type="text" id="campoNombre">
+		                </label>
+		                <label>Teléfono:
+		                	<input type="text" id="campoTelefono">
+		                </label>
+		                <label>Código postal:
+		                	<input type="text" id="campoCP">
+		                </label>
+		                <label>Fecha de nacimiento:
+		                	<input type="text" id="campoFecha">
+		                </label>
+		                <label>DNI:
+		                	<input type="text" id="campoDNI">
+		                </label>
+		                <label>Email de contacto:
+		                	<input type="text" id="campoEmail">
+		                </label> 
+		                <label>Formación académica:
+		                	<textarea id="campoFormacion"></textarea>
+		                </label> 
+
+		            </fieldset>
+
+		            <fieldset>
+
+		                <h4>Horario de contacto</h4>
+		                <label>
+		                	<input type="radio" name="horario">Mañanas
+		                </label>
+		                <label>
+		                	<input type="radio" name="horario">Tardes
+		                </label>
+		                <label>
+		                	<input type="radio" name="horario">Indiferente
+		                </label>
+		                
+		                <h4>Preferencias (min. dos)</h4>
+		                <label>
+		                	<input type="checkbox" class="preferencia">Javascript
+		                </label>
+		                <label>
+		                	<input type="checkbox" class="preferencia">HTML
+		                </label>
+		                <label>
+		                	<input type="checkbox" class="preferencia">CSS
+		                </label>
+
+		                <h4>Integrantes del núcleo familiar</h4>
+		                <select id="integrantes">
+		                	<option>Seleccionar</option>
+		                	<option>Menos de 3 personas</option>
+		                	<option>Entre 3 y 5 personas</option>
+		                	<option>Entre 6 y 8 personas</option>
+		                	<option>Entre 8 y 10 personas</option>
+		                	<option>Más de 10 personas</option>
+		                </select>
+
+		                <h4>Nivel de satisfacción con la aplicación</h4>
+		                <input type="range" min="0" max="100" value="0" id="satisfaccion">
+
+		            </fieldset>
+
+		            <fieldset>
+
+		            	<h4>Datos de acceso</h4>
+
+		                <label>
+		                    Contraseña                    
+		                    <input type="password" id="pwd1">
+		                </label>
+						<label>
+		                	Repita contraseña
+		                	<input type="password" id="pwd2">
+		                </label>		                
+
+		            </fieldset>
+
+		            <label>
+	                	<input type="checkbox" id="politica"> Acepto la política de datos
+	                </label>
+
+		            <input type="submit" value="Comprobar">
+
+		        </form>
+		    </div>
+		    <div id="alertas">
+		    	<p id="mensaje">Espacio para mensajes</p>
+		    </div>
+		</main>
+
+		<script type="text/javascript" src="js/scripts.js"></script>
+
+	</body>
+</html>
