@@ -40,46 +40,51 @@
 
 			// En la línea 40, imprime en pantalla el array para corroborar que el resultado es correcto. Imprime dos saltos de línea tras el array.
 
-			document.write("<p>"+ arrayPop+"</p><br><br>");
+			document.write("<p>"+ alumnos+"</p><br><br>");
 
 			
 			// En la línea 44, añade al alumno "Carlos" al inicio del array
 
-
+			let arrayUnshift = alumnos.unshift("Carlos");
 
 			// En la línea 48, imprime en pantalla el array para corroborar que el resultado es correcto. Imprime dos saltos de línea tras el array.
 
+			document.write("<p>"+ alumnos+"</p><br><br>");
 
 
 			// En la línea 52, ordena alfabéticamente el array
 
-
-
+			let arraySort = alumnos.sort();
+			
 			// En la línea 56, imprime en pantalla el array para corroborar que el resultado es correcto. Imprime dos saltos de línea tras el array.
-
-
-
+			
+			document.write("<p>"+ arraySort+"</p><br><br>");
+			
+			
 			// En la línea 62, añade los alumnos presentes en el array de la línea 60, al array original de alumnos.
-
+			
 			var nuevosAlumnos = ["Raulito", "Milagros"];
-
-
-
+			
+			let nuevoArray = alumnos.concat(nuevosAlumnos);
+			
 			// En la línea 66, imprime en pantalla el array para corroborar que el resultado es correcto. Imprime dos saltos de línea tras el array.
-
+			
+			document.write("<p>"+ nuevoArray+"</p><br><br>");
 
 
 			// En la línea 70 y 71, divide el array en dos arrays independientes de la longitud que desees. Entre los dos arrays deben contener a todos los alumnos, sin que ninguno se repita.
 
-
-
-
-			// En las líneas 75 y 76, imprime sendos arrays para corroborar que el resultado es correcto.
-
-
-
-
-
+			let posicionFinal = prompt("Ingresa una posicion para dividir el array");
+			let subArray1 = [], subArray2 = [];
+			//voy a obviar la validacion de la variable asumiendo que se conoce que debe ser un numero
+			if (parseInt(posicionFinal)>alumnos.length) {
+				alert("Debe ingresar una posicion menos a la cantidad de elementos, que es: "+ alumnos.length+". Reinicie la aplicacion e intentelo de nuevo.");
+			}else{
+				subArray1 = alumnos.slice(0,parseInt(posicionFinal));
+				subArray2 = alumnos.slice(parseInt(posicionFinal),-1);
+				// En las líneas 75 y 76, imprime sendos arrays para corroborar que el resultado es correcto.
+				document.write("<p>Dividiendo el array desde la posición indicada, se obtienen 2 arrays: <br>"+ subArray1+" y:<br>"+subArray2+".</p>");
+			}	
 
 		</script>		
 	</body>
