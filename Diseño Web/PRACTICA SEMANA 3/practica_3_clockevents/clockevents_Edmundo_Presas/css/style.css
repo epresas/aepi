@@ -26,6 +26,10 @@ float: right;
 }
 .menu nav li{
 display: inline-block;
+transition: all .5s;
+}
+.menu nav li:hover{
+background-color: white;
 }
 .menu nav li a{
 text-decoration: none;
@@ -37,6 +41,10 @@ font-family: 'Dosis', sans-serif;
 font-size: 0.9em;
 text-transform: uppercase;
 letter-spacing: 1px;
+transition: all .5s;
+}
+.menu nav li a:hover{
+    color: black;
 }
 
 /*HERO*/
@@ -76,11 +84,17 @@ letter-spacing: 1px;
     padding: 10px 40px;
     background-color: #333333;
     color:white;
+    font-family: 'Dosis',sans-serif;
+    border: 1px solid #FFFFFF;
 }
 .button:hover{
-    transition: background-color .5s, color .7s;
+    transition: background-color .5s, color .7s, border .7s;
     background-color: white;
-    color: black;
+    color: #333333;
+    border: 1px solid #333333;
+}
+.button a{
+    padding: 5px 20px;
 }
 
 /* CAN-CAN*/
