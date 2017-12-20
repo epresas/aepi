@@ -19,19 +19,22 @@
 			PASOS:
 			- Comprueba cómo este documento dispone de un evento 'onresize' asociado al objeto window: este se dispara cuando el tamaño de la ventana cambia.
 
-			- Encuentra las propiedades del objeto window que retornan el ancho interno y el alto interno de la pantalla, y asígnalas a las variables ancho y alto que están ya declaradas, respectivamente.
+			- Encuentra las propiedades del objeto window que retornan el ancho interno y el alto interno de la pantalla, y asígnalas a las variables ancho 
+			y alto que están ya declaradas, respectivamente.
 
-			- Sustituye los textos que ahora son inyectados como contenido en el documento (líneas 33 y 34) por las variables que almacenan estos datos, respectivamente. Cambia el tamaño de la ventana de forma manual y comprueba que la pantalla muestra su ancho y alto a tiempo real.
+			- Sustituye los textos que ahora son inyectados como contenido en el documento (líneas 33 y 34) por las variables que almacenan estos datos, 
+			
+		respectivamente. Cambia el tamaño de la ventana de forma manual y comprueba que la pantalla muestra su ancho y alto a tiempo real.
 
 			-------------------------------------------------------*/
 
 			window.onresize = function() {
 
-				let ancho = /* - COMPLETAR - */;
-				let alto = /* - COMPLETAR - */;
+				let ancho = window.innerWidth;
+				let alto = window.innerHeight;
 
-				document.getElementById('anchoPantalla').textContent = "Esperando ancho de pantalla...";
-				document.getElementById('altoPantalla').textContent = "Esperando alto de pantalla...";
+				document.getElementById('anchoPantalla').textContent =ancho;
+				document.getElementById('altoPantalla').textContent = alto;
 
 			}
 
