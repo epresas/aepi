@@ -1,3 +1,5 @@
+/*GENERALES*/
+
 *{
     padding: 0;
     margin: 0;
@@ -12,6 +14,9 @@ h1,h2,h3{
     letter-spacing: 1px;
     text-align: center;
     font-weight: 100;
+}
+.clearfix{
+    clear: both;
 }
 /* MENU SUPERIOR*/
 .menu{
@@ -67,12 +72,116 @@ transition: all .5s;
 /*SERVICIOS*/
 .servicios{
     background-color: white;
-    padding:80px;
+    
+}
+.servicios .col-5{
+    padding:0 80px;
+}
+.servicios .col-3{
+    padding:0 80px;
 }
 .servicios h2{
     color: rgb(83, 83, 83);
+     padding: 80px;
+}
+.servicios article{
+    padding: 50px 10px;
+    width: calc(33.33% - 20px);
+    float: left;
+}
+.servicios article{
+    padding: 50px 10px;
+    width: calc(33.33% - 20px);
+    float: left;
+}
+.servicios article h4{
+    font-family: 'Dosis',sans-serif;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    color: #636363;
+    font-weight: 100;
+}
+.servicios article p{
+    font-family: 'Dosis',sans-serif;
+    font-size:0.8em;
+    color:#636363;
+    margin-bottom: 10px;
+    line-height: 1.6em;
+   
 }
 
+.servicios article a{
+    float: right;
+    text-decoration: none;
+    font-family: 'Dosis',sans-serif;
+    font-size:0.9em;
+    color: #333333;
+    display: inline-block;
+    padding:5px 10px;
+    transition: all .3s;
+    
+}
+.servicios article a:hover{
+    color: #aaa4a4;
+}
+.servicios i{
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.flaticon-avatar-1::before{
+    font-size: 4em;
+    color: rgb(83, 83, 83); 
+
+}
+.flaticon-avatar::before{
+    font-size: 4em;
+    color: rgb(83, 83, 83);
+
+}
+.flaticon-photo-camera::before{
+    font-size: 4em;
+    color: rgb(83, 83, 83); 
+
+}
+.flaticon-monitor::before{
+    font-size: 4em;
+    color: rgb(83, 83, 83); 
+
+}
+.flaticon-edit::before{
+    font-size: 4em;
+    color: rgb(83, 83, 83); 
+
+}
+.servicios ul li{
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+    margin:20px 5px;
+    width: calc(20% - 20px);
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    font-family: 'Dosis',sans-serif;
+    font-size: 0.8em;
+    color: #333333;
+}
+.servicios ul li p{
+    margin-left: 20px;
+}
+.servicios footer{
+    background-color: #d3d3d3;
+    padding: 60px;
+}
+.servicios footer h3{
+    color: #333333;
+    margin:20px 0;
+} 
+.servicios footer small{
+    text-align: center;
+    display: block;
+    font-family:'Dosis',sans-serif;
+    color:#858585;
+}
 .button{
     text-decoration: none;
     text-transform: uppercase;
@@ -80,12 +189,12 @@ transition: all .5s;
     letter-spacing: 1px;
     display: block;
     width: 120px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 10px 40px;
     background-color: #333333;
     color:white;
     font-family: 'Dosis',sans-serif;
-    border: 1px solid #FFFFFF;
+    border: 1px solid #d3d3d3;
 }
 .button:hover{
     transition: background-color .5s, color .7s, border .7s;
@@ -93,16 +202,141 @@ transition: all .5s;
     color: #333333;
     border: 1px solid #333333;
 }
-.button a{
-    padding: 5px 20px;
-}
+
 
 /* CAN-CAN*/
 aside{
     background: #E6E6E6 url('../img/cancan-background.jpg') no-repeat center top / cover fixed;
-    padding: 80px 60px;
     
 }
-aside img{
-    width: 300px;
+
+.container{
+    padding: 80px 0px;
+    display: inline-block;
+    width: 100%;
+}
+.cancanLeft{
+    float:left;
+    width: calc(55% - 80px);
+    padding: 60px 40px;
+}
+.cancanLeft h2{
+    letter-spacing: 4px;
+    margin: 20px;
+}
+.cancanLeft p{
+    color: white;
+    font-family: 'Dosis',sans-serif;
+    letter-spacing: 1.5px;
+}
+.cancanRight{
+    float:left;
+    width: 45%;
+    text-align: center;
+}
+.cancanRight img{
+    padding-left: 60px;
+    width: 400px;   
+}
+.btnContactanos{
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+    display: block;
+    width: 120px;
+    margin: 20px auto;
+    padding: 10px 40px;
+    background-color: white;
+    color: #333333;
+    font-family: 'Dosis',sans-serif;
+    border: 1px solid #333333;   
+}
+.btnContactanos:hover{
+    transition: background-color .5s, color .7s, border .7s;
+    background-color: #333333;
+    color:white;
+    border: 1px solid #d3d3d3;   
+}
+/*VALORES*/
+.valores{
+    background-color: white;
+    padding-bottom: 60px;
+}
+.valores header {
+    padding: 80px 0 60px 0;
+ 
+}
+.valores header h2{
+       color:#333333;
+}
+.valores .col-3{
+    display: inline-block;
+}
+.valores .col-3 article{
+    width: calc(33.33% - 40px);
+    float:left;
+    padding: 20px;
+    text-align: center;
+}
+.valores .col-3 article h4{
+    margin:30px 0;
+    text-transform: uppercase;
+    font-family: 'Barlow',sans-serif;
+    color:#333333;
+    letter-spacing: 2px;
+}
+.valores .col-3 article p{
+    text-align: left;
+    font-family: 'Dosis',sans-serif;
+    color: #535353;
+}
+
+.flaticon-star::before{
+    font-size: 4em;
+    color: rgb(83, 83, 83);   
+}
+.flaticon-speaker::before{
+    font-size: 4em;
+    color: rgb(83, 83, 83);   
+}
+.flaticon-heart::before{
+    font-size: 4em;
+    color: rgb(83, 83, 83);   
+}
+.flaticon-piggy-bank::before{
+    font-size: 4em;
+    color: rgb(83, 83, 83);   
+}
+.flaticon-settings::before{
+    font-size: 4em;
+    color: rgb(83, 83, 83);   
+}
+.flaticon-like::before{
+    font-size: 4em;
+    color: rgb(83, 83, 83);   
+}
+
+/*FOOTER*/
+footer{
+    padding-top: 100px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+footer img{
+    display: inline-block;
+    text-align: center;
+    /* padding: 0 auto; */
+    margin-bottom: 80px;
+}
+footer small{
+    font-family: 'Dosis',sans-serif;
+    color: #333333;
+    
+}
+footer a{
+    text-decoration: none;
+    color: #333333;
+    padding: 0 5px;
+
 }

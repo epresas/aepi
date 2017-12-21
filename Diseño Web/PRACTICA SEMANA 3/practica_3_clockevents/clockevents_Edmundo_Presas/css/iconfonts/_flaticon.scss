@@ -1,0 +1,71 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 21/12/2017 12:01
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-phone-call:before { content: "\f100"; }
+.flaticon-house:before { content: "\f101"; }
+.flaticon-speaker:before { content: "\f102"; }
+.flaticon-heart:before { content: "\f103"; }
+.flaticon-like:before { content: "\f104"; }
+.flaticon-placeholder:before { content: "\f105"; }
+.flaticon-settings:before { content: "\f106"; }
+.flaticon-piggy-bank:before { content: "\f107"; }
+.flaticon-chat:before { content: "\f108"; }
+.flaticon-edit:before { content: "\f109"; }
+.flaticon-star:before { content: "\f10a"; }
+.flaticon-musical-note:before { content: "\f10b"; }
+.flaticon-monitor:before { content: "\f10c"; }
+.flaticon-avatar-1:before { content: "\f10d"; }
+.flaticon-avatar:before { content: "\f10e"; }
+.flaticon-photo-camera:before { content: "\f10f"; }
+    
+    $font-Flaticon-phone-call: "\f100";
+    $font-Flaticon-house: "\f101";
+    $font-Flaticon-speaker: "\f102";
+    $font-Flaticon-heart: "\f103";
+    $font-Flaticon-like: "\f104";
+    $font-Flaticon-placeholder: "\f105";
+    $font-Flaticon-settings: "\f106";
+    $font-Flaticon-piggy-bank: "\f107";
+    $font-Flaticon-chat: "\f108";
+    $font-Flaticon-edit: "\f109";
+    $font-Flaticon-star: "\f10a";
+    $font-Flaticon-musical-note: "\f10b";
+    $font-Flaticon-monitor: "\f10c";
+    $font-Flaticon-avatar-1: "\f10d";
+    $font-Flaticon-avatar: "\f10e";
+    $font-Flaticon-photo-camera: "\f10f";
