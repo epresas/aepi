@@ -20,7 +20,9 @@
 
 
 			PASOS:
-			- Como ves, cada función de este documento está asociada a cada uno de los botones presentes en el  DOM. Sigue las instrucciones contenidas en cada una de las funciones para que cada una muestre una alerta que contenga el texto de la variable global "frase" modificado de la forma que se solicita. La primera está resuelta a modo de ejemplo.
+			- Como ves, cada función de este documento está asociada a cada uno de los botones presentes en el  DOM. 
+			Sigue las instrucciones contenidas en cada una de las funciones para que cada una muestre una alerta que contenga el texto 
+			de la variable global "frase" modificado de la forma que se solicita. La primera está resuelta a modo de ejemplo.
 
 
 
@@ -37,25 +39,32 @@
 
 			document.getElementsByTagName('button')[1].onclick = function() {
 				// Sustituye las palabras "la Mancha" por la palabra "Móstoles" y muestra el resultado en una alerta.
-			
+				let stringReplace = frase.replace("la Mancha","Móstoles");
+				alert(stringReplace);
 			}
 
 
 			document.getElementsByTagName('button')[2].onclick = function() {
 				// Convierte la frase a mayúsculas y muestra el resultado en una alerta.
+				alert(frase.toUpperCase());
 
 			}
 
 
 			document.getElementsByTagName('button')[3].onclick = function() {
 				// Busca la palabra "catarro" en el string. Si está presente, muestra una alerta con la frase "Palabra detectada". De lo contrario, una alerta con la frase "Palabra no presente"
-			
+				if (frase.indexOf("catarro")===-1) {
+					alert("Palabra no presente.");
+				}else{
+					alert("Palabra detectada.");
+				}
 			}
 
 
 			document.getElementsByTagName('button')[4].onclick = function() {
 				// Muestra la frase en una alerta, pero antes concatena detrás esta segunda parte de la misma. La alerta debe mostrar la frase resultante: " no ha mucho tiempo que vivía un hidalgo de los de lanza en astillero."
-
+				let frase2 = " no ha mucho tiempo que vivía un hidalgo de los de lanza en astillero.";
+				alert(frase.concat(frase2));
 			}
 
 

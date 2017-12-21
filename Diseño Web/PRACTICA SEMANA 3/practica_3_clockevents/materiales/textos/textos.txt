@@ -1,6 +1,6 @@
-
+// HERO
 Personal, proyección y servicios para eventos
-
+//NAV--HEADER (FUERA DE HERO)
     Inicio
     Personal
     Equipo
@@ -8,30 +8,34 @@ Personal, proyección y servicios para eventos
     Galería
     Contacto
      
-
+//SECCION
 Nuestros servicios
-
+/*div
     Azafatas
     Animación
     Fotógrafos
     Creativos
     Programadores
-
+div*/
+/*div
     Clock Events cuenta con un equipo propio de azafatas con amplia experiencia en toda clase de eventos
 
 Mediante un minucioso proceso de selección, encontramos al profesional que mejor se ajusta a tus necesidades para ofrecer la mejor imagen de tu empresa.
 Ponemos a tu disposición profesionales formados específicamente para protocolo, ferias, congresos, entregas de premios, transfers e imagen, entre otros.
 
 Más información sobre azafatas
-
+div*/
+/*footer
 Apúntate a nuestro newsletter
 
 Olvida el spam. Nosotros también lo detestamos.
-
+footer*/
+SECCION//
+//SECCION
 ¿Buscas soluciones para diferenciar tu evento?
 
 Desde un show de Can-can al más puro estilo Far West hasta una noche de risa y terror en un caserón maldito. Lo tenemos.
-
+SECCION//
 Nuestros valores
 
 Siempre estamos ahí
