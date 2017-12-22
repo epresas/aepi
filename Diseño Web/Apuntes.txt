@@ -271,3 +271,6 @@ Clase 1:
     por defecto tienen tamaño de 1em = 16px, si es iconfont se trata como una fuente para el color. Pero para que coja el tamaño como una fuente se utiliza el ::before
 
     linea.io - iconos SVG
+
+    svg --- sprite svg, se  descarga, es un codigo xml grande.. se pega en un sitio en el html y se referencia donde se quiera meter el svg con la clase que dice el svg (flaticon)
+    otra forma es quitar el style, pegar el viewbox en el tag svg y quitar la etiqueta symbol.
