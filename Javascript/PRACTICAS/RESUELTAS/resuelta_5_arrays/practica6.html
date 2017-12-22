@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Práctica</title>
+		<meta charset="UTF8"/>		
+	</head>
+	<body>
+		<script>
+			/*-------------------------------------------------------
+
+			Partiendo del array de la línea 16, sigue los pasos marcados fuera de este comentario en las líneas que corresponda haciendo uso de los métodos específicos de los arrays.
+
+			-------------------------------------------------------*/
+
+
+			let alumnos = ["Jorge", "Sandra", "Ivan", "Mercedes", "Sergio", "Tania", "Clara", "Rafael", "Fernando", "Cristina", "Lara"];
+
+			// En la línea 20, sustituye del array alumnos a "Sergio" por un nuevo alumno, "Roberto".
+
+			alumnos[4] = "Roberto";
+
+			// En la línea 24, imprime en pantalla el array para corroborar que el resultado es correcto. Imprime dos saltos de línea tras el array.
+
+			document.write(alumnos + "<br><br>");
+
+			// En la línea 28, invierte el orden de los alumnos.
+
+			alumnos.reverse();
+
+			// En la línea 32, imprime en pantalla el array para corroborar que el resultado es correcto. Imprime dos saltos de línea tras el array.
+
+			document.write(alumnos + "<br><br>");
+
+			// En la línea 36, elimina el último de los alumnos del array.
+
+			alumnos.pop();
+
+			// En la línea 40, imprime en pantalla el array para corroborar que el resultado es correcto. Imprime dos saltos de línea tras el array.
+
+			document.write(alumnos + "<br><br>");
+			
+			// En la línea 44, añade al alumno "Carlos" al inicio del array
+
+			alumnos.unshift("Carlos");
+
+			// En la línea 48, imprime en pantalla el array para corroborar que el resultado es correcto. Imprime dos saltos de línea tras el array.
+
+			document.write(alumnos + "<br><br>");
+
+			// En la línea 52, ordena alfabéticamente el array
+
+			alumnos.sort();
+
+			// En la línea 56, imprime en pantalla el array para corroborar que el resultado es correcto. Imprime dos saltos de línea tras el array.
+
+			document.write(alumnos + "<br><br>");
+
+			// En la línea 62, añade al final del array de alumnos inicial, los alumnos presentes en el array de la línea 60, concatenándolos.
+
+			let nuevosAlumnos = ["Raulito", "Milagros"];
+
+			alumnos = alumnos.concat(nuevosAlumnos);
+
+			// En la línea 66, imprime en pantalla el array para corroborar que el resultado es correcto. Imprime dos saltos de línea tras el array.
+
+			document.write(alumnos + "<br><br>");
+
+			// En la línea 70, divide el array en dos arrays independientes de la longitud que desees. Entre los dos arrays deben contener a todos los alumnos, sin que ninguno se repita.
+
+			let alumnos1 = alumnos.slice(0,5);
+			let alumnos2 = alumnos.slice(5);
+
+			// En las líneas 74 y 75, imprime sendos arrays para corroborar que el resultado es correcto.
+
+			document.write(alumnos1 + "<br><br>");
+			document.write(alumnos2 + "<br><br>");
+
+
+
+		</script>		
+	</body>
+</html>

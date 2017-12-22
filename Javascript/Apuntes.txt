@@ -144,6 +144,29 @@ AJAX y JSON
     En firefox: red/XHR
 
 
+    EXPRESIONES REGULARES
+    / --> inicio y final de expresion
+    hay 2 tipos: estricta (tiene que cumplirse a juro) y normales, las estrictas empiezan con /^ y cierran con $/
+    \d -->digito
+    \s -->caracter invisible
+    \S -->caracter digito
+    lo que se encierra entre llaves {5} indica cuantas veces debe repetirse el caracter, en este caso 5 asi que \d{5} significa un digito repetido 5 veces. si dentro de la llave se meten varios "bucles" se separan con coma
+    caracteres especiales se escapan con \
+    + --> se repite 1 o mas veces el simbolo anterior
+    [] --> rango
+    luego se ejecuta la funcion text(expresionAEvaluar)
+
+    VALIDACION DE FORMULARIOS
+    validacion nativa: la propia de html (required, tipo del input), pero es un hueco de seguridad, ya que por consola se puede quitar
+    validacion on real time: responde a eventos, por ejemplo la de las contrseñas de minimo N caracteres que tiene un estilo hasta que se llega a cumplir la condicion
+    validacion  en cliente y en servidor
+    Consta de 4 pasos:
+        1 - en html un formulario debe tener un atributo onsubmit, cuyo valor es la palabra clave return seguida de la invocacion de la funcion que retorna true si se quiere enviar,
+        el primer paso es almacenar los valores en variables, comunmente con la propiedad.value
+        2 - Comprobar la existencia de todos los valores, si falta 1 se retorna false
+        3 - validacion especifica de cada dato, retornando false cuando se encuentre un dato invalido, esto se extendera con los criterios de validacion
+        4 - retornar true una vez cumplidos los 3 pasos anteriores
+
 
 ############## ECMASCRIPT 6 #######################
 

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Práctica</title>
+		<meta charset="UTF8"/>		
+	</head>
+	<body>
+		<script>
+			/*-------------------------------------------------------
+
+			PASO 5 DE 5
+
+			- Declara una variable de nombre "equivalencia" antes de acceder al bucle.
+
+			- Dentro del bucle, y antes de la impresión de cada frase, crea una estructura condicional 'if' que evalúe si la tarta que corresponda a cada vuelta tiene figuritas decorativas, o no (recuerda, esto se encuentra en la posición tartas[i][2] )
+
+			- Si no lleva (ya que está almacenado un boleano false), asigna a "equivalencia" el string "no". En caso de que sí lleve, asigna a "equivalencia" el string "sí".
+
+			- En las frases resultantes, utiliza la variable "equivalencia" para modificar las frases, mostrándolas de la siguiente manera:
+
+				La tarta sacher pesa un total de 180 gramos, no lleva decoración, es para 2 comensales y cuesta 33.50 euros. 
+
+			-------------------------------------------------------*/
+
+			let tartaFresa = new Array(5);
+			let tartaSacher = new Array(5);
+			let tartaSelva = new Array(5);
+			let tartaCrocan = new Array(5);
+			let equivalencia; 	
+
+			tartaFresa = ["Tarta de Fresa", 800, true, 3, 22.5];
+			tartaSacher = ["Tarta Sacher", 1200, true, 5, 35];
+			tartaSelva = ["Tarta Selva Negra", 900, false, 3, 12];
+			tartaCrocan = ["Tarta Crocanti", 500, false, 2, 29.8];
+
+			let tartas = [tartaFresa, tartaSacher, tartaSelva, tartaCrocan];
+
+			for (var i = 0; i < tartas.length; i++){
+
+				if (tartas[i][2] === true){
+					equivalencia = "sí";
+				}
+				else{
+					equivalencia = "no";
+				}
+
+				document.write(`La tarta ${tartas[i][0]} pesa un total de ${tartas[i][1]} gramos, ${equivalencia} lleva decoración, es para ${tartas[i][3]} comensales y cuesta ${tartas[i][4]} euros.<br>`);
+
+			}
+
+
+		</script>		
+	</body>
+</html>

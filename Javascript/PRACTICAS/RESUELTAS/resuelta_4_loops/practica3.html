@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Práctica</title>
+		<meta charset="UTF8"/>		
+	</head>
+	<body>
+
+		<script>
+			/*-------------------------------------------------------
+
+			PASO 3 DE 4
+
+			- Como habrás comprobado al testear tu aplicación, funciona correctamente excepto porque, cuando el usuario responde correctamente, continúa preguntando por la palabra secreta. Como habrás imaginado, si el usuario acierta la palabra, la aplicación no debe continuar preguntado.
+			
+			- Solución: en caso de que el usuario haya acertado la palabra secreta, utiliza la palabra clave 'break' después de la alerta de felicitación para obligar a la aplicación a abandonar el bucle sin que pregunte más veces.
+
+			-------------------------------------------------------*/
+
+			let palabraSecreta;
+
+			alert("Tienes 5 oportunidades para hayar la palabra secreta.");
+
+			for (let i = 0; i < 5; i++){
+
+				palabraSecreta = prompt("¿Cuál es la palabra secreta?", "Escríbela aquí");
+
+				if (palabraSecreta === "Javascript"){
+
+					alert("¡Felicidades! Has hayado la palabra clave de esta semana.");
+					break;
+
+				}
+
+				else{
+
+					alert("¡Lo sentimos! Esa no era la palabra clave de esta semana...");
+					
+				}
+
+			}
+
+			alert("Gracias por haber participado.");
+
+			
+		</script>
+		
+	</body>
+</html>
