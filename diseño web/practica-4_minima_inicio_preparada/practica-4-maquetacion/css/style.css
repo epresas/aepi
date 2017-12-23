@@ -1,0 +1,20 @@
+
+
+
+#video {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    background: rgba(0,0,0,0) url("../img/backgrounds/bg-video.jpg") no-repeat fixed center top / cover;
+}
+
+
+#video .roller{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background: url("../img/backgrounds/looping-blanco.png") no-repeat bottom right / contain;
+}
+

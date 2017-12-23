@@ -1,0 +1,53 @@
+Especificaciones técnicas:
+
+Se provee la estructura web base configurada y enlazada:
+
+- Archivo index.html con el HTML base desarrollado.
+- Subdirectorio img con todos los recursos gráficos necesarios.
+- Colección de iconos Font Awesome y framework Bootstrap instalados.
+
+
+Se proveen dos capturas completas del site, una de ellas incluye la diposición de secciones y filas necesarias para el sistema de rejilla Bootstrap.
+
+
+
+
+
+Fuentes utilizadas (puedes variarlas)
+
+Fuente de encabezados
+ Lato 100 - encabezados del hero
+ Montserrat 400 - encabezados en estilo normal
+ Georgia italic 400 - encabezados en estilo cursiva
+
+Fuente de lectura
+ Open Sans
+
+
+
+
+
+
+
+¿Cómo conseguimos dar un alto al hero que sea igual al de la pantalla desde la que se acceda?
+
+Indica al hero que disponga de una altura igual al alto del viewport (es decir, 100 vh - viewport height):
+
+  height: 100vh;
+
+
+
+
+¿Cómo utilizo los iconos de Font Awesome?
+
+La estructura que se provee ya está configurada para poder utilizar los iconos Font Awesome. Para conocer qué iconos contempla y el nombre de la clase de cada uno de ellos es suficiente con hacer una búsqueda en Internet. Para insertar un icono de Font Awesome en la web, basta con mencionar una etiqueta con las clases "fa fa-nombreicono", como se ve a continuación:
+
+<i class="fa fa-play"></i>
+
+
+
+
+¿Deben respetarse todos los iconos tal y como se muestran en la captura?
+
+No, elige los que desees de Font Awesome o, si lo prefieres, importa los que necesites de Flaticon.
+

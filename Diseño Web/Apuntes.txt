@@ -274,3 +274,35 @@ Clase 1:
 
     svg --- sprite svg, se  descarga, es un codigo xml grande.. se pega en un sitio en el html y se referencia donde se quiera meter el svg con la clase que dice el svg (flaticon)
     otra forma es quitar el style, pegar el viewbox en el tag svg y quitar la etiqueta symbol.
+
+    valores inherit e initial
+    inherit: fuerza la herencia de la propiedad del padre
+    initial: fuerza el comportamiento default del elemento.
+
+    - text-shadow: recibe 2 valores separados por espacio, 2 medidas que es la distancia de la sombra en los ejes x y y, se puede recibir un tercero que es el color
+    y opcionalmente un tercer valor que es el desenfoque y van en pixeles todas.
+    - box-shadow: igual que el text shadow pero a nivel de caja.
+    - font shadow: (grabient.com--> referencia) 
+    para degradados modal --  revisar pagina y en la propiedad background-image: linear-gradient(configuracion--> gradosdeg, color 1 porcentaje, color 2 porcentaje)
+
+    Velado de imagenes: con pseudo elementos
+    se coloca un pseudoelemento before donde en su estilo tenga un color y una opacidad, el content tiene que estar vacio altura y ancho 100% . se puede hacer degradado... ver documentacion
+
+
+    Microdata: 
+    schema.org --> referencia 
+    
+    #################   RESPONSIVE   #############################
+    meta etiqueta viewport es la que indica el responsive 
+        *width="device-width
+        *
+
+    al final del css se abre un media query
+    @media screen and (max-width:800px){
+        reglas css para esta dimension
+        
+    }
+    dentro van las reglas que no se repitan de tal forma que se logre el objetivo
+
+
+    
