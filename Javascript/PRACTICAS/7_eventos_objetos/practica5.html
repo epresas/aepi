@@ -13,11 +13,12 @@
 			/*-------------------------------------------------------
 
 			OBJETIVO FINAL:
-			Crear un sistema que detecte cada pulsación del teclado sobre el campo de texto, y muestre en una alerta el texto que hay en el campo en ese momento.
+			Crear un sistema que detecte cada pulsación del teclado sobre el campo de texto, 
+			y muestre en una alerta el texto que hay en el campo en ese momento.
 	
 			PASOS:
-			- Diseña un selector que apunte al input: utiliza un selector de etiqueta y no olvides aplicarle el índice cero, para que apunte 
-			al objeto adecuado (el primero del array que retorna este tipo de selector).
+			- Diseña un selector que apunte al input: utiliza un selector de etiqueta y no olvides aplicarle el índice cero, 
+			para que apunte al objeto adecuado (el primero del array que retorna este tipo de selector).
 
 			- Asóciale el evento que detecta cuándo una tecla del teclado se suelta tras haber sido presionada. 
 			Invoca entonces una función en cuyo interior declares una variable de nombre "contenido", y asígnale  
@@ -26,6 +27,14 @@
 			- Muestra ese contenido en una alerta.
 
 			-------------------------------------------------------*/
+
+			document.getElementsByTagName('input')[0].onkeyup = showMessage;
+			function showMessage() {
+				let message = "";
+				message += document.getElementsByTagName('input')[0].value;
+				alert(message);
+				
+			}
 
 
 		</script>		

@@ -14,17 +14,28 @@
 			/*-------------------------------------------------------
 
 			OBJETIVO FINAL:
-			Crear un sistema que permita al usuario abrir dos páginas web en una nueva ventana. Necesitarás la documentación del objeto Window. 
+			Crear un sistema que permita al usuario abrir dos páginas web en una nueva ventana. 
+			Necesitarás la documentación del objeto Window. 
 	
 			PASOS:
-			- Diseña un selector que apunte al primer botón (lo más sencillo es un selector de ID, como verás cada botón ya dispone de su propio ID a este efecto), 
+			- Diseña un selector que apunte al primer botón (lo más sencillo es un selector de ID, 
+			como verás cada botón ya dispone de su propio ID a este efecto), 
 			y asóciale un evento de click. Vincula una función a este evento que abra http://www.google.es en una nueva ventana. 
 			Encuentra para esto el método del objeto Window que permite crear nuevas ventanas.
 
 			- Repite el proceso para el segundo botón, que debe abrir http://developer.mozilla.org/es/ en otra ventana.
 
 			-------------------------------------------------------*/
-
+			document.getElementById('primerBoton').onclick = irAGoogle;
+			document.getElementById('segundoBoton').onclick = irAMozilla;
+			function irAGoogle() {
+			
+				window.open("http://www.google.es", "Buscador", "toolbar=no, width=800, scrollbars=yes");
+			}
+			function irAMozilla() {
+			
+				window.open("http://developer.mozilla.org/es/", "Buscador", "toolbar=no, width=800, scrollbars=yes");
+			}
 
 		</script>		
 	</body>

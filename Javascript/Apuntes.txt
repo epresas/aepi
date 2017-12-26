@@ -167,6 +167,13 @@ AJAX y JSON
         3 - validacion especifica de cada dato, retornando false cuando se encuentre un dato invalido, esto se extendera con los criterios de validacion
         4 - retornar true una vez cumplidos los 3 pasos anteriores
 
+    value - propiedad que almacena el valor del input
+
+    ############OBJETO DATE#######################
+    - los meses empiezan desde criterios
+    - crear un objeto date sin parametros devuelve la feca actual en formato UTC 
+    - Declaracion: new Date();
+    
 
 ############## ECMASCRIPT 6 #######################
 

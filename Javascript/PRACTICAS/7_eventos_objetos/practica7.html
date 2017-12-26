@@ -14,15 +14,29 @@
 			/*-------------------------------------------------------
 
 			OBJETIVO FINAL:
-			Permitir que el usuario navegue a la anterior página visitada y a la siguiente mediante dos botones. Necesitarás la documentación del objeto History.
+			Permitir que el usuario navegue a la anterior página visitada y a la siguiente mediante dos botones.
+			 Necesitarás la documentación del objeto History.
 
-			- Diseña un selector que apunte al primer botón (utiliza el selector de etiqueta, aplicándole el índice del primer botón, que es cero) 
-			y utiliza el método que proceda del objeto History para que al clickarlo cargue la anterior página guardada en el historial, si la hubiese.
+			- Diseña un selector que apunte al primer botón (utiliza el selector de etiqueta, 
+			aplicándole el índice del primer botón, que es cero) 
+			y utiliza el método que proceda del objeto History para que al clickarlo cargue la anterior página guardada en el 
+			historial, si la hubiese.
 
-			- Repite el procedimiento para que el segundo botón vaya a la siguiente página presente en el historial, si la hubiese.
+			- Repite el procedimiento para que el segundo botón vaya a la siguiente página presente en el historial, 
+			si la hubiese.
 
 			-------------------------------------------------------*/
-
+			let backBtn = document.getElementsByTagName("button")[0];
+			let forwardBtn = document.getElementsByTagName("button")[1];
+			// alert(forwardBtn.innerHTML);
+			backBtn.onclick = atras;
+			forwardBtn.onclick = adelante;
+			function adelante() {
+				window.history.forward();
+			}
+			function atras() {
+				window.history.back();
+			}
 
 		</script>		
 	</body>
