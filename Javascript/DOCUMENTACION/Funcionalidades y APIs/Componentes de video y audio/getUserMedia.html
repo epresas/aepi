@@ -16,7 +16,7 @@
             let canvas = document.getElementById('canvas');
             let context = canvas.getContext('2d');
 
-            if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+            if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {//si el navegador accede a las camaras y microfonos && puede pedir permiso
 
                 navigator.mediaDevices.getUserMedia({ video: true, audio: false }).then( function(reproduccion) {
                     video.src = window.URL.createObjectURL(reproduccion);
@@ -26,7 +26,7 @@
 
             document.getElementById("foto").onclick = function() {
                 video = document.getElementById('video');
-                context.drawImage(video, 0, 0, 640, 480);
+                context.drawImage(video, 0, 0, 640, 480);//parametros: video es lo que hay en ese instante en el video, ejes x e y 0 0 que es de donde empieza y luego el ancho y alto
             }
 
         </script>

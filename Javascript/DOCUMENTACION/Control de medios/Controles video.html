@@ -11,12 +11,12 @@
 				margin: 0; padding: 0;
 			}
 			
-			#video {
+			/* #video {
 			  position: fixed;
 			  top: 0;
 			  left: 0;
 			  width: 100%;
-			}
+			} */
 
 			section {
 				position: absolute;
@@ -51,12 +51,54 @@
 			<button>Avanzar 10''</button>
 			<button>Retoceder 10''</button>
 			<button>Silenciar</button>
+			<button>Subir volumen</button>
+			<button>Bajar volumen</button>
 		</section>
-	
+	<!-- en un input del tipo range para detectar el cambio se hace con oninput==>ajustar a -->
 
 	<script type="text/javascript">
+	const botones = document.getElementsByTagName('button');
+	botones[0].onclick = function () {
+			document.getElementById('video').play();
+		};
+	botones[1].onclick = function () {
+			document.getElementById('video').pause();
+		};
+	botones[2].onclick = function () {
+			document.getElementById('video').load();//No existe stop para detener, se recarga el video desde el principio
+		};
+	botones[3].onclick = function () {
+		if (document.getElementById('video').currentTime < document.getElementById('video').duration) {
+			document.getElementById('video').currentTime +=10;	
+		}
+		};
+	botones[4].onclick = function () {
+		if (document.getElementById('video').currentTime > 10) {
+			document.getElementById('video').currentTime -= 10;
+		} else {
+			document.getElementById('video').currentTime = 0;
+		}
+		};
+	botones[5].onclick = function () {
+		if (document.getElementById('video').volume === 0) {
+			document.getElementById('video').volume = 1;	
+		} else {
+			document.getElementById('video').volume = 0;
+		}
 
+		};
 		
+	botones[6].onclick = function () {
+		if (document.getElementById('video').volume > 1) {
+			document.getElementById('video').volume += .1;	
+		}
+		};
+	botones[7].onclick = function () {
+			if (document.getElementById('video').volume < 0) {
+				
+			}
+			document.getElementById('video').volume -= .1;
+		};
 
 
 	</script>

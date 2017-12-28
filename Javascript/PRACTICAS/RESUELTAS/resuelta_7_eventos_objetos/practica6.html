@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Práctica</title>
+		<meta charset="UTF8"/>		 
+	</head>
+	<body>
+
+		<button>Programar alerta</button>
+
+
+		<script>
+			/*-------------------------------------------------------
+
+			OBJETIVO FINAL:
+			Crear un sistema que avise al usuario cuando hayan pasado los segundos que elija. Necesitarás la documentación del objeto Window. 
+	
+			PASOS:
+			- Como ves, el documento dispone de una función anónima asociada a un evento de click sobre el botón. Asigna a la variable 'tiempo' un método prompt que pregunte al usuario "¿Dentro de cuántos segundos te avisamos?"
+
+			- Encuentra el método del objeto Window que permite crear una cuenta atrás y configúralo para que, pasado el tiempo indicado por el usuario, emerja una alerta que muestre "Avisado". Recuerda que Js trabaja en milisegundos, y que el usuario responde en segundos.
+
+			-------------------------------------------------------*/
+
+
+			document.getElementsByTagName('button')[0].onclick = function() {
+
+				let tiempo = prompt("¿Dentro de cuántos segundos te avisamos?");
+
+				setTimeout( function(){
+
+					alert("¡AVISADO!");
+
+				}, tiempo * 1000);
+			}
+
+
+		</script>		
+	</body>
+</html>

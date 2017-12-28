@@ -3,8 +3,14 @@
 <head>
 <meta http-equiv="content-type" content="text/html;"></head>
 <body>
-    <canvas id="myCanvas" width="360" height="450" style="border:1px solid #d3d3d3;"></canvas>
 
+        <div id="bola"></div>
+        
+        <div class="resultados">
+            <p>Alpha: <span id="alpha">0</span></p>
+            <p>Beta: <span id="beta">0</span></p>
+            <p>Gamma: <span id="gamma">0</span></p>
+        </div>
     <script>
 
         /*
@@ -12,39 +18,19 @@
         http://cosasdigitales.com/documentacion/orientacion/
         */
 
-        function procesarOrientacion(event) {
 
-             // propiedades alpha, beta, gamma
+            window.ondeviceorientation = parallax;
 
-             let ctx = document.getElementById("myCanvas").getContext("2d");
-             ctx.clearRect(0,0, c.width, c.height);
-             ctx.fillStyle = "#FF7777";
-             ctx.font = "14px Verdana";
-             ctx.fillText("Alpha:" + Math.round(event.alpha) ,10,20);
-             ctx.beginPath();
-             ctx.moveTo(180, 75);
-             ctx.lineTo(210, 75);
-             ctx.arc(180,75,60,0, event.alpha * Math.PI / 180);
-             ctx.fill();
+            function parallax(e) {
 
-             ctx.fillStyle="#FF6600";
-             ctx.fillText("Beta:" + Math.round(event.beta),10,140);
-             ctx.beginPath();
-             ctx.fillRect(180, 150, event.beta, 90);
+                document.getElementById('alpha').textContent(e.alpha);
+                document.getElementById('beta').textContent(e.beta);
+                document.getElementById('gamma').textContent(e.gamma);
 
-             ctx.fillStyle="#FF0000";
-             ctx.fillText("Gamma:" + Math.round(event.gamma),10,270);
-             ctx.beginPath();
-             ctx.fillRect(90, 340, 180, event.gamma);
-        }
+                document.getElementById('bola').style.transform = 'translate(' + - e.gamma * 2 + 'px, ' + - e.beta * 2 + 'px';
+            }
 
-        if (window.DeviceOrientationEvent) {
-           window.addEventListener("deviceorientation", procesarOrientacion);
-        }
-        else {
-            alert("¡Ops! tu navegador no soporta la API de orientación...");
-        }
-
+    
 
     </script> 
 

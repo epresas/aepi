@@ -172,8 +172,9 @@ AJAX y JSON
     ############OBJETO DATE#######################
     - los meses empiezan desde criterios
     - crear un objeto date sin parametros devuelve la feca actual en formato UTC 
-    - Declaracion: new Date();
-    
+    - Declaracion: new Date()
+
+############# CONTROL DE MEDIOS #########################
 
 ############## ECMASCRIPT 6 #######################
 

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Práctica</title>
+		<meta charset="UTF8"/>		 
+	</head>
+	<body>
+
+		<button id="muestraInfo">Mostrar información del navegador</button>
+
+
+		<script>
+			/*-------------------------------------------------------
+
+			OBJETIVO FINAL:
+			Mostrar en pantalla todos los detalles del navegador desde el que se accede a la página. Necesitarás la documentación del objeto Navigator.
+
+			PASOS:
+			- Utiliza las propiedades del objeto Navigator que necesites para que, al hacer click sobre el botón, se muestre en la pantalla un texto como el que sigue (sutituyendo los datos entrecomillados por los propios del navegador del usuario, claro):
+
+				Estás accediendo desde un navegador 'Mozilla', versión '5.0' ('Windows'), configurado en idioma 'es-ES' e instalado en una plataforma 'Win32'
+
+
+			-------------------------------------------------------*/
+
+
+			document.getElementById('muestraInfo').onclick = function() {
+
+				let resultado = `Estás accediendo desde un navegador ${navigator.appCodeName}, versión ${navigator.appVersion}, configurado en el idioma ${navigator.language} e instalado en una plataforma ${navigator.platform}`;
+
+				document.write(resultado);
+			}			
+
+
+		</script>		
+	</body>
+</html>

@@ -4,20 +4,20 @@
         <title>Geolocalizacion</title>
         <script>        
 
-        function procesarPosicion(pos) {
+        function procesarPosicion(pos) {//pos es un objeto
 
             let coordenadas = pos.coords;
 
             document.write("La latitud del dispositivo es: " + coordenadas.latitude + " grados.<br><br>");
             document.write("La longitud del dispositivo es: " + coordenadas.longitude + " grados.<br><br>");
             document.write("La altitud del dispositivo es: " + coordenadas.altitude + " metros respecto al mar.<br><br>");
-            document.write("La exactutud de longitud y latitud es de +- " + coordenadas.accuracy + " metros.<br><br>");
+            document.write("La exactitud de longitud y latitud es de +- " + coordenadas.accuracy + " metros.<br><br>");
             document.write("El dispositivo está viajando hacia la dirección " + coordenadas.heading + " grados.<br><br>");
             document.write("El dispositivo está viajando a " + coordenadas.speed + " metros por segundo.<br><br>");
 
         }
 
-        function procesarError(err) {
+        function procesarError(err) {//err es un objeto de error nativo .code y .message son propiedades del mismo
 
             document.write('¡OPS! Ha habido un error: (' + err.code + '): ' + err.message);
         }
@@ -31,6 +31,7 @@
             };
         
         	navigator.geolocation.getCurrentPosition(procesarPosicion, procesarError, opcionesGeolocalizacion);
+            //recibe 2 funciones y un objeto de opciones como argumentos, la primera es un success, la segunda es un error (timeout o denegar permisos) y la tercera es el objeto de opciones
         }
 
         </script>
