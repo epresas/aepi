@@ -1,11 +1,157 @@
+/* font-family: 'Open Sans',sans-serif;
+font-family: 'Lato',sans-serif;
+font-family: 'Montserrat',sans-serif; 
+font-family: 'Kurale',serif; */
+/* ESTILOS GENERALES */
+body {
 
+    font-family: "Montserrat", sans-serif;
+    font-size: .95em;
+    font-weight: 400;
+    line-height: 23px;    /*afecta a todos los elementos, incluidos los numeros*/
+    color: #8d8d8d;
+    background-color: #fff;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 4em;
+    font-weight: 100;
+    line-height: 1.313em;
+    letter-spacing: 22px;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 1.4em;
+    font-weight: 400;
+    line-height: 1.53846em;
+    letter-spacing: 1px;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-size: 1.4em;
+    font-weight: 400;
+    line-height: 1.44444em;
+    letter-spacing: 1px;
+}
+
+h5 {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 1.44444em;
+    letter-spacing: 1px;
+}
+
+li {
+    list-style: none;
+}
+
+p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    line-height: 1.9em;
+}
+
+a {
+    text-decoration: none;
+}
+.destacado {
+    font-family: 'Kurale', serif;
+    text-transform: lowercase;
+    font-style: oblique;
+}
+.subtitle{
+    margin-top: 40px;
+    font-family: 'Kurale',serif;
+    font-style: oblique;
+    font-weight: bold;
+    color: #9e9e9e;
+}
+/* CABECERA SUPERIOR  */
+.fa.fa-bars {
+    float: right;
+    padding: 5px 5px 0 0;
+    color: #9e9e9e;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+#hero {
+    text-align: center;
+    background: rgba(0, 0, 0, 0) url("../img/backgrounds/bg-header.jpg") no-repeat fixed center top / cover;
+    padding: 20px 0 650px 0;
+   
+}
+#hero h1 {
+    letter-spacing: 20px;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 3.5em;
+    color: #adadad;
+}
+#hero p{
+    color: #adadad;
+    text-transform: uppercase;
+}
+
+
+/* PROCESO CREATIVO */
+
+#creativo {
+    padding: 80px 0;
+}
+#creativo p {
+    padding: 40px 10px 10px 0;
+}
+#creativo .firma{
+    float: right;
+}
+#creativo .modelo{
+    width: 80%;
+    padding: 10px;
+}
+
+ 
+
+
+#creativo header .fa-star-o::before{
+    font-size: 1.8em;
+    padding-right: 5px;
+    color: #9e9e9e;
+}
+#creativo .row:first-of-type{
+    border-bottom: 1px solid #adadad;
+    margin-bottom: 20px;
+    
+}
+.card{
+    margin: 120px 0;
+}
+.number{
+   font-family: "Montserrat",
+   sans-serif;
+   font-size: 11em;
+   font-weight: 400;
+   letter-spacing: 2px;
+   color: #edefeb;
+}
+
+
+/* VIDEO */
 
 
 #video {
     position: relative;
     text-align: center;
     color: #fff;
-    background: rgba(0,0,0,0) url("../img/backgrounds/bg-video.jpg") no-repeat fixed center top / cover;
+    background: rgba(0, 0, 0, 0) url("../img/backgrounds/bg-video.jpg") no-repeat fixed center top / cover;
+    padding: 150px 0;
 }
 
 
@@ -18,3 +164,7 @@
     background: url("../img/backgrounds/looping-blanco.png") no-repeat bottom right / contain;
 }
 
+/* RESPONSIVE */
+@media screen and (max-width:762px) {
+
+}
