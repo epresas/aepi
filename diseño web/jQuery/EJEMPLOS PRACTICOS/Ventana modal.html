@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+	
+	<head> 		
+		<meta charset="UTF-8"/>
+		<title>jQuery</title>		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+		<style>body{padding:50px;height:9000px;}h1{margin:100px 0;}.pull-right{float: right;}
+
+		.fondoModal {
+			position: fixed;
+			width: 100%;
+			height: 100vh;
+			top: 0;
+			left: 0;
+			background-color: rgba(0,0,0,.85);
+			display: none;
+		}
+
+		.contenidoModal {
+			background-color: white;
+			border-radius: 15px;
+			padding: 20px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			background: url('src/bg-app.jpg') no-repeat center / cover;
+			display: none;
+		}
+		
+
+		</style>
+	</head>
+	<body>	
+	<body>	
+
+    	<h1>Ventanas modales</h1>
+
+		<a href="#" class="botonModal btn btn-primary btn-lg">Mostrar ventana modal</a>
+
+    	<div class="fondoModal">
+
+			<div class="contenidoModal col-6">
+
+				<button class="btn btn-secondary pull-right cerrarModal">Cerrar</button>
+
+				<h2 class="text-uppercase">Soy una modal</h2>
+				<h5>Puedo mostrar contenido adicional</h5>
+				<hr>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+				<p>Lorem ipsum dolor site molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>				
+			</div>
+			
+		</div>
+    	
+
+		<script  src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript">
+		
+		$(document).ready(function(){
+			$('.botonModal').on('click',showModalBg);
+
+			function showModalBg() {
+				$('.fondoModal').fadeIn(300,function(){
+					$('.contenidoModal').fadeIn(300);
+				});
+			}
+		
+			$('.cerrarModal').on('click',closeModal);
+			function closeModal() {
+				$('.contenidoModal').fadeOut(200);
+				$('.fondoModal').fadeOut(200);
+			}
+		});
+			
+		</script>
+
+	</body>
+</html> 

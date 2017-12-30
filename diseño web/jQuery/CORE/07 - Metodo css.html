@@ -5,7 +5,7 @@
 		<meta charset="UTF-8"/>
 		<title>jQuery</title>		
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
-		<style>body{padding:50px;}h1{margin-bottom:200px} .caja{width:200px;height:200px;line-height:200px;text-align:center;border:1px solid;margin-bottom:50px}</style>
+		<style>body{padding:50px;}h1{margin-bottom:200px} .caja{transition: all 1s linear ;width:200px;height:200px;line-height:200px;text-align:center;border:1px solid;margin-bottom:50px}</style>
 	</head>
 	<body>	
 	<body>	
@@ -64,7 +64,8 @@
 
 			$('.caja').css({
 				'border-radius': '50%',
-				'background': 'darksalmon'
+				'background': 'darksalmon',
+				'transform': 'rotate(90deg)'
 			});
 		}
 		
