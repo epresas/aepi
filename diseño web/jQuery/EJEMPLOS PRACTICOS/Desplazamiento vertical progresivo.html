@@ -19,8 +19,17 @@
 	<script  src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript">
 
+		$(document).ready(function(){
+			$('.boton').on('click',desplazar);
 
 
+		});
+
+		function desplazar() {
+			$('html').animate({
+				scrollTop:800
+			},1000);
+		}
 	</script>
 
 	</body>

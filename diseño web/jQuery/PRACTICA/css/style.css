@@ -141,7 +141,102 @@ ul {
 }
 
 
+/* ------------------ PANTALLA DE CARGA ------------------*/
+#overlay{
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 
+}
+.spinnerWrapper {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    position: absolute;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+
+}
+
+.spinnerWrapper div{
+ 
+    /* border-radius: 50%; */
+    margin: 0 auto;
+    float: left;
+    background-color: #5e5e5e;
+    height: 20px;
+    width: 20px;
+}
+
+
+.spinnerWrapper div:nth-child(1) {
+    
+    animation: loop 1s ease-in-out infinite;
+}
+
+.spinnerWrapper div:nth-child(2) {
+    
+    animation: loop 1s ease-in-out infinite;
+    animation-delay: .2s;
+}
+
+.spinnerWrapper div:nth-child(3) {
+    
+    animation: loop 1s ease-in-out infinite;
+    animation-delay: .5s;
+}
+
+.spinnerWrapper div:nth-child(4) {
+    
+    animation: loop 1s ease-in-out infinite;
+    animation-delay: .1s;
+}
+
+.spinnerWrapper div:nth-child(5) {
+    
+    animation: loop 1s ease-in-out infinite;
+    animation-delay: .4s;
+}
+
+.spinnerWrapper div:nth-child(6) {
+    
+    animation: loop 1s ease-in-out infinite;
+    animation-delay: .7s;
+}
+
+.spinnerWrapper div:nth-child(7) {
+    
+    animation: loop 1s ease-in-out infinite;
+    animation-delay: .3s;
+}
+
+.spinnerWrapper div:nth-child(8) {
+    
+    animation: loop 1s ease-in-out infinite;
+    -webkit-animation-delay: .6s;
+    animation-delay: .6s;
+}
+
+.spinnerWrapper div:nth-child(9) {
+    animation: loop 1s ease-in-out infinite;
+    animation-delay: .8s;
+}
+
+@keyframes loop {
+    0% {
+        opacity: 1;
+    }
+    40% {
+        opacity: .1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 
 /* ------------------ BARRA NAVEGACIÓN ------------------*/
