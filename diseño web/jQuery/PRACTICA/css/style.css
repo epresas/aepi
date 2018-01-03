@@ -152,6 +152,15 @@ ul {
     z-index: 1000;
 
 }
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-42% ,129%);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 1.7em;
+}
 .spinnerWrapper {
     width: 60px;
     height: 60px;
@@ -161,18 +170,9 @@ ul {
     left: calc(50% - 30px);
 
 }
-.loading {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-42% ,129%);
-	text-transform: uppercase;
-	letter-spacing: 1.5px;
-	font-size: 1.7em;
-}
 
 .spinnerWrapper div{
- 
+    
     /* border-radius: 50%; */
     margin: 0 auto;
     float: left;
@@ -185,6 +185,7 @@ ul {
 .spinnerWrapper div:nth-child(1) {
     
     animation: loop 1s ease-in-out infinite;
+    /*sin delay empieza desde cero*/
 }
 
 .spinnerWrapper div:nth-child(2) {
@@ -203,6 +204,7 @@ ul {
     
     animation: loop 1s ease-in-out infinite;
     animation-delay: .1s;
+    /*desfase de la segunda fila*/
 }
 
 .spinnerWrapper div:nth-child(5) {
@@ -221,12 +223,12 @@ ul {
     
     animation: loop 1s ease-in-out infinite;
     animation-delay: .3s;
+    /*desfase de la tercera fila*/
 }
 
 .spinnerWrapper div:nth-child(8) {
     
     animation: loop 1s ease-in-out infinite;
-    -webkit-animation-delay: .6s;
     animation-delay: .6s;
 }
 
@@ -234,13 +236,16 @@ ul {
     animation: loop 1s ease-in-out infinite;
     animation-delay: .8s;
 }
-
+/*Alterna entre opacidades a medida que transcurre la animacion*/
 @keyframes loop {
     0% {
         opacity: 1;
     }
-    40% {
+    50% {
         opacity: .1;
+    }
+    70%{
+        opacity: .5;
     }
     100% {
         opacity: 1;
