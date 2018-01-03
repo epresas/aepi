@@ -77,12 +77,24 @@ h5 {
     border: 1px solid #555;
     color: #fff;
     background-color: #111;
+    transition: all 0.4s linear;
+}
+.boton.oscuro:hover {
+    border: 1px solid #ddd;
+    color: #3f3f3f;
+    background-color: #fcfcfc;
 }
 
 .boton.claro {
     border: 1px solid #ddd;
     color: #3f3f3f;
     background-color: #fcfcfc;
+    transition: all 0.4s linear;
+}
+.boton.claro:hover {
+    border: 1px solid #555;
+    color: #fff;
+    background-color: #111;
 }
 
 .boton.naranja {
@@ -160,6 +172,21 @@ ul {
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-size: 1.7em;
+}
+.loading span{
+    opacity: 0;
+    font-size: 2em;
+}
+.loading span:nth-child(1){
+    animation: dot 1s linear infinite;
+}
+.loading span:nth-child(2){
+    animation: dot 1s linear infinite;
+    animation-delay: .4s;
+}
+.loading span:nth-child(3){
+    animation: dot 1s linear infinite;
+    animation-delay: .6s;
 }
 .spinnerWrapper {
     width: 60px;
@@ -251,8 +278,59 @@ ul {
         opacity: 1;
     }
 }
+/*animacion para los puntos del "CARGANDO"*/
+@keyframes dot{
+  0%{
+      opacity: 0;
+  }
+  50%{
+      opacity: .5;
+  }
+  75%{
+      opacity: 1;
+  }
+  100%{
+      opacity: 0;
+  }
+}
 
 
+/* ------------------ MODAL ------------------*/
+.modalFondo{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.75);
+    z-index: 2000;
+    /* display: none; */
+}
+.modalCont {
+    background-color: rgb(238, 238, 238);
+    border-radius: 15px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: url('../img/backgrounds/cool-white-backgrounds-004.jpg') no-repeat center / cover;
+    color: #202020;
+    /* display: none; */
+}
+.modalCont hr{
+    border-bottom:3px solid white;
+}
+.boton.botonCerrar {
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: 3px solid white;
+	border-radius: 20px;
+	padding: 5px 10px;
+	color: #202020;
+	margin: 5px 5px;
+}
 /* ------------------ BARRA NAVEGACIÓN ------------------*/
 
 nav {

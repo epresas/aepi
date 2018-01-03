@@ -6,6 +6,11 @@ function initialize() {
 }
 
 $(document).ready(function(){
-    
+    $('.boton.oscuro').on('click',mostrarModal);
+
 
 });//ready
+
+function mostrarModal() {
+      
+}
