@@ -71,6 +71,7 @@ h5 {
     text-transform: uppercase;
     font-size: 1.1em;
     letter-spacing: 2px;
+    cursor: pointer;
 }
 
 .boton.oscuro {
@@ -90,6 +91,7 @@ h5 {
     color: #3f3f3f;
     background-color: #fcfcfc;
     transition: all 0.4s linear;
+    cursor: pointer;
 }
 .boton.claro:hover {
     border: 1px solid #555;
@@ -304,22 +306,29 @@ ul {
     left: 0;
     background-color: rgba(0,0,0,.75);
     z-index: 2000;
-    /* display: none; */
+    display: none;
 }
 .modalCont {
     background-color: rgb(238, 238, 238);
     border-radius: 15px;
-    padding: 20px;
+    padding: 20px 40px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     background: url('../img/backgrounds/cool-white-backgrounds-004.jpg') no-repeat center / cover;
-    color: #202020;
-    /* display: none; */
+    color: #504a4a;
+    display: none;
+}
+.modalCont h2{
+    text-align: center;
+    font-size: 2.3em;
 }
 .modalCont hr{
-    border-bottom:3px solid white;
+    border-bottom:3px solid white
+}
+.modalCont p{
+    font-size: 2em;
 }
 .boton.botonCerrar {
 	position: absolute;
@@ -328,8 +337,15 @@ ul {
 	border: 3px solid white;
 	border-radius: 20px;
 	padding: 5px 10px;
-	color: #202020;
-	margin: 5px 5px;
+	color: #504a4a;
+    margin:10px;
+    transition: border-color .5s,background-color .7s;
+}
+.boton.botonCerrar:hover {
+
+	border-color: #504a4a;
+	background-color: white;
+	
 }
 /* ------------------ BARRA NAVEGACIÓN ------------------*/
 
