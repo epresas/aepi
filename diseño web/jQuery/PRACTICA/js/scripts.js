@@ -17,5 +17,5 @@ function mostrarModal() {
     });
 }
 function cerrarModal() {
-    $('.modalFondo,.modalFondo').fadeOut(500);
+    $('.modalFondo,.modalCont').fadeOut(500);
 }
