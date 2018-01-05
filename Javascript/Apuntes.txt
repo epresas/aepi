@@ -149,7 +149,7 @@ AJAX y JSON
     hay 2 tipos: estricta (tiene que cumplirse a juro) y normales, las estrictas empiezan con /^ y cierran con $/
     \d -->digito
     \s -->caracter invisible
-    \S -->caracter digito
+    \S -->caracter no invisible
     lo que se encierra entre llaves {5} indica cuantas veces debe repetirse el caracter, en este caso 5 asi que \d{5} significa un digito repetido 5 veces. si dentro de la llave se meten varios "bucles" se separan con coma
     caracteres especiales se escapan con \
     + --> se repite 1 o mas veces el simbolo anterior

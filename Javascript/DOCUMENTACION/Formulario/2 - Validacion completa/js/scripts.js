@@ -63,7 +63,7 @@ function validarFormulario() {
       }
       else{
 
-            if ( /^\s+$/.test(nombre) ||  nombre.length < 2 || /[0-9]/.test(nombre) ) {
+            if ( !/^\s+$/.test(nombre) ||  nombre.length < 2 || /[0-9]/.test(nombre) ) {
 
                   alert("El campo 'Nombre' no es correcto. Es obligatorio, de mínimo 2 letras y no puede contener números.");
                   return false;
@@ -78,7 +78,7 @@ function validarFormulario() {
 
             else if ( !/^\d{5}$/.test(codigoP) ) {
 
-                  alert("El campo 'Código Posteal' no es correcto. Es obligatorio, y debe formarse por cinco dígitos.");
+                  alert("El campo 'Código Postal' no es correcto. Es obligatorio, y debe formarse por cinco dígitos.");
                   return false;
 
             }
