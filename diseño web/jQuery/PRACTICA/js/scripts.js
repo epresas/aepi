@@ -1,14 +1,11 @@
 $(window).on('load', initialize);
 
-function initialize() {
-    $('#overlay').fadeOut(2000);
-    
-}
 
 $(document).ready(function(){
-    $('#comenzamos').on('click',mostrarModal);
+    $('#adentrate').on('click', mostrarModal);
     $('.botonCerrar').on('click', cerrarModal);
-
+    $('#comenzamos').on('click',desplazar);
+    
 });//ready
 
 function mostrarModal() {
@@ -18,4 +15,14 @@ function mostrarModal() {
 }
 function cerrarModal() {
     $('.modalFondo,.modalCont').fadeOut(500);
+}
+
+function initialize() {
+    $('#overlay').fadeOut(2000);
+}
+function desplazar() {
+    let objetivo = $('#contacto').offset().top;
+    $('html').animate({
+        scrollTop: objetivo
+    }, 1000);
 }
