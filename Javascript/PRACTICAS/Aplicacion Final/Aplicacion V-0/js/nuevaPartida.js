@@ -49,9 +49,9 @@ for (let i = 0; i < pais.length; i++) {
     if (nombre === null || pass1 === null || pass2 === null || email === null || dni === null || pagoIndex === null || fechaNac === null || pais === null) {
     msg('error','No se enviaron los datos. Por favor, vuelva a intentarlo.');   
  }else{
-    if (/^\s+$/.test(nombre) || nombre.length < 6 || /^[0-9]$/.test(nombre)) {
+        if (/^\s+$/.test(nombre) || nombre.length < 6 ) {
 
-        msg('error','El nombre no es correcto. No debe contener espacios, debe tener mínimo 6 caracteres y no debe contener números.');
+        msg('error','El nombre no es correcto. No debe contener espacios, debe tener mínimo 6 caracteres y no debe contener espacios.');
         return false;
         
     } else if (pass1.length < 6 || !/[a-z]/.test(pass1) || !/[A-Z]/.test(pass1) || !/[0-9]/.test(pass1)  ) {

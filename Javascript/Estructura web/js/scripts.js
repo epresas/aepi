@@ -316,5 +316,63 @@ objetos literales: su simbolo es la llave, tienen pares clave : valor... si un o
 nominales se dota de identificadores, hablamos de una propiedad cuando estamos ante un identificador cuyo valor es distinto a una funcion, cuando su valor es una funcion
 estamos ante un metodo.
 la propiedad puede ser getter (que obtiene el valor), o setter (actualizas asignandole un)
+class Factura { //en Mayúscula por convención para diferenciar de los demas objetos
+    constructor(numero,cliente,importe,IVA){  //metodo de constructor (solo 1 por clase) transfiere a la instancia de objeto las propiedades
+        this._numero = numero; //con _delante para diferenciar del argumento, es convencion
+        this._cliente = cliente;
+        this._importe = importe;
+        this._IVA = IVA;
+    }
+    //externalizar datos para que se accesen, mediante el metodo get
+    get nombreCliente() {
+        return this._cliente;
+    }
+    //metodos Prototype ---> como function pero la sintaxis cambia... es asi:
+    imprimir(){
+        document.write("La factura numero "+this._numero+ " es de "+this._cliente);
+    }
+}
+
+//instanciacion de objeto
+let factura1 = new Factura(512,"Empresa Tal",100,21);
 */
+
+
+class Persona {
+    constructor(nombre, apellidos, edad, altura, tieneHijos, celiaco){
+        this._nombre = nombre;
+        this._apellidos = apellidos;
+        this._edad = edad;
+        this._altura = altura;
+        this._tieneHijos = tieneHijos;
+        this._celiaco = celiaco;
+    }
+    get nombreCompleto(){
+        return this._nombre + " "+this._apellidos;
+    }
+    get presentacion(){
+        return "¡Hola! Mi nombre es " + this.nombreCompleto+" y tengo "+this._edad+" años";
+    }
+ 
+
+}//Persona
+let amigo1 = new Persona("Ivan", "Alonso Martínez",35,181,true,false);
+let amigo2 = new Persona("Leticia", "Talavera Carrasco",33,171,true,true);
+alert(amigo1.presentacion);
+
+//Herencia
+class Superheroe extends Persona {
+    constructor(nombre, apellidos, edad, altura, tieneHijos, celiaco, poderes){
+        super(nombre, apellidos, edad, altura, tieneHijos, celiaco);// el metodo super transfiere los valores de las propiedades que ya la clase padre (persona) ya esta gestionando, asi no se repite el codigo
+        this._poderes = poderes; //propiedad de Superheroe, NO de persona
+    }
+    relatarPoder(){
+        alert("Puedo "+this._poderes+"!");
+    }
+}
+let superman = new Superheroe("Clark","Kent",35,185,false,false,"volar");
+
+superman.gritar();//es un metodo de Persona por lo que Superheroe lo tiene
+superman.relatarPoder(); //metodo propio de Superheroe
+amigo2.relatarPoder();//no va a poder porque es un metodo de Superheroe no de Persona
 
