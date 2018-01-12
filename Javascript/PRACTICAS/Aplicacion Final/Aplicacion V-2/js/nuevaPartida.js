@@ -1,3 +1,32 @@
+//Evitando que accese directamente al formulario
+if (opener === null) {
+    alert("Por favor, debe ingresar desde el panel principal.");
+    location.assign("../index.html");
+}
+//"Saneando" la entrada de caracteres en el campo nombre
+document.getElementById('campoNombre').onkeyup = sanearTexto;
+
+function sanearTexto(event) {
+    let textoLimpio="";
+    let texto = document.getElementById("campoNombre").value;
+    if (event.keyCode===32) {
+        textoLimpio = texto.replace(" ", "");
+        document.getElementById("campoNombre").value = textoLimpio;  
+    }else{
+        textoLimpio = texto.toUpperCase();
+        document.getElementById("campoNombre").value = textoLimpio; 
+    }
+}
+//Cerrar ventana si se presiona la tecla Escape
+document.onkeyup = function(event){
+
+    if (event.keyCode===27) {
+        let salir = confirm('Has presionado la tecla "Escape", ¿Desea cerrar la ventana? Si se cierra, se perderán los datos ingresados.');
+        if(salir){
+            window.close();
+        }
+    }
+}
 
 document.getElementById('validarFormularioPartida').onclick = function() {
 
