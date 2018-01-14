@@ -4,7 +4,12 @@ $(window).on('load', initialize);
 $(document).ready(function(){
     $('#adentrate').on('click', mostrarModal);
     $('.botonCerrar').on('click', cerrarModal);
-    $('#comenzamos').on('click',desplazar);
+    $('#comenzamos').on('click', function() {
+        let objetivo = $('#contacto').offset().top;
+        $('html').animate({
+            scrollTop: objetivo
+        }, 1000);
+    });
     
 });//ready
 

@@ -5,7 +5,7 @@
 		<meta charset="UTF-8"/>
 		<title>jQuery</title>		
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
-		<style>body{padding:50px;height:2500px;}h1{margin:200px 0;}h3{opacity:0;text-align:center;margin:1500px 0;transition: all 1s;}h3.visible{opacity:1}</style>
+		<style>body{padding:50px;height:2500px;}h1{margin:200px 0;}h3{opacity:0;text-align:center;margin:1500px 0;transition: all .3s;}h3.visible{opacity:1}</style>
 	</head>
 	<body>	
 	<body>	
@@ -16,6 +16,15 @@
 	<script  src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript">
 
+		$(window).on('scroll',function () {
+			let profundidadVentana = $(window).scrollTop();
+			let profundidadObjetivo = $('#objetivo').offset().top - ($(window).innerHeight() / 3)*2;
+			if ( profundidadVentana >= profundidadObjetivo ) {
+				$('#objetivo').addClass('visible');
+			
+			}
+			console.log(profundidadVentana);
+		});
 	</script>
 
 	</body>

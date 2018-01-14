@@ -72,7 +72,23 @@
 
 		<script  src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript">
+		$(document).ready(function(){
+			$('.botonModal').on('click',function () {
+				let numero = $(this).data('numero');
+				$('.fondoModal').fadeIn(200,function () {
+					$('.contenidoModal[data-contenido="'+numero+'"]').fadeIn(200);
+				});
+				
+			});
 
+
+			// $('.botonModal:nth-of-type(1)').on('click',function () {
+			// 	$('.fondoModal').fadeIn(200,function () {
+			// 		$('.contenidoModal[data-contenido="uno"]').fadeIn(200);
+			// 	});
+			// });
+
+		});//ready
 			
 		</script>
 
