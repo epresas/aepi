@@ -104,3 +104,17 @@
        url('../fonts/khulakhula-v3-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
        url('../fonts/khulakhula-v3-latin-600.svg#Khula') format('svg'); /* Legacy iOS */
 }
+
+
+/*---------------------------- RESETEO DE ESTILOS ---------------------------*/
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/*---------------------------- ESTILOS GENERALES ---------------------------*/
+
+body{
+}
+h1,h2,h3{}
+p{}

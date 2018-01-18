@@ -23,31 +23,115 @@
 <body>
     
     <div id="overlay">
-
+        <div class="spinnerWrapper">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <p class="loading">Cargando
+            <span>.</span>
+            <span>.</span>
+            <span>.</span>
+        </p>
     </div>
     <nav id="menuSuperior">
         <a href="#"></a>
         <ul>
-            <li><a href="#inicio-about">Inicio</a></li>
-            <li><a href="#projects">Proyectos</a></li>
-            <li><a href="#skills">Habilidades</a></li>
-            <li><a href="#contact">Contacto</a></li>
+            <li><a href="#" data-level="#inicio-about" class="navigation">Inicio</a></li>
+            <li><a href="#" data-level="#projects" class="navigation">Proyectos</a></li>
+            <li><a href="#" data-level="#skills" class="navigation">Habilidades</a></li>
+            <li><a href="#" data-level="#contact" class="navigation">Contacto</a></li>
         </ul>
     </nav>
+
+    <header id="hero">
+        <h1>Edmundo Presas</h1>
+        <div id="hoverContainer">
+            <div id="hoverLeft">
+                <h3>Diseñador</h3>
+                <p>Diseño de experiencias de usuario</p>
+            </div>
+            <div id="hoverRight">
+                <h3>Desarrollador</h3>
+                <p>Interactividad y resolución de problemas</p>
+            </div>
+        </div>
+                
+    </header>
     <main>
-        <header id="hero">
+        <section id="inicio-about">
+            <h2>Diseñador / Desarrollador web</h2>
+            <p>Combino 2 mundos en uno solo. Soy un tecnófilo transicionando al mundo del desarrollo web con una afición que me ha colocado
+                en el camino para día a día mejorar y ofrecer las mejores soluciones a los retos actuales.</p>
+            <p>Creación de contenidos digitales con más de 3 años de experiencia trabajando para grandes clientes en diversos sectores del mercado.</p>
+            <a href="#">¿Nos reunimos?</a>
+        </section>
 
-        </header>
         <section id="projects">
-
+            <h2>Proyectos</h2>
+            <p>Proyectos hechos, bien sea durante mi formación, o proyectos donde he participado como colaborador y diseños propios.</p>
+            <ul id="proyectList">
+                <li>Macmillan ByME</li>
+                <li>Elesapiens - Profuturo</li>
+                <li>Telefónica</li>
+                <li>Proyecto formación Javascript</li>
+            </ul>
         </section>
+
         <section id="skills">
-
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 reveal">
+                        <h3>Diseñador / Desarrollador web</h3>
+                        <p>Creación de contenidos digitales con más de 3 años de experiencia utilizando las tecnologías mostradas a continuación:</p>
+                    </div>
+                    <div class="col-md-8 col-sm-6 barras reveal">
+                    
+                        <p>Html5
+                            <span class="width90"></span> <span class="pull-right">90</span>
+                        </p>
+                    
+                        <p>Css3
+                            <span class="width70"></span> <span class="pull-right">70</span>
+                        </p>
+                        
+                        <p>Sass
+                            <span class="width50"></span> <span class="pull-right">50</span>
+                        </p>
+                    
+                        <p>Jquery
+                            <span class="width80"></span> <span class="pull-right">80</span>
+                        </p>
+                        
+                        <p>AngularJS
+                            <span class="width40"></span> <span class="pull-right">40</span>
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
         </section>
+
         <section id="contact">
-
+            <form action="#" method="post">
+                <input type="text" name="contactName" id="contactName" placeholder="Nombre...">
+                <input type="email" name="contactEmail" id="contactEmail" placeholder="E-mail...">
+                <textarea name="contactMessage" id="contactMessage" cols="100" rows="10" placeholder="Mensaje..."></textarea>
+                <input type="submit" class="button" value="Enviar">
+            </form>
         </section>
+
     </main>
+    <footer>
+        <img src="#" alt="Logo personal">
+        
+    </footer>
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
 </body>
