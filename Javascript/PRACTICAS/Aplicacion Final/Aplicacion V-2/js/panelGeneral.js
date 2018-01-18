@@ -34,7 +34,7 @@ document.getElementById('recaudarCaja').onclick = function () {
 }
 let celdas = document.getElementsByClassName('celda');
 
-for (celda of celdas) {
+for (let celda of celdas) {
 
     celda.onclick = function () {
 
@@ -64,11 +64,31 @@ for (celda of celdas) {
 // intervalo de actualización
 
 let actualizador = setInterval( function(){    
-
+    
+    let parque = objPartida.parque;
     if (objPartida.iniciada) {
-
-        // TODO
-
+        //Progresión parque
+        for (let edificio of parque) {
+            if (edificio.tipo === "atraccion") {
+                
+                objPartida.visitantes += parseInt(edificio.visitantes);
+                objPartida.recaudacion += parseInt(edificio.visitantes * 2);
+                
+                // console.log(parque);
+            }
+            if (edificio.tipo === "puesto") {
+                
+                objPartida.saldo += parseInt(edificio.ingresos);
+            }
+        }    
+        
+        
+        
+        //Actualizar interfaz    
+        document.getElementById('contadorEdificios').textContent = parque.length + ' edificios';
+        document.getElementById('contadorVisitantes').textContent = objPartida.visitantes+ ' visitantes';
+        document.getElementById('contadorSaldoActual').textContent = objPartida.saldo + '$';
+        document.getElementById('contadorRecaudacion').textContent = objPartida.recaudacion + '$ en ingresos';
     }
 
 }, 100); 
