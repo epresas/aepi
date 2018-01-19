@@ -128,7 +128,9 @@ h1{
 h1,h2,h3{
   text-transform: uppercase;
 }
-p{}
+p{
+  letter-spacing: 1px;
+}
 
 .button{
   display: inline-block;
@@ -136,10 +138,15 @@ p{}
   text-transform: uppercase;
   letter-spacing: 2px;
   cursor: pointer;
+  transition: all .5s;
 }
 .button.dark{
-  background-color: #00204A;
+  background-color: rgb(11, 45, 90);
   color: white;
+}
+.button.light{
+  color: rgb(11, 45, 90);
+  background-color: white;
 }
 .clearfix{
   clear: both;
@@ -284,7 +291,7 @@ p{}
 
 /* ------------------ HERO/SECCIÓN ABOUT ------------------*/
 #hero {
-	padding: 100px 0 80px 0;
+  padding: 100px 0 80px 0;
 	background: rgba(0,0,0,0) url("../img/Website-Design-Background.jpg") no-repeat fixed center bottom/ cover;
 }
 
@@ -306,10 +313,18 @@ p{}
 }
 .hoverEffect:hover{
   background-color: rgba(0,0,0,.4);
+  
+}
+.hoverEffect:hover h3{
 
+  transform: translateY(50px);
+}
+.hoverEffect:hover p{
+  opacity:1;
+  transform: translateY(50px);
 }
 .hoverEffect h3{
-
+  
   line-height: 1.5;
   /* padding-top: 100px; */
 	margin-bottom: 20px;
@@ -320,10 +335,25 @@ p{}
   letter-spacing: 5px;
   transition: transform .4s;
 }
+
 .hoverEffect p{
   color: white;
   font-size: 1.2em;
   text-align: center;
   opacity: 0;
   transition: opacity .2s, transform .4s;
+}
+
+#hoverLeft h3{
+
+}
+
+#hoverRight h3{
+
+}
+  
+
+/* ------------------ HERO/SECCIÓN ABOUT ------------------*/
+#inicio-about{
+  padding: 80px 20px;
 }
