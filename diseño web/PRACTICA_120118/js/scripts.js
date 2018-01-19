@@ -70,6 +70,17 @@ $(document).ready(function(){
 	// 	}
 	// });
 
+	// Reproductor video trailer
+	$('#verTrailer').on('click',function () {
+		$('.modalVideo').fadeIn(300,function () {
+			$('#videoModal').get(0).play();
+		});
+	});
+	$('#cerrarTrailer').on('click',function () {
+		$('#videoModal').get(0).load();
+		$('.modalVideo').fadeOut(200);
+	});
+
 	$(window).on('scroll', function () {
 
 		let windowDepth = $(window).scrollTop();
