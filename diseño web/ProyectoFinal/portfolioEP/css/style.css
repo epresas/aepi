@@ -115,6 +115,211 @@
 /*---------------------------- ESTILOS GENERALES ---------------------------*/
 
 body{
+  font-size: .95em;
+  font-weight: 400;
+  color: #5e5e5e;
+  background-color: rgb(247, 247, 247);
 }
-h1,h2,h3{}
+h1{
+	text-align: center;
+  font-family: 'Roboto',sans-serif;
+}
+
+h1,h2,h3{
+  text-transform: uppercase;
+}
 p{}
+
+.button{
+  display: inline-block;
+  padding: 7px 35px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.clearfix{
+  clear: both;
+}
+
+/* ------------------ PANTALLA DE CARGA ------------------*/
+#overlay{
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: none;
+}
+
+.spinnerWrapper {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  position: absolute;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  
+}
+
+.spinnerWrapper div{
+  
+  /* border-radius: 50%; */
+  margin: 0 auto;
+  float: left;
+  background-color: #5e5e5e;
+  height: 20px;
+  width: 20px;
+}
+
+
+.spinnerWrapper div:nth-child(1) {
+  
+  animation: loop 1s ease-in-out infinite;
+  /*sin delay empieza desde cero*/
+}
+
+.spinnerWrapper div:nth-child(2) {
+  
+  animation: loop 1s ease-in-out infinite;
+  animation-delay: .2s;
+}
+
+.spinnerWrapper div:nth-child(3) {
+  
+  animation: loop 1s ease-in-out infinite;
+  animation-delay: .5s;
+}
+
+.spinnerWrapper div:nth-child(4) {
+  
+  animation: loop 1s ease-in-out infinite;
+  animation-delay: .1s;
+  /*desfase de la segunda fila*/
+}
+
+.spinnerWrapper div:nth-child(5) {
+  
+  animation: loop 1s ease-in-out infinite;
+  animation-delay: .4s;
+}
+
+.spinnerWrapper div:nth-child(6) {
+  
+  animation: loop 1s ease-in-out infinite;
+  animation-delay: .7s;
+}
+
+.spinnerWrapper div:nth-child(7) {
+  
+  animation: loop 1s ease-in-out infinite;
+  animation-delay: .3s;
+  /*desfase de la tercera fila*/
+}
+
+.spinnerWrapper div:nth-child(8) {
+  
+  animation: loop 1s ease-in-out infinite;
+  animation-delay: .6s;
+}
+
+.spinnerWrapper div:nth-child(9) {
+  animation: loop 1s ease-in-out infinite;
+  animation-delay: .8s;
+}
+/*Alterna entre opacidades a medida que transcurre la animacion*/
+@keyframes loop {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .1;
+  }
+  70%{
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ------------------ BARRA SUPERIOR DE NAVEGACIÓN ------------------*/
+
+#menuSuperior {
+	width: 100%;
+	background-color: white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 50px;
+}
+
+#menuSuperior ul{
+  float: right;
+}
+#menuSuperior ul li{
+  display: inline-block;
+}
+#menuSuperior ul li a {
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	padding: 0 12px;
+	display: block;
+	line-height: 40px;
+	margin: 5px;
+  text-decoration: none;
+  transition: all 0.5s;
+  color:black;
+}
+#menuSuperior ul li a:hover{
+  background-color: rgb(66, 30, 30);
+  color:white;
+}
+
+
+/* ------------------ HERO/SECCIÓN ABOUT ------------------*/
+#hero {
+	padding: 100px 0 80px 0;
+	background: rgba(0,0,0,0) url("../img/Website-Design-Background.jpg") no-repeat fixed center bottom/ cover;
+}
+
+#hero h1{
+  color:white;
+}
+#hoverContainer{
+  padding: 60px 40px;
+  /* background-color: rgba(0,0,0,.4) ; */
+}
+.hoverEffect {
+  width: calc(50% - 100px);
+  height: 300px;
+	float: left;
+  margin: 0 10px;
+	padding: 40px;
+  background-color: rgba(0,0,0,.0);
+  transition: all .4s;
+}
+.hoverEffect:hover{
+  background-color: rgba(0,0,0,.4);
+
+}
+.hoverEffect h3{
+
+  line-height: 1.5;
+  /* padding-top: 100px; */
+	margin-bottom: 20px;
+	text-align: center;
+	color: white;
+	font-family: 'Roboto',sans-serif;
+	font-weight: 100;
+  letter-spacing: 5px;
+  transition: transform .4s;
+}
+.hoverEffect p{
+  color: white;
+  font-size: 1.2em;
+  text-align: center;
+  opacity: 0;
+  transition: opacity .2s, transform .4s;
+}
