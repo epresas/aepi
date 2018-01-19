@@ -137,6 +137,10 @@ p{}
   letter-spacing: 2px;
   cursor: pointer;
 }
+.button.dark{
+  background-color: #00204A;
+  color: white;
+}
 .clearfix{
   clear: both;
 }
