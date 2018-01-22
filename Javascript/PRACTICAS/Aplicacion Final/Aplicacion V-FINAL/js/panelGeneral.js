@@ -37,6 +37,19 @@ document.getElementById('recaudarCaja').onclick = function() {
     }
 }
 
+document.getElementById('nuevoSorteo').onclick = function() {
+
+    if (objPartida.iniciada) {
+
+        open("paneles/nuevoSorteo.html", 'Sorteo', 'scrollbars=yes,width=500,height=600');  
+
+    } else {
+        
+        msg('error', 'Para acceder al panel del sorteo, inicia una partida.');       
+    }
+}
+
+
 
 let celdas = document.getElementsByClassName('celda');
 
