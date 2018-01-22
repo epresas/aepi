@@ -1,4 +1,5 @@
 $(window).on('load', function(){
+	$('html').addClass('cargada');	
 
 	$('#overlay span').delay(200).fadeOut(200, function(){
 
@@ -9,18 +10,21 @@ $(window).on('load', function(){
 });
 
 
+
 $(document).ready(function(){
 
-	// desplazamiento botón
-	// $('#bajar').on('click', function(){
+	$('.owl-carousel').owlCarousel();
 
-	// 	var profundidad = $('#contacto').offset().top;
+	new Vivus('bolt', { 
+		duration: 300,
+		animTimingFunction: Vivus.EASE
+	 }, function () {
+		$('#bolt').addClass('done');
+	});
 
-	// 	$('html').animate({
-	// 		scrollTop: profundidad
-	// 	}, 1000);
+	new Vivus('light', { duration: 200,
+	type: 'oneByOne' });
 
-	// });
 
 	$('.desplazar').on('click',function () {
 		let nivelObjetivo = $(this).data('nivel');
@@ -87,21 +91,50 @@ $(document).ready(function(){
 		
 		$('.reveal').each(function () {
 			let targetDepth = $(this).offset().top - ($(window).innerHeight() * .6);
-			let targetDelay = $(this).data('delay');
-			let self = $(this);//setTimeout pertenece a window... por lo que dentro de el $(this) hace referencia a window no a quien lo desencadeno
+
 			if (windowDepth >= targetDepth) {
-				setTimeout(function(){
-					self.addClass('visible');
-				},targetDelay);
-				
+			
+				$(this).addClass('visible');	
 
 			}
 
+		});
+		//retardo reveal
+		$('.reveal.delayed').each(function () {
+			let retardo = $(this).data('delay');
+			$(this).css('transition-delay',+ retardo +'ms');
 		});
 
 		//rotacion logo
 		$('#logoMenu').css('transform', 'rotate(' + (windowDepth * .1) +'deg)');
 
 	});
+	$('form').on('submit', function (e) {
+		e.preventDefault();
+		let nombre = $('#campoNombre').val(); //No forma parte del DOM por lo que el metodo text no sirve
+		let email = $('#campoEmail').val();
+		let mensaje = $('#campoMensaje').val();
+		// alert("Soy "+nombre+", de correo "+email+" y mi mensaje es: " + mensaje);
+		if (nombre.length < 2) {
+			alertaError('El nombre es demasiado corto.');
+		}
+		if (!email.includes('@') || !email.includes('.')) {
+			alertaError('Email no válido.');
+		}
+		if (mensaje.length < 20) {
+			alertaError('El Mensaje es demasiado corto.');
+
+		}
+	});
 
 });
+
+
+function alertaError(texto) {
+	$('#alerta p').text(texto);
+	$('#alerta').addClass('visible');
+	setTimeout(function () {
+		$('#alerta').removeClass('visible');
+
+	}, 3000);
+}

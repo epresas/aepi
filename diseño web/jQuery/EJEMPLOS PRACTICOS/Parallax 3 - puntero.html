@@ -17,7 +17,15 @@
 
 	    <script  src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript">
-
+			$(document).on('mousemove',function (evento) {
+				let ejeX = evento.pageX;
+				let ejeY = evento.pageY;
+				$('.montahna').css('transform','translate('+ ejeX *-.015+'px,'+ ejeY *-.015+'px)');
+				$('.fondo').css('transform','translate('+ ejeX *.025+'px,'+ ejeY *.025+'px)');
+				$('.nubes1').css('transform','translate('+ ejeX *-.095+'px,'+ ejeY *-.095+'px)');
+				$('.nubes2').css('transform','translate('+ ejeX *-.055+'px,'+ ejeY *-.055+'px)');
+				//hacer un each y meter la transferencia
+			})
 		</script>
 
 	</body>

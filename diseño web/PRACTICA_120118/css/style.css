@@ -235,7 +235,21 @@ nav img {
 
 #hero {
     height: 100vh;
-    background: rgba(0,0,0,0) url("../img/backgrounds/bg-header.jpg") no-repeat fixed center bottom / cover;
+    /* background: rgba(0,0,0,0) url("../img/backgrounds/bg-header.jpg") no-repeat fixed center bottom / cover; */
+}
+#bolt{
+    width: 30%;
+    margin-top: 10vh;
+}
+#bolt *{  
+    fill: white;
+    stroke-width: .5;
+    stroke: #000;
+    transition: fill .5s;
+}
+/* el plugin convierte la forma en path asi que deja de ser polygon */
+#bolt.done *{
+    fill: #d3d3d3;
 }
 
 #hero p {
@@ -507,6 +521,17 @@ nav img {
     display: block;
     margin: 70px auto 40px;
     opacity: 0.3;
+}
+/* SVG BOMBILLA */
+#light{
+    width: 150px;
+    display: block;
+    margin: 50px auto;
+}
+/* seleccionamos todos los paths y elementos que tiene el SVG */
+#light *{
+    stroke-width: 1;
+    stroke: #888;
 }
 
 

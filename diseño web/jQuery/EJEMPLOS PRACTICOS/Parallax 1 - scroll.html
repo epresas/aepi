@@ -33,7 +33,10 @@
 
     <script  src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript">
-
+		$(window).on('scroll',function(){
+			let scrollActual = $(window).scrollTop();
+			$('.bg').css('transform','translateY('+ scrollActual *-.1+'px)');
+		});
 
 	</script>
 

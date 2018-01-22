@@ -1,0 +1,907 @@
+/* ------------------ ESTILOS GENERALES ------------------*/
+body {
+    overflow-x: hidden !important;      /* no es necesario */
+    overflow-y: scroll;                 /* no es necesario */
+    font-family: "Montserrat",sans-serif;
+    font-size: .95em;
+    font-weight: 400;
+    line-height: 23px;
+    color: #8d8d8d;
+    background-color: #fff;
+}
+
+li{
+    list-style: none;
+}
+
+p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 2em;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 5em;
+    font-weight: 100;
+    line-height: 1.313em;
+    letter-spacing: 22px;
+    font-family: 'Lato',sans-serif;
+    color: black;
+    margin-top: 150px;
+    letter-spacing: 50px;
+}
+
+
+h2 {
+    text-transform: uppercase;
+    font-size: 1.4em;
+    font-weight: 400;
+    line-height: 1.53846em;
+    letter-spacing: 1px;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-size: 1.4em;
+    font-weight: 400;
+    line-height: 1.44444em;
+    letter-spacing: 1px;
+}
+
+h5 {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 1.44444em;
+    letter-spacing: 1px;
+}
+
+.mano-alzada {
+    text-transform: none !important;
+    font-family: "Georgia",sans-serif;
+    font-style: italic;
+    font-weight: normal;
+}
+
+.boton {
+    display: inline-block;
+    padding: 7px 35px;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    letter-spacing: 2px;
+}
+
+.boton.oscuro {
+    border: 1px solid #555;
+    color: #fff;
+    background-color: #111;
+}
+
+.boton.claro {
+    border: 1px solid #ddd;
+    color: #3f3f3f;
+    background-color: #fcfcfc;
+}
+
+.boton.naranja {
+    border: 1px solid #bd9f86;
+    color: #000;
+}
+
+ul {
+    padding-left: 0;
+}
+
+
+.padding-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.grey-section {
+    background-color: rgb(245,245,245);
+}
+
+.devider {
+    width: 20px;
+    margin-bottom: 40px;
+    border-bottom: 3px solid #bd9f86;
+}
+
+.subtitle {
+    margin-bottom: 80px;
+    font-family: "Georgia",sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    color: #333;
+}
+
+.subtitle i {
+    margin-right: 10px;
+    font-size: 1.5em;
+}
+
+
+
+.border-bottom {
+    border-bottom: 1px solid #eee;
+}
+
+.divisor {
+    width: 50px;
+    height: 5px;
+    margin: 10% auto 0;
+    background-color: #d7d7d7;
+}
+
+.tachado {
+    text-decoration: line-through;
+}
+
+
+
+/* ------------------ OVERLAY ------------------*/
+
+#overlay {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: #444;
+    color: #ccc;
+    line-height: 100vh;
+    text-align: center;
+    font-size: 4em;
+    letter-spacing: 3px;
+}
+
+
+
+/* ------------------ MODAL ------------------*/
+
+
+.fondoModal {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.85);
+    display: none;
+}
+
+.contenidoModal {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #ccc;
+    color: black;
+    display: none;
+}
+
+/* ------------------ BARRA NAVEGACIÓN ------------------*/
+
+nav {
+    height: 72px;
+    width: 100%;
+    background: #FAFAFA;
+    padding: 1px 0px;
+    border-bottom: 1px solid #D8D8D8;
+    border-top: 1px solid #D8D8D8;
+    z-index: 900;
+    transition: all .5s cubic-bezier(0.190, 0.585, 0.285, 0.865);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: height .5s;
+}
+
+nav.small {
+    height: 62px;
+}
+
+nav ul {
+    float: right;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.5em;
+    padding: 0 10px;
+    display: block;
+    line-height: 62px;
+    margin: 5px 8px;
+    transition: line-height .5s;
+}
+
+nav.small a {
+    line-height: 52px;
+}
+
+nav img {
+    width: 60px;
+    margin: 5px 10px;
+    opacity: .8;
+    transition: width .5s;
+}
+
+nav.small img {
+    width: 50px;
+}
+
+
+
+/* ------------------ SECCIÓN HERO ------------------*/
+
+#hero {
+    height: 100vh;
+    /*
+    background: rgba(0,0,0,0) url("../img/backgrounds/bg-header.jpg") no-repeat fixed center bottom / cover;
+    */
+}
+
+#hero p {
+    text-transform: uppercase;
+    font-family: "Lato",sans-serif;
+    font-size: 1.3em;
+    font-weight: 300;
+}
+
+#hero-noindex{
+    padding:150px 0 230px;
+}
+
+#hero-noindex h1{
+    font-size:4em;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+#hero-noindex ul li{
+    display: inline-block;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+#hero-noindex ul li a{
+    color: grey;
+}
+
+#hero-noindex ul li::after{
+    content: " / ";
+    margin: 0 10px;
+}
+
+#hero-noindex ul li:last-of-type::after{
+    content: "";
+}
+
+/* SVG HERO RAYO */
+
+#bolt {
+    width: 50%;
+    height: 60vh;
+    margin-top: 10vh;
+    transition: .5s transform .5s;
+}
+
+#bolt path {
+    fill: transparent;
+    stroke-width: .5;
+    stroke: #000;
+    transition: fill .5s;
+}
+
+#bolt.done path {
+    fill: rgb(245,245,245);
+}
+
+#bolt.done {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* ------------------ INTRO NOSOTROS ------------------*/
+
+
+#intro-nosotros {
+    box-shadow: inset 0px 10px 20px rgba(0,0,0,.05);
+}
+
+
+#intro-nosotros p{
+    text-align: justify;
+    padding-right: 50px;
+}
+
+#intro-nosotros h2{
+    font-family: "Georgia",sans-serif;
+    font-size: 2.5em;
+    text-align: center;
+    text-transform: none;
+    letter-spacing: 3px;
+    margin-bottom: 100px;
+    color: black;
+}
+
+#intro-nosotros .videoContainer{
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+}
+
+#intro-nosotros .videoControls {
+    float: right;
+}
+
+#intro-nosotros .videoControls i::before {
+    font-size: 21px;
+}
+
+#intro-nosotros #iconoPlayVid{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 9em;
+    color: #444;
+    cursor: pointer;
+    z-index:500;
+}
+
+#intro-nosotros video{
+    width: 100%;
+}
+
+
+#intro-nosotros .reveal {
+    opacity: 0;
+    transform: translateX(200px);
+    transition: all 1s;
+}
+
+
+#intro-nosotros .reveal.visible {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+
+
+
+/* ------------------ SECCIÓN PROCESS ------------------*/
+
+#process .facts {
+    margin: 150px 0;
+}
+
+#process .numero {
+    font-family: "Montserrat",sans-serif;
+    font-size: 14em;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #edefeb;
+}
+
+
+.facts article {
+    padding-left: 60px;
+}
+
+
+
+
+/* ------------------ SECCIÓN SKILLS ------------------*/
+
+#skills {
+    padding: 50px 0;
+    /*background: rgba(0,0,0,0) url("../img/backgrounds/bg-skills.jpg") no-repeat fixed center top / cover;*/
+}
+
+#skills .elemento {
+    padding: 20px;
+    text-align: center;
+    font-family: "Lato",sans-serif;
+    font-weight: 300;
+}
+
+#skills .marco {
+    padding: 20px;
+    border: 1px solid white;
+    background-color: rgba(255,255,255,0.1);
+}
+
+
+#skills .elemento h5 {
+    margin-top: 20px;
+    text-transform: lowercase;
+    font-family: "Georgia",sans-serif;
+    font-style: italic;
+    color: #fff;
+}
+
+#skills i {
+    margin-bottom: 40px;
+    font-size: 4em;
+    color: #fff;
+}
+
+#skills .numero {
+    margin-bottom: 30px;
+    font-family: "Montserrat",sans-serif;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 400;
+    color: #fff;
+}
+
+
+
+/* ------------------ SECCIÓN ABOUT ------------------*/
+
+#about img {
+    float: right;
+    margin-top: 20px;
+}
+
+#about .claimCruz {
+    margin-top: 20px;
+    padding: 60px 20px;
+    text-align: center;
+    background: rgba(0,0,0,0) url("../img/graphic/contain-cross.png") no-repeat center / contain;
+}
+
+#about article {
+    margin-top: 17px;
+    margin-left: 30px;
+    text-align: justify;
+    line-height: 27px;
+}
+
+#about .boton {
+    margin-top: 40px;
+}
+
+
+
+/* ------------------ SECCIÓN VIDEO ------------------*/
+
+#video {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    background: rgba(0,0,0,0) url("../img/backgrounds/bg-video.jpg") no-repeat fixed center top / cover;
+}
+
+
+#video .roller{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background: url("../img/backgrounds/looping-blanco.png") no-repeat bottom right / contain;
+}
+
+
+#video h2 {
+    margin-top: 20px;
+    font-size: 3em;
+    color: #fff;
+}
+
+
+
+#video i {
+    font-size: 7em;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+/* ------------------ SECCIÓN PROYECTOS ------------------*/
+
+#proyectos {
+    text-align: center;
+    background: rgb(245,245,245) url('../img/backgrounds/looping-blanco.png') no-repeat scroll right bottom / cover;
+}
+
+#proyectos i {
+    padding: 10px 20px 10px 10px;
+    font-size: 32px;
+    color: #bd9f86;
+}
+
+#proyectos .boton {
+    margin-top: 60px;
+}
+
+
+
+/* ------------------ SECCIÓN SERVICIOS ------------------*/
+
+#servicios article i {
+    padding: 10px 20px 10px 10px;
+    text-align: left;
+    font-size: 32px;
+    color: #bd9f86;
+}
+
+#servicios img {
+    display: block;
+    margin: 70px auto 40px;
+    opacity: 0.3;
+}
+
+/* SVG BOMBILLA */
+
+#light {
+    width: 150px;
+    display: block;
+    margin: 80px auto 0;
+}
+
+#light * {
+    stroke-width: 1;
+    stroke: #888;
+}
+
+
+
+
+/* ------------------ HERO NOSOTROS ------------------*/
+
+header.nosotros{
+    background: rgba(0,0,0,0) url("../img/backgrounds/bg-nosotros.jpg") no-repeat fixed center top / cover;
+}
+
+
+
+
+/* ------------------ EQUIPO NOSOTROS ------------------*/
+
+#team{
+    position: relative;
+}
+
+#team article{
+    text-align: center;
+    position: relative;
+    opacity: 0;
+    transition: all .5s;
+    transform: translateY(60px);
+}
+
+#team article.visible {
+
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+
+#team article img{
+    margin-bottom: 30px;
+}
+
+#team article ul{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 2em;
+    background-color: white;
+}
+
+#team article ul .devider{
+    width: 50%;
+    margin: 0 25%;
+    border-bottom: 1px solid #bd9f86;
+    opacity: .5;
+}
+
+#team article ul li a{
+    display: block;
+    padding: 8px 15px;
+    color: #bd9f86;
+    font-size: .8em;    
+}
+
+#team article header .devider{
+    width: 50px;
+    margin: 20px auto;
+    border-bottom: 1px solid black;
+    opacity: .2;   
+}
+
+#team .row:last-of-type{
+    margin-top: 100px;
+}
+
+#team .claimbar {
+    background: rgba(0, 0, 0, 0) url("../img/graphic/contain-line.png") no-repeat scroll center center / contain ;
+    margin-top: 20px;
+    padding: 60px;
+    text-align: center;
+}
+
+#team div[class^="progress"] {
+    height: 4px;
+    background: rgba(0,0,0,.2);
+    margin-bottom: 10px;
+    position: relative;
+}
+
+#team div[class^="progress"]:before {
+    content: '';
+    position: absolute;
+    background:black;
+    height: 100%;
+    left:0;
+    top:0;
+    width: 0;
+    transition: all 1s;
+}
+
+#team .visible .progress70:before{
+    width:70%;
+}
+
+#team .visible .progress50:before{
+    width:50%;
+    transition-delay: .2s;
+}
+
+#team .visible .progress90:before{
+    width:90%;
+    transition-delay: .4s;
+}
+
+#team .visible .progress100:before{
+    width:100%;
+    transition-delay: .6s;
+}
+
+
+
+#team > img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    opacity: .04;
+    z-index: -1;
+}
+
+/* ------------------ SECCIÓN TRABAJOS ------------------*/
+
+#trabajos {
+    padding-bottom: 0;
+    padding-top: 0
+}
+
+
+#trabajos img {
+    width: 100%;
+    -webkit-filter: grayscale(80%);
+    filter: grayscale(80%);
+}
+
+#trabajos .container-fluid,
+#trabajos .row,
+#trabajos div[class^="col-"] {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ------------------ EQUIPO TARIFAS ------------------*/
+
+#rates article{
+    text-align: center;
+    background-color: #fff;
+    padding: 30px 0 40px;
+}
+
+#rates .transparent {
+    background-color: transparent;
+    border: 2px solid #bd9f86;
+}
+
+#rates article header span{
+    margin-bottom: 20px;
+    display: block;
+    font-size: 1.4em;
+}
+
+#rates article header h5{
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #555;
+    letter-spacing: 3px;
+}
+
+#rates article .devider{
+    width: 60%;
+    margin: 20px 20%;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+}
+
+#rates article strong{
+    margin: 40px 0;
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    color: #555;
+}
+
+#rates article strong sup{
+    font-size: .5em;
+    vertical-align: middle;
+    margin: 2px;
+}
+
+#rates article ul{
+    margin-bottom: 40px;
+}
+
+#rates article ul .cross p{
+    text-decoration: line-through;
+    opacity: .5;
+}
+
+#rates article:not(.transparent) .boton{
+    margin-bottom: 4px;
+}
+
+
+/* ------------------ SECCIÓN CONTACTO ------------------*/
+
+#contacto {
+    background: rgb(50,50,50) none repeat scroll 0 0;
+}
+
+#contacto * {
+    color: white;
+}
+
+#contacto .form-control::-moz-placeholder {
+    color: #000;
+}
+
+#contacto input:not(.boton),
+#contacto textarea {
+    width: 100%;
+    margin-top: 25px;
+    padding: 5px 20px 20px 14px;
+    border-bottom: 1px solid #fff;
+    text-transform: uppercase;
+    font-family: "Lato",sans-serif;
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1em;
+    color: #fff;
+}
+
+#contacto .boton {
+    float: right;
+    margin-top: 40px;
+}
+
+
+
+/* ------------------ SECCIÓN FOOTER ------------------*/
+
+footer {
+    text-align: center;
+    background: url("../img/backgrounds/bg-atracciones.png") no-repeat center bottom / cover;
+}
+
+footer h4 {
+    margin-bottom: 40px;
+}
+
+footer a {
+    color: #000;
+}
+
+footer .instagram li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+}
+
+footer .sociales li {
+    float: left;
+}
+
+footer address li{
+    margin-bottom: 10px;
+}
+
+
+/* ------------------ MODAL ------------------*/
+
+.modalVideo {
+    z-index: 8000;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.modalVideo video {
+    display: block;
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.modalVideo h3 {
+    color: white;
+    text-align: center;
+    font-size: 5em;
+    margin: 50px 0;
+}
+
+.modalVideo .fa {
+    color: white;
+    font-size: 5em;
+    position: fixed;
+    margin: 20px;
+    right: 0;
+    top: 0;
+    cursor: pointer
+}
+
+#alerta {
+    background: #FAFAFA;
+    position: fixed;
+    bottom: 100px;
+    left: 0;
+    transition: all .5s;
+    color: rgb(50,50,50);
+    transform: translateX(-100%);
+}
+
+#alerta.visible{
+    transform: translateX(0);
+}
+
+ #alerta p {
+    padding: 12px 10px;
+    border: 2px dashed rgb(50,50,50);
+    margin: 10px 35px;
+    text-align: center;
+    width: 300px;
+    font-size: 14px;
+    line-height: 16px
+}
+
+/* ------------------ EFECTOS SCROLL REVEAL ------------------*/
+
+#bajar {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s, transform 1.5s;
+}
+
+
+#bajar.visible {
+    opacity: 1;
+    transform: translateY(0px);
+}

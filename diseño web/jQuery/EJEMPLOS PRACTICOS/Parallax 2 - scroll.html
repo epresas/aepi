@@ -88,7 +88,13 @@
 
     <script  src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript">
-
+		$(window).on('scroll',function(){
+			let windowScroll = $(window).scrollTop();
+			$('.fondo-paisaje').css('transform','translateX('+windowScroll *-.1+'px)');
+			$('.fondo-nubes').css('transform','translateX('+windowScroll *.2+'px)');
+			$('.fondo-nubes2').css('transform','translateX('+windowScroll *.4+'px)');
+			$('.fondo-globo').css('transform','translateY('+windowScroll * -.1+'px)');
+		});
 
 	</script>
 
