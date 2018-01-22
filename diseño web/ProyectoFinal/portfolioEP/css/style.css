@@ -173,6 +173,26 @@ p{
 .clearfix{
   clear: both;
 }
+/*SVG LOGO*/
+#logoMenu{
+
+}
+
+#logoBlack2{
+  width: 70px;
+  margin: 10px auto;
+}
+#logoBlack2.st0{stroke:#000000;stroke-miterlimit:10;}
+#logoBlack2.st1{enable-background:new    ;}
+#logoBlack2.st2{stroke:#000000;stroke-width:4;stroke-miterlimit:10;}
+
+#logoWhite2{
+  width: 50px;
+  margin: 10px;
+}
+#logoWhite2 .st0{fill:#FFFFFF;stroke:#FFFFFF;stroke-miterlimit:10;}
+#logoWhite2 .st1{enable-background:new    ;}
+#logoWhite2 .st2{fill:#FFFFFF;stroke:#FFFFFF;stroke-width:4;stroke-miterlimit:10;}
 
 /* ------------------ PANTALLA DE CARGA ------------------*/
 #overlay{
@@ -288,6 +308,9 @@ p{
   height: 77px;
   background: rgba(3, 29, 45, .5);
 }
+#menuSuperior>a{
+  float: left;
+}
 
 #menuSuperior ul{
   float: right;
@@ -394,3 +417,39 @@ p{
 }
 /* ------------------ CONTACTO --------------------- */
 /* ------------------ FOOTER --------------------- */
+
+footer{
+  background-color: #23AAB0;
+  padding: 60px 0;
+  text-align: center;
+}
+footer ul li{
+  display: inline-block;
+}
+.footer-padding{
+  text-decoration: none;
+  font-family: 'PT Sans',sans-serif;
+  color: rgb(54, 52, 52);
+}
+.socialIcon svg{
+  margin: 10px 5px 20px;
+  width: 26px;
+}
+#githubBlack{
+  transition: transform .3s;
+}
+#githubBlack:hover{
+  transform: scale(1.1)
+}
+#skypeBlack{
+  transition: transform .3s;
+}
+#skypeBlack:hover{
+  transform: scale(1.1)
+}
+#linkedinBlack{
+  transition: transform .3s;
+}
+#linkedinBlack:hover{
+  transform: scale(1.1)
+}

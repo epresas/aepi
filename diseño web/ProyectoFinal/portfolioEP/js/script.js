@@ -11,6 +11,11 @@ $(document).ready(function () {
     });
 
 
+    new Vivus('logoBlack2', {
+        duration: 100,
+        animTimingFunction: Vivus.EASE,
+        type: 'delayed'
+    });
 });
 
 
