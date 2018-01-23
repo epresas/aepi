@@ -1,4 +1,4 @@
-let sorteoDisponible = true;
+// let sorteoDisponible = true; //pensado para el temporizador de una hora
 let botones = document.getElementsByTagName('button');
 
 window.onload = function(){
@@ -18,7 +18,7 @@ window.onload = function(){
                if(parseInt(e.target.firstChild.data) === btnPremio){
                    opener.msg('success','Has ganado 10.000$! Gracias por jugar.');
                    opener.objPartida.saldo += 10000;
-                   sorteoDisponible=false;
+                //    sorteoDisponible=false;
                    window.close();
                 } else if (parseInt(e.target.firstChild.data) === btnTerremoto){
                     terremoto();
@@ -27,7 +27,7 @@ window.onload = function(){
                 } else {
 
                     opener.msg('warning','No ha pasado nada. Vuelve a intentarlo en una hora.');
-                    sorteoDisponible=false;
+                    // sorteoDisponible=false;
                     window.close();
 
                }
@@ -50,7 +50,7 @@ function terremoto() {
             cadaEdificio.dataset.edificio = "vacia";
             opener.objPartida.parque.splice(edificio, 1);
             console.log(opener.objPartida.parque);
-            sorteoDisponible = false;
+            // sorteoDisponible = false;
 
         }
 
