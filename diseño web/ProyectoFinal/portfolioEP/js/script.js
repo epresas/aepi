@@ -16,6 +16,21 @@ $(document).ready(function () {
         animTimingFunction: Vivus.EASE,
         type: 'delayed'
     });
+
+
+    // Navegación menu
+
+    $('.navigation').on('click', function () {
+
+        var navTarget = $(this).data('level');
+
+        var targetDepth = $(navTarget).offset().top;
+
+        $('html').animate({
+            scrollTop: targetDepth
+        }, 1000);
+
+    });
 });
 
 

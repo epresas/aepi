@@ -154,7 +154,10 @@ p{
 .button{
   display: inline-block;
   padding: 7px 35px;
+  margin-top: 20px;
   text-transform: uppercase;
+  font-family: 'PT Sanz',sans-serif;
+  text-decoration: none;
   letter-spacing: 2px;
   cursor: pointer;
   transition: all .5s;
@@ -167,7 +170,18 @@ p{
 
 .button.light{
   color: rgb(11, 45, 90);
-  background-color: white;
+  border: 1px solid rgb(11, 45, 90);
+  background-color: transparent;
+  
+}
+.button.light:hover {
+  color: white;
+  background-color:  rgb(11, 45, 90);
+
+}
+.destacado{
+  font-weight: bold;
+  color:rgb(11, 45, 90);
 }
 
 .clearfix{
@@ -400,10 +414,24 @@ p{
 #inicio-about{
   padding: 80px 20px;
 }
-#inicio-about h2{
-  text-align: center;
-  margin-bottom: 30px;
+#inicio-about h2 {
+	text-align: center;
+	margin-bottom: 30px;
+	padding: 30px 0px;
 }
+#inicio-about p {
+	margin-bottom: 20px;
+  line-height: 28.5px;
+  text-align:justify; 
+}
+#profilePic {
+	width: 100%;
+	margin-left: 40px;
+}
+.about-text{
+  padding: 0 50px 0 20px;
+}
+
 
 /* ------------------ PROJECTS --------------------- */
 /* ------------------ SKILLS --------------------- */
@@ -419,17 +447,17 @@ p{
 /* ------------------ FOOTER --------------------- */
 
 footer{
-  background-color: #23AAB0;
-  padding: 60px 0;
+  background-color: #083D4C;
+  padding: 40px 0;
   text-align: center;
 }
 footer ul li{
   display: inline-block;
 }
-.footer-padding{
+.footer-links{
   text-decoration: none;
   font-family: 'PT Sans',sans-serif;
-  color: rgb(54, 52, 52);
+  color: rgb(29, 28, 28);
 }
 .socialIcon svg{
   margin: 10px 5px 20px;
