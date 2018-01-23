@@ -39,11 +39,15 @@ document.getElementById('recaudarCaja').onclick = function() {
 
 document.getElementById('nuevoSorteo').onclick = function() {
 
-    if (objPartida.iniciada) {
+    if (objPartida.iniciada && objPartida.parque.length >= 2) {
 
         open("paneles/nuevoSorteo.html", 'Sorteo', 'scrollbars=yes,width=500,height=600');  
 
-    } else {
+    } else if (objPartida.parque.length < 2){
+
+        msg('error', 'Necesitas tener al menos 2 edificios construidos para acceder al sorteo');
+    }
+     else {
         
         msg('error', 'Para acceder al panel del sorteo, inicia una partida.');       
     }
