@@ -15,12 +15,12 @@ window.onload = function(){
     
         for (const boton of botones) {
             boton.onclick = function (e) {
-               if(parseInt(e.target.firstChild.data) === btnPremio){
+               if(parseInt(boton.textContent) === btnPremio){
                    opener.msg('success','Has ganado 10.000$! Gracias por jugar.');
                    opener.objPartida.saldo += 10000;
                 //    sorteoDisponible=false;
                    window.close();
-                } else if (parseInt(e.target.firstChild.data) === btnTerremoto){
+               } else if (parseInt(boton.textContent) === btnTerremoto){
                     terremoto();
                     terremoto();
                     window.close();
