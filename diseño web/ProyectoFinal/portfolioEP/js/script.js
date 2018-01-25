@@ -15,7 +15,7 @@ $(document).ready(function () {
 
 
 
-    // Navegación menu
+    // FUNCIONALIDAD NAVEGACIÓN MENU
 
     $('.navigation').on('click', function () {
 

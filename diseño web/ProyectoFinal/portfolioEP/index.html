@@ -14,8 +14,7 @@
     <meta name="robots" content="index,follow">
 
     <!-- Estilos -->
-    <link type="text/css" rel="stylesheet" href="css/bootstrap-grid.min.css">
-    <!-- <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/fonticon/flaticon.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
@@ -97,14 +96,14 @@
 
     <header id="hero">
         <h1>Edmundo Presas</h1>
-        <div id="hoverContainer">
-            <div id="hoverLeft" class="hoverEffect">
+        <div id="hoverContainer" class="container-fluid">
+            <div id="hoverLeft" class="hoverEffect col-md-6">
                 <div class="hoverBg">
                     <h3>Diseñador</h3>
                     <p>Diseño de experiencias de usuario</p>
                 </div>
             </div>
-            <div id="hoverRight" class="hoverEffect">
+            <div id="hoverRight" class="hoverEffect col-md-6">
                <div class="hoverBg">
                     <h3>Desarrollador</h3>
                     <p>Interactividad y resolución de problemas</p>
@@ -124,7 +123,7 @@
                         <p>Combino 2 mundos en uno solo. Soy un tecnófilo transicionando al mundo del desarrollo web con una afición que me ha colocado
                             en el camino para día a día mejorar y ofrecer <span class="destacado">las mejores soluciones</span> a los retos actuales.</p>
                         <p>Creación de contenidos digitales con <span class="destacado">más de 3 años de experiencia</span> trabajando para grandes clientes en diversos sectores del mercado.</p>
-                        <a href="#" class="button light" id="contactBtn">¿Nos reunimos?</a>
+                        <a href="#" class="button light navigation" data-level="#contact" id="contactBtn">¿Nos reunimos?</a>
               
                     </div>
                     <div class="col-sm-12 col-md-4">
@@ -225,39 +224,40 @@
             </div>
         </section>
 
-        <section id="skills">
-            <div class="container">
+        <section id="skills" class="reveal">
+            <h2>Habilidades</h2>
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-4 col-sm-12 ">
-                        <h2>Habilidades</h2>
-                        <p>Creación de contenidos digitales con más de 3 años de experiencia utilizando las tecnologías mostradas a continuación:</p>
-                    </div>
-                    <div class="col-md-8 col-sm-12 barras reveal">
-                    
-                        <p>Html5
-                            <span class="pull-right">90</span>
-                        </p>
+                    <div class="col-md-6 col-sm-12 skillBars reveal">
+
+                        <h5>Frontend</h5>
+
+                        <p>Html5</p>
                         <div class="width90"></div>
                     
-                        <p>Css3
-                            <span class="pull-right">50</span>
-                        </p>
+                        <p>Css3</p>
                         <div class="width50"></div>
                     
-                        <p>Javascript
-                            <span class="pull-right">60</span>
-                        </p>
+                        <p>Javascript</p>
                         <div class="width60"></div>
                     
-                        <p>AngularJS
-                            <span class="pull-right">40</span>
-                        </p>
+                        <p>AngularJS</p>
                         <div class="width40"></div>
+
+                    </div>
+
+                    <div class="col-md-6 col-sm-12 skillBars reveal">
+
+                        <h5>Otros</h5>
                         
-                        <p>Git
-                            <span class="pull-right">70</span>
-                        </p>
+                        <p>Photoshop</p>
+                        <div class="width50"></div>
+                        
+                        <p>Git</p>
                         <div class="width70"></div>
+
+                        <p>Illustrator</p>
+                        <div class="width40"></div>
                     
                     </div>
                 </div>
@@ -267,9 +267,18 @@
         <section id="contact">
             <h2>Contacto</h2>
             <form action="#" method="post">
-                <input type="text" name="contactName" id="contactName" placeholder="Nombre...">
-                <input type="email" name="contactEmail" id="contactEmail" placeholder="E-mail...">
-                <textarea name="contactMessage" id="contactMessage" cols="100" rows="10" placeholder="Mensaje..."></textarea>
+                <div class="col-sm-12 col-md-6">
+                    <label for="contactNombre">Nombre</label>
+                    <input type="text" class="form-control" id="contactNombre" aria-describedby="emailHelp" placeholder="Enter email">
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <label for="contactEmail">Email</label>
+                    <input type="text" class="form-control" id="contactEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                </div>
+                <div class="col-sm-12">
+                    <label for="contactMessage">Mensaje</label>
+                    <textarea class="form-control" id="contactMessage" rows="5" cols="100"></textarea>
+                </div>
                 <input type="submit" class="button light" value="Enviar">
             </form>
         </section>

@@ -115,7 +115,6 @@
 /*---------------------------- ESTILOS GENERALES ---------------------------*/
 
 body{
-  font-size: .95em;
   font-weight: 400;
   color: #5e5e5e;
   background-color: rgb(247, 247, 247);
@@ -133,7 +132,9 @@ h1 {
 h2 {
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
-  letter-spacing: 2px
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 80px;
 }
 
 h3{
@@ -150,7 +151,10 @@ p{
   letter-spacing: 1px;
   font-family: 'PT Sans',sans-serif;
 }
-
+section{
+  padding: 100px 0 80px; 
+  
+}
 .button{
   display: inline-block;
   padding: 7px 35px;
@@ -187,10 +191,9 @@ p{
 .clearfix{
   clear: both;
 }
-/*SVG LOGO*/
-#logoMenu{
 
-}
+/*SVG LOGO*/
+
 
 #logoBlack2{
   width: 70px;
@@ -434,9 +437,19 @@ p{
 
 
 /* ------------------ PROJECTS --------------------- */
+#projects{
+ background: rgba(0, 0, 0, 0) url("../img/Website-Design-Background.jpg") no-repeat fixed center bottom/ cover;
+}
+#projects h2{
+  color: white;
+}
+
 /* ------------------ SKILLS --------------------- */
+#skills{
+
+}
 #skills div[class^="width"] {
-    height: 8px;
+    height: 12px;
     background: rgba(3,29,45,.1);
     margin-bottom: 15px;
     position: relative;
@@ -504,10 +517,51 @@ p{
 
 .item{
     padding: 40px 160px;
+  }
+  
+.item blockquote {
+	background-color: rgba(250, 250, 250, 1);
+	margin: 0 auto;
+	width: 60%;
+	padding: 40px;
+	border: 2px solid rgb(3,29,45);
+	border-radius: 20px;
+	position: relative;
+}
+.item blockquote p{
+  line-height: 2em;
+  margin-bottom: 20px;
+}
+.item blockquote>p{
+  
+  margin-bottom: 40px
+}
+.item blockquote > p::before {
+	content: "“";
+	font-size: 2em;
+
+}
+.item blockquote > p::after {
+	content: "”";
+	font-size: 2em;
+
+}
+/* .item blockquote .quote{
+  font-size: 14em;
+    font-weight: 400;
+    letter-spacing: 2px;
+} */
+.item blockquote footer{
+  padding: 10px;
+  background-color: transparent;
 }
 
-.item blockquote{
-  margin: 0 50px;
+.divider{
+  width: 30%;
+  margin: 0 auto;
+  border: none;
+  border-top: 2px solid rgb(3,29,45);
+
 }
 /* ------------------ CONTACTO --------------------- */
 /* ------------------ FOOTER --------------------- */
@@ -546,4 +600,17 @@ footer ul li{
 }
 #linkedinBlack:hover{
   transform: scale(1.1)
+}
+
+/* ------------------ RESPONSIVE --------------------- */
+
+@media screen and (max-width: 700px) {
+#hoverContainer{
+display: none;
+   
+}
+
+@media screen and (max-width: 1200px) {
+
+   
 }
