@@ -366,11 +366,11 @@ p{
 
 .hoverEffect {
   width: calc(50% - 100px);
-  height: 300px;
-	float: left;
+  height: 400px;
+  float: left;
   margin: 0 10px;
-	padding: 40px;
-  background-color: rgba(3,29,45,.0);
+  padding: 40px;
+  background-color: rgba(3, 29, 45, .0);
   transition: all .4s;
 }
 
@@ -479,7 +479,29 @@ p{
 }
 
 
+#projects{
+  background: rgba(0, 0, 0, 0) url("../img/responsive-web-design-web-veil.jpg") no-repeat fixed center bottom/ cover;
+}
+#projects::after{
+  content: '';
+  background-color:rgba(0, 0, 0, .4)
+}
+ .frame{
+     padding: 20px;
+     border: 1px solid white;
+     background-color: rgba(255, 255, 255, 0.2);
+     overflow: hidden;
+}
+ .frame h5{
+  color: white;
+}
+ .frame img{
+   width:100%;
+}
 /* ------------------ TESTIMONIOS --------------------- */
+
+/* ------------------ SKILLS --------------------- */
+
 .item{
     padding: 40px 160px;
 }
