@@ -42,30 +42,43 @@ $(document).ready(function () {
     // validación formulario - SIN ADAPTAR
 
     $('form').on('submit', function (e) {
+        e.preventDefault();
+        var name = $('#contactName').val();
+        var email = $('#contactEmail').val();
+        var message = $('#contactMessage').val();
 
-        var nombre = $('#campoNombre').val();
-        var email = $('#campoEmail').val();
-        var mensaje = $('#campoMensaje').val();
+        if (name.length < 2) {
 
-        if (nombre.length < 2) {
-
-            mostrarError("Por favor, introduce un nombre.");
+            showMessage("Por favor, introduce un nombre. Debe tener mínimo 2 caracteres.");
             e.preventDefault();
+        } else if (email.includes('@') == false || email.includes('.') == false) {
+
+            showMessage("Por favor, introduce un email válido. Debe ser de la forma \"xxxx@xxxx.xxx\"");
+            e.preventDefault();
+        } else if (message.length < 20) {
+
+            showMessage("El mensaje es demasiado corto. Mínimo 20 caracteres.");
+            e.preventDefault();
+        } else {
+            showMessage("¡Mensaje enviado con exito!.");
+            name = "";
+            email = "";
+            message= "";
         }
 
-        if (email.includes('@') == false || email.includes('.') == false) {
-
-            mostrarError("Por favor, introduce un email válido.");
-            e.preventDefault();
-        }
-
-        if (mensaje.length < 12) {
-
-            mostrarError("El mensaje es demasiado corto.");
-            e.preventDefault();
-        }
 
     });
+
+    function showMessage(text) {
+
+        $('#formMessage>p').text(text);
+        $('#formMessage').addClass('visible');
+
+        setTimeout(() => {
+            $('#formMessage').removeClass('visible');   
+        }, 3000);
+        
+    }
     
     // Aparición de modal
     $('.frame').on('click', openModal );
@@ -90,14 +103,14 @@ $(document).ready(function () {
 
 $(window).on('scroll', function () {
 
-    var profundidadUsuario = $(window).scrollTop();
+    var userDepth = $(window).scrollTop();
 
     // sistema scrollreveal -SIN ADAPTAR
     $('.reveal').each(function () {
 
-        var profundidadObjetivo = $(this).offset().top - $(window).innerHeight() / 2;
+        var targetDepth = $(this).offset().top - $(window).innerHeight() / 2;
 
-        if (profundidadUsuario >= profundidadObjetivo) {
+        if (userDepth >= targetDepth) {
 
             $(this).addClass('visible');
         }

@@ -279,19 +279,20 @@
             <h2>Contacto</h2>
             <form action="#" method="post">
                 <div class="col-sm-12 col-md-6">
-                    <label for="contactNombre">Nombre</label>
-                    <input type="text" class="form-control" id="contactNombre" aria-describedby="emailHelp" placeholder="Enter email">
+                    <label class="sr-only " for="contactName">Nombre</label>
+                    <input type="text" class="form-control" id="contactName" aria-describedby="emailHelp" placeholder="Nombre">
                 </div>
                 <div class="col-sm-12 col-md-6">
-                    <label for="contactEmail">Email</label>
-                    <input type="text" class="form-control" id="contactEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                    <label class="sr-only " for="contactEmail">Email</label>
+                    <input type="text" class="form-control" id="contactEmail" aria-describedby="emailHelp" placeholder="Email">
                 </div>
                 <div class="col-sm-12">
-                    <label for="contactMessage">Mensaje</label>
-                    <textarea class="form-control" id="contactMessage" rows="5" cols="100"></textarea>
+                    <label class="sr-only " for="contactMessage">Mensaje</label>
+                    <textarea class="form-control" id="contactMessage" rows="5" cols="100" placeholder="Mensaje..."></textarea>
                 </div>
-                <input type="submit" class="button dark" value="Enviar">
+                <input id="submitBtn" type="submit" class="button dark" value="Enviar">
             </form>
+            <div id="formMessage"><p>Mensaja de Prueba</p></div>
         </section>
 
     </main>
