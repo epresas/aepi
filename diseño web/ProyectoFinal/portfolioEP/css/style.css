@@ -607,7 +607,7 @@ footer ul li{
 
 /* ------------------ RESPONSIVE --------------------- */
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1000px) {
   #hoverContainer{
     display: none;
     
@@ -630,21 +630,7 @@ footer ul li{
   }  
 }
 
-@media screen and (max-width: 1000px) {
-   
-  #profilePic{
-    display: none;
-  }
-    .item{
-    padding: 40px;
-  }
 
-  .item blockquote{
-    width: 100%;
-    text-align: justify;
-  }
-   
-}
 @media screen and (max-width: 1200px) {
 
    
