@@ -371,7 +371,7 @@ section{
 }
 
 .hoverEffect {
-  width: calc(50% - 100px);
+  width: calc(50% - 20px);
   height: 400px;
   float: left;
   margin: 0 10px;
