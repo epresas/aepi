@@ -380,20 +380,23 @@ section{
   transition: all .4s;
 }
 
-.hoverEffect:hover{
+.hoverEffect:hover {
   background-color: rgba(3, 29, 45, .5);
   
 }
+
 .hoverEffect:hover h3{
 
   transform: translateY(-80px);
-  
+
 }
+
 .hoverEffect:hover p{
   opacity:1;
   transform: translateY(-80px);
 }
-.hoverEffect h3{
+
+.hoverEffect h3 {
   
   line-height: 1.5;
   padding-top: 120px;
@@ -417,37 +420,65 @@ section{
 
 
 /* ------------------SECCIÓN ABOUT ------------------*/
+
 #inicio-about{
   padding: 80px 20px;
 }
+
 #inicio-about h2 {
 	text-align: center;
 	margin-bottom: 30px;
 	padding: 30px 0px;
 }
+
 #inicio-about p {
 	margin-bottom: 20px;
   line-height: 28.5px;
   text-align:justify; 
 }
+
 #profilePic {
 	width: 100%;
 	margin-left: 40px;
 }
+
 .about-text{
   padding: 0 50px 0 20px;
 }
 
 
 /* ------------------ PROJECTS --------------------- */
+
 #projects{
- background: rgba(0, 0, 0, 0) url("../img/Website-Design-Background.jpg") no-repeat fixed center bottom/ cover;
+  background: rgba(0, 0, 0, 0) url("../img/responsive-web-design-web-veil.jpg") no-repeat fixed center bottom/ cover;
 }
+
+#projects::after{
+  content: '';
+  background-color:rgba(0, 0, 0, .4)
+}
+
 #projects h2{
   color: white;
 }
 
+ .frame{
+     padding: 20px;
+     border: 1px solid white;
+     background-color: rgba(255, 255, 255, 0.2);
+     overflow: hidden;
+}
+
+ .frame h5{
+  color: white;
+}
+
+ .frame img{
+   width:100%;
+}
+
 /* ------------------ SKILLS --------------------- */
+
 #skills{
 
 }
@@ -468,7 +499,6 @@ section{
     width: 0;
     transition: all 1s;
 }
-
 
 #skills .visible .width90::before{
     width:90%;
@@ -495,25 +525,6 @@ section{
 }
 
 
-#projects{
-  background: rgba(0, 0, 0, 0) url("../img/responsive-web-design-web-veil.jpg") no-repeat fixed center bottom/ cover;
-}
-#projects::after{
-  content: '';
-  background-color:rgba(0, 0, 0, .4)
-}
- .frame{
-     padding: 20px;
-     border: 1px solid white;
-     background-color: rgba(255, 255, 255, 0.2);
-     overflow: hidden;
-}
- .frame h5{
-  color: white;
-}
- .frame img{
-   width:100%;
-}
 /* ------------------ TESTIMONIOS --------------------- */
 
 /* ------------------ SKILLS --------------------- */
@@ -604,6 +615,34 @@ footer ul li{
 #linkedinBlack:hover{
   transform: scale(1.1)
 }
+
+/* ------------------ MODAL --------------------- */
+
+#modalBg {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.85);
+    display: none;
+    z-index: 1000;
+  }
+  
+  #modalContent {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #ccc;
+    color: black;
+    display: none;
+    z-index: 1100;
+}
+
 
 /* ------------------ RESPONSIVE --------------------- */
 

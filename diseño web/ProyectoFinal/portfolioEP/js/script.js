@@ -66,6 +66,14 @@ $(document).ready(function () {
         }
 
     });
+
+    // Aparición de modal
+    $('.showModal').on('click',function () {
+        $('#modalBg').fadeIn(300,function () {
+            $('#modalContent').fadeIn(300);
+        });
+    });
+
 });
 
 $(window).on('scroll', function () {
@@ -95,3 +103,32 @@ $(window).on('scroll', function () {
 function initialize() {
     $('#overlay').fadeOut(2000);
 }
+
+// Datos de modales
+
+let projectData = [
+    {
+        id:1,
+        title:"Macmillan - ByME",
+        text: "Proyecto educativo online, consiste en un gran catálogo de libros y recursos digitales gestionados mediante un CMS.<br>Duración: 2 años.<br>Rol: Técnico de producción.<br>Tecnología utilizada: HTML5, CSS3 y Javascript."
+
+    },
+    {
+        id:2,
+        title:"Microsite Telefónica",
+        text: "Microsite hecho para la empresa Telefónica por medio del cual se personalizan y envian felicitaciones navideñas corporativas. Dotado de un escenario 360 y acceso a redes sociales.<br>Duración: 2 meses.<br>Rol: Creación de contenido.<br>Tecnología utilizada: HTML5, CSS3, Javascript, frameworks para el lado de cliente (AngularJs, Sass)."
+
+    },
+    {
+        id:3,
+        title:"Profuturo",
+        text: "Proyecto educativo online, que consta de unidades relativas a un tópico particular, visualizado como una presentación dinámica, tiene slides explicativos y actividades interactivas.<br>Duración: 1 año y medio.<br>Rol: Responsable de producción / Desarrollador front.<br>Tecnología utilizada: HTML5, CSS3, Javascript, frameworks para el lado de cliente (AngularJs, Sass)."
+
+    },
+    {
+        id:4,
+        title:"Proyecto final formación javascript",
+        text: "Proyecto final del curso de programación en Javascript. Es un juego donde se tiene que construir un parque de atracciones.<br>Rol: Programador.<br>Tecnología utilizada: HTML5, CSS3 y Javascript."
+
+    }
+];
