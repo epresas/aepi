@@ -156,7 +156,9 @@ section{
   
 }
 .button{
-  display: inline-block;
+  display: block;
+  width: 230px;
+  margin: 0 auto;
   padding: 7px 35px;
   margin-top: 20px;
   text-transform: uppercase;
@@ -359,9 +361,10 @@ section{
   background: rgba(0, 0, 0, 0) url("../img/Website-Design-Background.jpg") no-repeat fixed center bottom/ cover;
 }
 
-#hero h1 {
-
-}
+#responsiveHeader{
+  display: none;
+  color: white;
+} 
 #hoverContainer{
   padding: 60px 40px;
   /* background-color: rgba(0,0,0,.4) ; */
@@ -605,11 +608,43 @@ footer ul li{
 /* ------------------ RESPONSIVE --------------------- */
 
 @media screen and (max-width: 700px) {
-#hoverContainer{
-display: none;
-   
+  #hoverContainer{
+    display: none;
+    
+  }
+  #profilePic{
+    display: none;
+  }
+
+  .item{
+    padding: 40px;
+  }
+
+  .item blockquote{
+    width: 100%;
+    text-align: justify;
+  }
+  
+  #responsiveHeader{
+  display: block;
+  }  
 }
 
+@media screen and (max-width: 1000px) {
+   
+  #profilePic{
+    display: none;
+  }
+    .item{
+    padding: 40px;
+  }
+
+  .item blockquote{
+    width: 100%;
+    text-align: justify;
+  }
+   
+}
 @media screen and (max-width: 1200px) {
 
    
