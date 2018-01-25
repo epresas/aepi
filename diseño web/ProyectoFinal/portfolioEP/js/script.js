@@ -66,13 +66,25 @@ $(document).ready(function () {
         }
 
     });
-
+    
     // Aparición de modal
-    $('.showModal').on('click',function () {
-        $('#modalBg').fadeIn(300,function () {
-            $('#modalContent').fadeIn(300);
-        });
+    $('.frame').on('click', openModal );
+    $('#modalClose').on( 'click', closeModal );
+    
+    // Efecto hover proyectos
+    // $('.frame').hover( showModalBtn, hideModalBtn );
+    $('.frame').on('mouseenter', function () {
+        $(this).find('.showModal').fadeIn(500);
     });
+    $('.frame').on('mouseleave', function () {
+        $(this).find('.showModal').fadeOut(500);
+    });
+    // function showModalBtn() {
+    //     $(this).find('.veil').fadeIn(200);
+    // }
+    // function hideModalBtn() {
+        
+    // }
 
 });
 
@@ -91,20 +103,58 @@ $(window).on('scroll', function () {
         }
     });
 
-
-
+ 
 
 });
 
+$(window).on('scroll', menuHide);
+
+let lastScroll = 0;
+
+function menuHide() {
+
+    let currentScroll = $(window).scrollTop();
+    
+    if (currentScroll > lastScroll) {
+        
+        $('#menuSuperior').addClass('hidden');
+        
+    } else {
+        console.log("currentScroll")
+
+        $('#menuSuperior').removeClass('hidden');
+
+    }
+    lastScroll = currentScroll;
+}
 
 
-// Declaración de funciones
 
+// ###################### DECLARACION DE FUNCIONES ##############################
+
+// Pantalla de carga
 function initialize() {
     $('#overlay').fadeOut(2000);
 }
 
-// Datos de modales
+// Plugin para abrir modal
+function openModal () {
+    let projectId = $(this).data('project') -1 ;
+    let modalTitle = projectData[projectId].title;
+    let modalText = projectData[projectId].text;
+    $('#modalTitle').text(modalTitle);
+    $('#modalText').html(modalText);
+    $('#modalBg').fadeIn(200,function () {
+       $('#modalContent').fadeIn(300); 
+    });
+    
+}
+
+function closeModal(){
+    $('#modalBg,#modalContent').fadeOut(300);
+}
+
+// ###################### INFORMACIÓN DE MODALES ##############################
 
 let projectData = [
     {

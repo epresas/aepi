@@ -149,6 +149,7 @@ h1,h2,h3{
 
 p{
   letter-spacing: 1px;
+  font-size: 1.2em;
   font-family: 'PT Sans',sans-serif;
 }
 section{
@@ -170,8 +171,12 @@ section{
 }
 
 .button.dark{
-  background-color: rgb(11, 45, 90);
+  border: 1px solid white;
   color: white;
+}
+.button.dark:hover{
+  background-color:  white;
+  color: #292828;
 }
 
 .button.light{
@@ -326,7 +331,12 @@ section{
   left: 0;
   height: 77px;
   background: rgba(3, 29, 45, .5);
+  transition: transform 1s;
 }
+#menuSuperior.hidden{
+  transform: translateY(-100%)
+}
+
 #menuSuperior>a{
   float: left;
 }
@@ -436,10 +446,15 @@ section{
   line-height: 28.5px;
   text-align:justify; 
 }
+.imgContainer{
+  position: relative;
+}
 
 #profilePic {
-	width: 100%;
-	margin-left: 40px;
+  width: 100%;
+  /* margin-left: 40px; */
+  position: absolute;
+  left: 50%;
 }
 
 .about-text{
@@ -453,20 +468,37 @@ section{
   background: rgba(0, 0, 0, 0) url("../img/responsive-web-design-web-veil.jpg") no-repeat fixed center bottom/ cover;
 }
 
-#projects::after{
+/* #projects::after{
   content: '';
   background-color:rgba(0, 0, 0, .4)
-}
+} */
 
 #projects h2{
   color: white;
+  margin-bottom: 40px;
+}
+#projects header{
+  margin-bottom: 20px;
+}
+#projects header p{
+  color:white;
+  text-align: center;
+}
+#projectList{
+  margin: 60px 0 80px;
 }
 
- .frame{
-     padding: 20px;
-     border: 1px solid white;
-     background-color: rgba(255, 255, 255, 0.2);
-     overflow: hidden;
+#projectList .content{
+ 
+  margin-bottom: 30px;
+ 
+}
+
+.frame{
+  padding: 20px;
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.2);
+  overflow: hidden;
 }
 
  .frame h5{
@@ -475,6 +507,25 @@ section{
 
  .frame img{
    width:100%;
+}
+.showModal {
+  color: white;
+  display: inline-block;
+  padding: 10px 15px;
+  border: 1px solid white;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  top: 50%;
+  display: none;
+  /* transition: all .5s; */
+}
+.veil{
+  background-color: rgba(0, 0, 0, .3);
+}
+.veil.visible{
+  background-color: rgba(0, 0, 0, .2);
 }
 
 /* ------------------ SKILLS --------------------- */
@@ -527,7 +578,7 @@ section{
 
 /* ------------------ TESTIMONIOS --------------------- */
 
-/* ------------------ SKILLS --------------------- */
+
 
 .item{
     padding: 40px 160px;
@@ -542,13 +593,16 @@ section{
 	border-radius: 20px;
 	position: relative;
 }
-.item blockquote p{
+
+.item blockquote p {
   line-height: 2em;
+  font-size: 1.5em;
   margin-bottom: 20px;
 }
-.item blockquote>p{
-  
-  margin-bottom: 40px
+
+.item blockquote > p {
+  margin-bottom: 40px;
+  font-size: 1.4em;
 }
 .item blockquote > p::before {
 	content: "“";
@@ -559,6 +613,10 @@ section{
 	content: "”";
 	font-size: 2em;
 
+}
+
+.item blockquote cite{
+  font-size: 1.4em;
 }
 /* .item blockquote .quote{
   font-size: 14em;
@@ -578,20 +636,36 @@ section{
 
 }
 /* ------------------ CONTACTO --------------------- */
+
+#contact{
+  background-color: #292828;
+}
+
+#contact input[id^="contact"]{
+  border: 1px solid white;
+  border-top: none;
+  border-left: none;
+  margin-bottom: 20px;
+}
 /* ------------------ FOOTER --------------------- */
 
 footer{
-  background-color: #083D4C;
+  background-color: #03627D;
   padding: 40px 0;
   text-align: center;
 }
 footer ul li{
   display: inline-block;
 }
-.footer-links{
+.footer-links {
   text-decoration: none;
   font-family: 'PT Sans',sans-serif;
   color: rgb(29, 28, 28);
+  transition: all .6s;
+}
+.footer-links:hover {
+  font-family: 'PT Sans',sans-serif;
+  color: rgb(255, 255, 255);
 }
 .socialIcon svg{
   margin: 10px 5px 20px;
@@ -629,18 +703,41 @@ footer ul li{
     z-index: 1000;
   }
   
-  #modalContent {
-    background-color: white;
-    border-radius: 15px;
-    padding: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background: #ccc;
-    color: black;
-    display: none;
-    z-index: 1100;
+#modalContent {
+  background-color: white;
+  border-radius: 15px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: #ccc;
+  color: black;
+  display: none;
+  z-index: 1100;
+}
+
+#modalTitle {
+  padding: 10px 0;
+  margin-top: 45px;
+}
+
+#modalText{
+  line-height: 1.8em;
+}
+
+#modalClose {
+  text-transform: uppercase;
+  position: absolute;
+  right: 3%;
+  cursor: pointer;
+  padding: 10px 15px;
+  top: 8%;
+}
+
+#modalClose:hover {
+  border-radius: 20px;
+  background: rgba(159, 159, 159, 0.4);
 }
 
 

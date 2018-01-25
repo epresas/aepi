@@ -114,6 +114,7 @@
         </div>
                 
     </header>
+    
     <main>
         <section id="inicio-about">
             <div class="container">
@@ -128,7 +129,7 @@
               
                     </div>
                     <div class="col-md-4">
-                        <img src="img/profile.png" id="profilePic" alt="Foto Edmundo Presas">
+                        <div class="imgContainer"><img src="img/profile.png" id="profilePic" alt="Foto Edmundo Presas"></div>
                     </div>
                 </div>
             </div>
@@ -136,15 +137,19 @@
 
         <section id="projects">
             <div class="container-fluid">
-                <h2>Proyectos</h2>
-                <p>Proyectos hechos, bien sea durante mi formación, o proyectos donde he participado como colaborador y diseños propios.</p>
-                <div id="proyectList" class="row">
+                <header>
+                    <h2>Proyectos</h2>
+                    <p>Proyectos hechos, bien sea durante mi formación, o proyectos donde he participado como colaborador y diseños propios.</p>
+                </header>
+                <div id="projectList" class="row">
                     <div class=" content col-lg-3 col-md-6 col-sm-12">
                     
                         <article class="frame" data-project="1">
                     
-                            <img src="img/projectByme.jpg" alt="Proyecto ByME">
-                            <a class="showModal">Macmillan ByME</a>
+                            <div class="veil">
+                                <img src="img/projectByme.jpg" alt="Proyecto ByME">
+                                <a class="showModal">Macmillan ByME</a>
+                            </div>
                             
                         </article>
                         
@@ -154,9 +159,10 @@
                         <article class="frame" data-project="2">
                             
                             
-                            
-                            <img src="img/projectTelefonica.jpg" alt="Proyecto Telefónica">
-                            <a class="showModal">Telefonica</a>
+                           <div class="veil">
+                                <img src="img/projectTelefonica.jpg" alt="Proyecto Telefónica">
+                                <a class="showModal">Telefonica</a>
+                           </div>
                             
                         </article>
                         
@@ -166,8 +172,10 @@
                         <article class="frame" data-project="3">
                             
                             
-                            <img src="img/projectProfuturo.jpg" alt="Proyecto Profuturo">
-                            <a class="showModal">Profuturo</a>
+                           <div class="veil">
+                                <img src="img/projectProfuturo.jpg" alt="Proyecto Profuturo">
+                                <a class="showModal">Profuturo</a>
+                           </div>
                             
                         </article>
                         
@@ -177,8 +185,10 @@
                         <article class="frame" data-project="4">
                             
                             
-                            <img src="img/projectFormacion.jpg" alt="Proyecto Formación Javascript">
-                            <a class="showModal">Proyecto Formación</a>
+                            <div class="veil">
+                                <img src="img/projectFormacion.jpg" alt="Proyecto Formación Javascript">
+                                <a class="showModal">Proyecto Formación</a>
+                            </div>
                     
                         </article>
                     
@@ -280,7 +290,7 @@
                     <label for="contactMessage">Mensaje</label>
                     <textarea class="form-control" id="contactMessage" rows="5" cols="100"></textarea>
                 </div>
-                <input type="submit" class="button light" value="Enviar">
+                <input type="submit" class="button dark" value="Enviar">
             </form>
         </section>
 
@@ -460,6 +470,7 @@
 
     <div id="modalBg">
         <div id="modalContent">
+            <div id="modalClose">Cerrar</div>
             <h3 id="modalTitle"></h3>
             <p id="modalText"></p>
         </div>
