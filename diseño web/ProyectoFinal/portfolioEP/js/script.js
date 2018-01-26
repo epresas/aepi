@@ -30,12 +30,12 @@ $(document).ready(function () {
     });
 
 
-    // aplicación de retardos reveal - SIN ADAPTAR
+    // aplicación de retardos reveal
     $('.reveal.delayed').each(function () {
 
-        var retardo = $(this).data('delay');
+        var objDelay = $(this).data('delay');
 
-        $(this).css('transition-delay', retardo + 'ms');
+        $(this).css('transition-delay', objDelay + 'ms');
     });
 
 
@@ -74,7 +74,7 @@ $(document).ready(function () {
         $('#formMessage>p').text(text);
         $('#formMessage').addClass('visible');
 
-        setTimeout(() => {
+        setTimeout(function() {
             $('#formMessage').removeClass('visible');   
         }, 3000);
         
@@ -85,7 +85,7 @@ $(document).ready(function () {
     $('#modalClose').on( 'click', closeModal );
     
     // Efecto hover proyectos
-    // $('.frame').hover( showModalBtn, hideModalBtn );
+   
     $('.frame').on('mouseenter', function () {
         $(this).find('.veil').addClass('visible');
         $(this).find('.showModal').fadeIn(500);
@@ -96,12 +96,7 @@ $(document).ready(function () {
         $(this).find('.showModal').fadeOut(500);
         $(this).find('.veil').removeClass('visible');
     });
-    // function showModalBtn() {
-    //     $(this).find('.veil').fadeIn(200);
-    // }
-    // function hideModalBtn() {
-        
-    // }
+
 
 });
 
@@ -123,27 +118,6 @@ $(window).on('scroll', function () {
  
 
 });
-
-// $(window).on('scroll', menuHide);
-
-// let lastScroll = 0;
-
-// function menuHide() {
-
-//     let currentScroll = $(window).scrollTop();
-    
-//     if (currentScroll > lastScroll) {
-        
-//         $('#menuSuperior').addClass('hidden');
-        
-//     } else {
-//         console.log("currentScroll")
-
-//         $('#menuSuperior').removeClass('hidden');
-
-//     }
-//     lastScroll = currentScroll;
-// }
 
 
 
