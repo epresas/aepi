@@ -78,32 +78,7 @@
   url('../fonts/pt-sans-v9-latin-italic.svg#PTSans') format('svg');
   /* Legacy iOS */
 }
-/* khula-regular - latin */
-@font-face {
-  font-family: 'Khula';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/khulakhula-v3-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local('Khula Regular'), local('Khula-Regular'),
-       url('../fonts/khulakhula-v3-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/khulakhula-v3-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/khulakhula-v3-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/khulakhula-v3-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/khulakhula-v3-latin-regular.svg#Khula') format('svg'); /* Legacy iOS */
-}
-/* khula-600 - latin */
-@font-face {
-  font-family: 'Khula';
-  font-style: normal;
-  font-weight: 600;
-  src: url('../fonts/khulakhula-v3-latin-600.eot'); /* IE9 Compat Modes */
-  src: local('Khula SemiBold'), local('Khula-SemiBold'),
-       url('../fonts/khulakhula-v3-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/khulakhula-v3-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/khulakhula-v3-latin-600.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/khulakhula-v3-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/khulakhula-v3-latin-600.svg#Khula') format('svg'); /* Legacy iOS */
-}
+
 
 
 /*---------------------------- RESETEO DE ESTILOS ---------------------------*/
@@ -135,10 +110,11 @@ h2 {
   letter-spacing: 2px;
   text-align: center;
   margin-bottom: 80px;
+  color:rgb(11, 45, 90);
 }
 
 h3{
-  font-family: 'Khula', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 600;
   font-size: 1.8em;
 }
@@ -475,7 +451,7 @@ section{
 
 #projects h2{
   color: white;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 #projects header{
   margin-bottom: 20px;
@@ -483,14 +459,21 @@ section{
 #projects header p{
   color:white;
   text-align: center;
-}
-#projectList{
-  margin: 60px 0 80px;
+  margin-bottom: 100px;
 }
 
 #projectList .content{
  
   margin-bottom: 30px;
+  transition: opacity .5s, transform .8s;
+  transform: translateY(60px);
+  opacity: 0;
+ 
+}
+#projectList .content.visible{
+
+  transform: translateY(0);
+  opacity: 1;
  
 }
 
@@ -521,11 +504,23 @@ section{
   display: none;
   /* transition: all .5s; */
 }
-.veil{
-  background-color: rgba(0, 0, 0, .3);
+.veil {
+  background-color: rgba(0,0,0,.7);
+  opacity: 0;
+	position: absolute;
+	width: 94.9%;
+	height: 100%;
+	top: 0;
+  left: 2.5%;
+  transition: opacity .3s;
 }
 .veil.visible{
-  background-color: rgba(0, 0, 0, .2);
+  opacity: 1;
+ 
+}
+
+#recomendations{
+  margin-top: 120px;
 }
 
 /* ------------------ SKILLS --------------------- */
@@ -533,6 +528,19 @@ section{
 #skills{
 
 }
+#skills h3 {
+  margin-bottom:40px;
+  font-weight: 100;
+  letter-spacing: 1.4px;
+}
+#skills p {
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+.skillBars{
+  margin-bottom: 40px;
+}
+
 #skills div[class^="width"] {
     height: 12px;
     background: rgba(3,29,45,.1);
@@ -587,7 +595,7 @@ section{
 .item blockquote {
 	background-color: rgba(250, 250, 250, 1);
 	margin: 0 auto;
-	width: 60%;
+	width: 100%;
 	padding: 40px;
 	border: 2px solid rgb(3,29,45);
 	border-radius: 20px;
@@ -785,30 +793,50 @@ footer ul li{
 /* ------------------ RESPONSIVE --------------------- */
 
 @media screen and (max-width: 1000px) {
-  #hoverContainer{
+  #hoverContainer {
     display: none;
     
   }
-  #profilePic{
+  #profilePic {
     display: none;
   }
 
-  .item{
+  .item {
     padding: 40px;
   }
 
-  .item blockquote{
+  .item blockquote {
     width: 100%;
     text-align: justify;
   }
   
-  #responsiveHeader{
-  display: block;
-  }  
+  #responsiveHeader {
+    display: block;
+    margin-top: 100px;
+  } 
+  #projectList .content {
+    width: 80%;
+  } 
 }
 
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 690px) and (max-height: 400px) {
 
-   
+   #modalContent{
+     width: 80%;
+     padding: 10px 25px;
+
+   }
+   #modalTitle{
+     font-size:1.3em;
+     text-align: center;
+   }
+   #modalText{
+     font-size: 1em;
+    }
+    #modalClose{
+      font-size: .9em;
+      right: 1%;
+      top: 5%;
+   }
 }

@@ -39,7 +39,7 @@ $(document).ready(function () {
     });
 
 
-    // validación formulario - SIN ADAPTAR
+    // validación formulario
 
     $('form').on('submit', function (e) {
         e.preventDefault();
@@ -87,10 +87,14 @@ $(document).ready(function () {
     // Efecto hover proyectos
     // $('.frame').hover( showModalBtn, hideModalBtn );
     $('.frame').on('mouseenter', function () {
+        $(this).find('.veil').addClass('visible');
         $(this).find('.showModal').fadeIn(500);
     });
+    
     $('.frame').on('mouseleave', function () {
+
         $(this).find('.showModal').fadeOut(500);
+        $(this).find('.veil').removeClass('visible');
     });
     // function showModalBtn() {
     //     $(this).find('.veil').fadeIn(200);
@@ -105,7 +109,7 @@ $(window).on('scroll', function () {
 
     var userDepth = $(window).scrollTop();
 
-    // sistema scrollreveal -SIN ADAPTAR
+    // sistema scrollreveal
     $('.reveal').each(function () {
 
         var targetDepth = $(this).offset().top - $(window).innerHeight() / 2;
@@ -120,26 +124,26 @@ $(window).on('scroll', function () {
 
 });
 
-$(window).on('scroll', menuHide);
+// $(window).on('scroll', menuHide);
 
-let lastScroll = 0;
+// let lastScroll = 0;
 
-function menuHide() {
+// function menuHide() {
 
-    let currentScroll = $(window).scrollTop();
+//     let currentScroll = $(window).scrollTop();
     
-    if (currentScroll > lastScroll) {
+//     if (currentScroll > lastScroll) {
         
-        $('#menuSuperior').addClass('hidden');
+//         $('#menuSuperior').addClass('hidden');
         
-    } else {
-        console.log("currentScroll")
+//     } else {
+//         console.log("currentScroll")
 
-        $('#menuSuperior').removeClass('hidden');
+//         $('#menuSuperior').removeClass('hidden');
 
-    }
-    lastScroll = currentScroll;
-}
+//     }
+//     lastScroll = currentScroll;
+// }
 
 
 

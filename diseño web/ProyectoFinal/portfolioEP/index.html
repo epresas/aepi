@@ -136,64 +136,69 @@
         </section>
 
         <section id="projects">
-            <div class="container-fluid">
+            <div class="container">
                 <header>
                     <h2>Proyectos</h2>
                     <p>Proyectos hechos, bien sea durante mi formación, o proyectos donde he participado como colaborador y diseños propios.</p>
                 </header>
                 <div id="projectList" class="row">
-                    <div class=" content col-lg-3 col-md-6 col-sm-12">
+                    <div class=" content reveal delayed col-md-6 col-sm-12"  data-delay="0">
                     
-                        <article class="frame" data-project="1">
+                        <article class="frame " data-project="1">
                     
                             <div class="veil">
-                                <img src="img/projectByme.jpg" alt="Proyecto ByME">
-                                <a class="showModal">Macmillan ByME</a>
                             </div>
+                            <img src="img/projectByme.jpg" alt="Proyecto ByME">
+                            <a class="showModal">Macmillan ByME</a>
                             
                         </article>
                         
                     </div>
-                    <div class=" content col-lg-3 col-md-6 col-sm-12">
+                    <div class=" content  reveal delayed col-md-6 col-sm-12"  data-delay="200">
                         
                         <article class="frame" data-project="2">
                             
                             
                            <div class="veil">
-                                <img src="img/projectTelefonica.jpg" alt="Proyecto Telefónica">
-                                <a class="showModal">Telefonica</a>
-                           </div>
+                        </div>
+                        <img src="img/projectTelefonica.jpg" alt="Proyecto Telefónica">
+                        <a class="showModal">Telefonica</a>
                             
                         </article>
                         
                     </div>
-                    <div class=" content col-lg-3 col-md-6 col-sm-12">
+                  
+                </div>
+                <div id="projectList" class="row">
+             
+                    <div class=" content  reveal delayed col-md-6 col-sm-12"  data-delay="0">
                         
                         <article class="frame" data-project="3">
                             
                             
                            <div class="veil">
-                                <img src="img/projectProfuturo.jpg" alt="Proyecto Profuturo">
-                                <a class="showModal">Profuturo</a>
-                           </div>
+                        </div>
+                        <img src="img/projectProfuturo.jpg" alt="Proyecto Profuturo">
+                        <a class="showModal">Profuturo</a>
                             
                         </article>
                         
                     </div>
-                    <div class=" content col-lg-3 col-md-6 col-sm-12">
+                    <div class=" content  reveal delayed col-md-6 col-sm-12" data-delay="200">
                         
-                        <article class="frame" data-project="4">
+                        <article class="frame"  data-project="4">
                             
                             
                             <div class="veil">
-                                <img src="img/projectFormacion.jpg" alt="Proyecto Formación Javascript">
-                                <a class="showModal">Proyecto Formación</a>
                             </div>
+                            <img src="img/projectFormacion.jpg" alt="Proyecto Formación Javascript">
+                            <a class="showModal">Proyecto Formación</a>
                     
                         </article>
                     
                     </div>
                 </div>
+
                 <div id="recomendations">
                     <h2>Testimonios &amp; feedback</h2>
                     <div class="owl-carousel" id="feedbackCarousel"> 
@@ -237,11 +242,11 @@
 
         <section id="skills" class="reveal">
             <h2>Habilidades</h2>
-            <div class="container-fluid">
+            <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-sm-12 skillBars reveal">
 
-                        <h5>Frontend</h5>
+                        <h3>Frontend</h3>
 
                         <p>Html5</p>
                         <div class="width90"></div>
@@ -259,7 +264,7 @@
 
                     <div class="col-md-6 col-sm-12 skillBars reveal">
 
-                        <h5>Otros</h5>
+                        <h3>Otros</h3>
                         
                         <p>Photoshop</p>
                         <div class="width50"></div>
@@ -277,21 +282,23 @@
 
         <section id="contact">
             <h2>Contacto</h2>
-            <form action="#" method="post">
-                <div class="col-sm-12 col-md-6">
-                    <label class="sr-only " for="contactName">Nombre</label>
-                    <input type="text" class="form-control" id="contactName" aria-describedby="emailHelp" placeholder="Nombre">
-                </div>
-                <div class="col-sm-12 col-md-6">
-                    <label class="sr-only " for="contactEmail">Email</label>
-                    <input type="text" class="form-control" id="contactEmail" aria-describedby="emailHelp" placeholder="Email">
-                </div>
-                <div class="col-sm-12">
-                    <label class="sr-only " for="contactMessage">Mensaje</label>
-                    <textarea class="form-control" id="contactMessage" rows="5" cols="100" placeholder="Mensaje..."></textarea>
-                </div>
-                <input id="submitBtn" type="submit" class="button dark" value="Enviar">
-            </form>
+            <div class="container">
+                <form action="#" method="post">
+                    <div class="col-sm-12 col-md-6">
+                        <label class="sr-only " for="contactName">Nombre</label>
+                        <input type="text" class="form-control" id="contactName" aria-describedby="emailHelp" placeholder="Nombre">
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <label class="sr-only " for="contactEmail">Email</label>
+                        <input type="text" class="form-control" id="contactEmail" aria-describedby="emailHelp" placeholder="Email">
+                    </div>
+                    <div class="col-sm-12">
+                        <label class="sr-only " for="contactMessage">Mensaje</label>
+                        <textarea class="form-control" id="contactMessage" rows="5" cols="100" placeholder="Mensaje..."></textarea>
+                    </div>
+                    <input id="submitBtn" type="submit" class="button dark" value="Enviar">
+                </form>
+            </div>
             <div id="formMessage"><p>Mensaja de Prueba</p></div>
         </section>
 
