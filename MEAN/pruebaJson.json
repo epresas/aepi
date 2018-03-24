@@ -1,0 +1,11 @@
+{
+    "name":"Edmundo",
+    "surname":"Presas",
+    "age":34,
+    "smoker":false,
+    "address":{
+        "city":"Alcobendas",
+        "CP":"28100"
+    },
+    "gender":"male"
+}

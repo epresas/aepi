@@ -1,0 +1,7 @@
+MONGODB
+
+comparaciones en el find:
+db.getCollection('personCollection').find({"age": {$gt:18}})
+
+and: db.mycol.find({$and:[{"name":name"},{“surname": "surname”}]}).pretty()
+or: db.mycol.find({$or:[{"name":name"},{“surname": "surname”}]}).pretty()

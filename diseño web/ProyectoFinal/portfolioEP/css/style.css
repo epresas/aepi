@@ -411,6 +411,8 @@ section{
   padding: 80px 20px;
 }
 
+
+
 #inicio-about h2 {
 	text-align: center;
 	margin-bottom: 30px;
@@ -431,6 +433,7 @@ section{
   /* margin-left: 40px; */
   position: absolute;
   left: 50%;
+  transform: translateX(-50%);
 }
 
 .about-text{
@@ -444,10 +447,18 @@ section{
   background: rgba(0, 0, 0, 0) url("../img/responsive-web-design-web-veil.jpg") no-repeat fixed center bottom/ cover;
 }
 
-/* #projects::after{
+#projects::after{
   content: '';
-  background-color:rgba(0, 0, 0, .4)
-} */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  bottom: 0;
+  transform-origin: right bottom;
+  transform: skewY(-3deg);
+}
+
 
 #projects h2{
   color: white;
