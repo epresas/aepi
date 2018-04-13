@@ -5,3 +5,36 @@ db.getCollection('personCollection').find({"age": {$gt:18}})
 
 and: db.mycol.find({$and:[{"name":name"},{“surname": "surname”}]}).pretty()
 or: db.mycol.find({$or:[{"name":name"},{“surname": "surname”}]}).pretty()
+
+db.collection.update({})
+
+* Al hacer operaciones, se coloca $ delante de palabras reservadas para diferenciar que no son parte de la estructura de datos.
+
+mlab (entorno para cargar bd MONGODB, luego conectarse por robomongo o node
+)
+
+
+
+Codigo bloqueante: codigo que paraliza la ejecucion mientras se obtiene el resultado de una operacion
+
+
+se pasa un parametro a la funcion "callback" y dentro y en vez de return se le asigna a callback el resultado y al invocar la funcion donde deberia ir el 
+parametro callback se define la funcion
+
+exportar/importar desde node
+
+MONGOOSE
+
+mongoose.connect("mongodb://localhost:27017/test-aepi"
+                  protocolo    ip     puerto  Base de datos
+
+
+
+
+PAUTAS PROYECTO FINAL
+
+- Al menos 3 vistas /home /about /etc 
+- Cada vista estructurada = header, body, footer
+- CRUD en servidor
+- 2 colecciones
+- autentificación
