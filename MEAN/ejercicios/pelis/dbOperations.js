@@ -7,14 +7,14 @@ function createMovie() {
 
     var movie = new Movie();
     movie.title = generator.getMovieName;
-    movie.year = generator.randomDate;
-    movie.cast = movie.cast.push(generator.getName + " " + generator.getSurname);
+    // movie.year = generator.randomDate(new Date(1910, 0, 1), new Date());
+    movie.cast = movie.cast.push(generator.getFullName);
     movie.rating = Math.round(Math.random() * (10 - 1) + 1);
 
-    var director = new Director();
+    var director = new Director;
     director.name = generator.getName;
     director.surname = generator.getSurname;
-    director.birthDate = generator.randomDate;
+    // director.birthDate = generator.randomDate(new Date(1910, 0, 1), new Date());
     director.rating = Math.round(Math.random() * (10 - 1) + 1);
     director.save(function (err, director) {
         movie.director = director.id;
@@ -29,9 +29,7 @@ function createMovie() {
 
 }
 
-function name(params) {
-    
-}
+
 
 module.exports = {
     createMovie: createMovie

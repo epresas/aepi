@@ -18,6 +18,9 @@ function getSurname() {
  
 }
 
+function getFullName(){
+    return namesList[getRandomArbitrary(namesList.length - 1)] + " " + surnamesList[getRandomArbitrary(surnamesList.length - 1)];
+}
 
 function getMovieName() {
     var movieName1 = movieName1list [getRandomArbitrary(movieName1list.length - 1)];
@@ -26,20 +29,21 @@ function getMovieName() {
     return movieName;
 }
 
-function randomDate(start, end) {
-    var date = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
-    var month = date.getMonth();
-    var day = date.getDate();
-    var year = date.getFullYear();
-    return  day + " / " + (parseInt(month)+1) + " / " + year;
-}
+// function randomDate(start, end) {
+//     var date = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+//     var month = date.getMonth();
+//     var day = date.getDate();
+//     var year = date.getFullYear();
+//     return  day + " / " + (parseInt(month)+1) + " / " + year;
+// }
 
 // console.log(randomDate(new Date(2012, 0, 1), new Date()));
-// console.log(getMovieName());
+console.log(getFullName());
 
 module.exports = {
-    randomDate: randomDate,
-    getMovieName: getMovieName,
-    getName: getName,
-    getName: getSurname
+    // randomDate: randomDate(),
+    getMovieName: getMovieName(),
+    getName: getName(),
+    getSurname: getSurname(),
+    getFullName: getFullName()
 }
