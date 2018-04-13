@@ -4,7 +4,6 @@ var Schema = mongoose.Schema;
 var directorSchema = new Schema({
     name: String,
     surname: String,
-    birthDate: String,
     country: String,
     rating: Number
 });

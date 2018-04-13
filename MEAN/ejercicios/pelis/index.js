@@ -15,4 +15,15 @@ mongoose.connect("mongodb://admin:ednmj.281211@ds157833.mlab.com:57833/pelis", f
     }
 });
 
+
+// for (let i = 0; i < 5; i++) {
+    
+//     dbOperations.createMovie();
+    
+// }
 dbOperations.createMovie();
+// dbOperations.findMovie();
+// dbOperations.updateMovie();
+// dbOperations.deleteMovie();
+
+mongoose.connection.close();

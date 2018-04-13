@@ -29,21 +29,29 @@ function getMovieName() {
     return movieName;
 }
 
-// function randomDate(start, end) {
-//     var date = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
-//     var month = date.getMonth();
-//     var day = date.getDate();
-//     var year = date.getFullYear();
-//     return  day + " / " + (parseInt(month)+1) + " / " + year;
-// }
+function randomNamesList(){
+    var list = [];
+    for (let i = 0; i < getRandomArbitrary(5,1); i++) {
+        list[i]= getFullName();
+    }
+    return list;
+}
+
+function randomYear() {
+   var date = new Date();
+
+    return Math.round(Math.random() * (date.getFullYear() - 1940) + 1940);
+   
+}
 
 // console.log(randomDate(new Date(2012, 0, 1), new Date()));
-console.log(getFullName());
+// console.log(randomNamesList());
 
 module.exports = {
-    // randomDate: randomDate(),
-    getMovieName: getMovieName(),
-    getName: getName(),
-    getSurname: getSurname(),
-    getFullName: getFullName()
+    randomNamesList: randomNamesList,
+    getMovieName: getMovieName,
+    getName: getName,
+    getSurname: getSurname,
+    getFullName: getFullName,
+    randomYear: randomYear
 }
