@@ -1,0 +1,4 @@
+["Angustia","La casa","Embarazada","Familia","Madre","Obsesión","Psicopatía","La Hija","Asesino","Secuestro","Vejez","Traición","Divorcio","Penumbra","Desconocido","Sucesos","El hombre","Incesto","Homicidio","Sospecha","Rehén","Secreto","Miedo","Silencio","Engaño","Rabia","Pánico"]
+
+["misterioso","fatal","obsesiv@","en el bosque","al amanecer","del pasado","enfermiz@","desesperad@","en el lago","paranoic@","por despecho","siniestro en Navidad"]
+
