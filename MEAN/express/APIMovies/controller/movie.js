@@ -6,10 +6,10 @@ var generator = require('./NamesGenerator');
 
 //CREATE
 function createMovie(req, res) {
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 100; i++) {
         
 
-
+        var count = 0;
         var director = new Director;
         director.name = generator.getName();
         director.surname = generator.getSurname();
@@ -25,10 +25,9 @@ function createMovie(req, res) {
                 if (err) {
                     res.status(500).send({ "message": err.message });
                 } else {
-                    res.status(201).send(movie_result);
+                    res.status(201).send({ "message":"Creadas correctamente."});
                 }
             })
-            //res.status(200).send()
         });
         
     }
@@ -51,14 +50,14 @@ function findMovies(req, res) {
 function findMovie(req, res) {
     var movie_id = req.params.id;
     console.log(movie_id);
-    Movie.findById(movie_id), function (err, movie) {
+    Movie.findById(movie_id, function (err, movie) {
         if (err) {
             res.status(500).send({ "message": err.message });
         } else {
             res.status(200).send(movie);
 
         }
-    }
+    }).populate({ path: 'director' })
 
 }
 
@@ -73,16 +72,15 @@ function updateMovie(req, res) {
         if (err) {
             res.status(500).send({ "message": err.message });
         } else {
+            console.log(movie);
             res.status(200).send(movie);
 
         }
     });
 
-    /*   Movie.find({"_id": movie_id}, function (err, movie) { 
-          movie_id = movie.id;
-          Movie.update()//falta el resto de mongoose
-      }) */
 }
+
+//DELETE
 function deleteMovie(req, res) {
     var movie_id = req.params.id;
     Movie.findByIdAndRemove(movie_id, function (err, result) {
