@@ -49,3 +49,6 @@ en app.js se importa express se hace instancia de express y se definen las rutas
 
 NODE:
 nodemon paquete para 
+
+
+BCRYPT modulo para encriptar passwords

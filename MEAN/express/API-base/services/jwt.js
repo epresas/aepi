@@ -8,7 +8,7 @@ exports.createToken = function(user){
         sub: user._id,
         name: user.name,
         surname: user.surname,
-        email: user.email,
+        email: user.role,
         image: user.image,
         iat: moment().unix(),
         exp: moment().add(30, 'days').unix(),

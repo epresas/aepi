@@ -1,81 +1,50 @@
-var Movie = require("../models/Movie");
+'use strict'
 
 
-function createMovie(req, res) {
-    var movie = new Movie();
+var Movie = require('../models/Movie');
+var bcrypt = require('bcrypt-nodejs');
+var jwt = require('../services/jwt');
+var Type = require('type-of-is');
+var fs = require('fs');
+var path = require('path');
 
-    var title = req.body.title;
-    var year = req.body.year;
-
-    movie.title = title;
-    movie.year = year;
-    
-    movie.save( function (err, movie_result) {
-        if (err) {
-            res.status(500).send({"message": err.message});
-        } else {
-            res.status(201);
-        }
+function pruebas(req, res){
+    console.log(req.headers.holaa);
+    res.status(200).send({
+        messsage: 'movie'
     })
-    res.status(200).send()
 }
 
-function getMovies(req, res) {
-    Movie.find({}, function (err, movies) {
-        if (err) {
-            res.status(500).send({ "message": err.message });
-        } else {
-            res.status(200).send(movies);
-            
-        } 
-    })
-    
-}
-function getMovie(req, res) {
-    var movie_id = req.params.id;
-    console.log(movie_id);
-    Movie.findById(movie_id),function  (err, movie) {
-        if (err) {
-            res.status(500).send({ "message": err.message });
-        } else {
-            res.status(200).send(movie);
 
-        }  
-    }
-    
-}
-
-function updateMovie (req, res) {
-    var movie_id = req.params.id; //(pide el id)
-    var movie_obj = req.body; //recibe el objeto de postman (post put)
-    
-    Movie.findByIdAndUpdate(movie_id, movie_obj, function (err, movie) {
-        if (err) {
-            res.status(500).send({ "message": err.message });
-        } else {
-            res.status(200).send(movie);
-
-        } 
+function createMovie(req, res){
+    var movie = new Movie()
+    movie.title = "adsddsds";
+    movie.age = "dsdsd";
+    movie.save(function(err, data){
+        if (err) throw err;
+        return res.status(203).send("created")
     });
-   
-  /*   Movie.find({"_id": movie_id}, function (err, movie) { 
-        movie_id = movie.id;
-        Movie.update()//falta el resto de mongoose
-    }) */
 }
-function deleteMovie(req, res) {
-    var movie_id = req.params.id;
-    Movie.findByIdAndRemove(movie_id,function (err, result) {
-        res.status(200).send();
-    })
-    
+function getMovies(req, res){
+    Movie.find({}, function (err, data){
+        return res.status(200).send(data)
+    });
 }
-
+function getMovie(req, res){
+    var movie_id = req.params.id
+    Movie.findById(movie_id, function (err, data){
+        return res.status(200).send(data)
+    });
+}
+function insertImage(req, res){
+    console.log(req.files.image.path)
+    return res.status(200).send()
+}
 
 module.exports = {
+    pruebas,
     createMovie,
     getMovies,
     getMovie,
-    updateMovie,
-    deleteMovie
-}
+    insertImage,
+};

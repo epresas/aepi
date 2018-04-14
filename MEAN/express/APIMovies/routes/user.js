@@ -10,7 +10,9 @@ var api = express.Router()
 var multiparty = require('connect-multiparty')
 var md_upload = multiparty({uploadDir: './uploads/users'})
 
-api.get('/probando-controlador', UserController.pruebas);
+api.post('/user', UserController.createUser);
+api.get('/user', UserController.getUsers);
+
 
 
 module.exports = api;

@@ -5,7 +5,8 @@ var Schema = mongoose.Schema;
 
 var MovieSchema = Schema({
     title: String,
-    year: Number,
+    age: String,
+    score: String
 });
 
 module.exports = mongoose.model('Movie', MovieSchema)

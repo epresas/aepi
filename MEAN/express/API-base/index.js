@@ -1,10 +1,10 @@
-'use strict'
+'use strict' //meter instruccioones nuevos estandares de js
 
 var mongoose = require('mongoose');
 var app = require('./app.js')
-var port = 3977;
+var port = process.env.PORT || 3977;
 
-mongoose.connect('mongodb://localhost:27017/test', (err, res) => {
+mongoose.connect('mongodb://admin:admin@ds223009.mlab.com:23009/test-aepi', (err, res) => {
     if(err){
         throw err;
     }else{
@@ -15,3 +15,10 @@ mongoose.connect('mongodb://localhost:27017/test', (err, res) => {
     }
 })
 
+// var swaggerTools = require('swagger-tools');
+// var YAML = require('yamljs');
+// var swaggerDoc = YAML.load('openapi.yaml');
+// swaggerTools.initializeMiddleware(swaggerDoc, function (middleware) {
+//     // Serve the Swagger documents and Swagger UI
+//     app.use(middleware.swaggerUi());
+//   });
