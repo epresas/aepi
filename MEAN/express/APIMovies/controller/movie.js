@@ -21,7 +21,6 @@ function createMovie(req, res) {
             movie.cast = generator.randomNamesList();
             movie.rating = Math.round(Math.random() * (10 - 1) + 1);
             movie.director = director.id;
-            console.log(director.id)
             movie.save(function (err, movie_result) {
                 if (err) {
                     res.status(500).send({ "message": err.message });
@@ -37,12 +36,14 @@ function createMovie(req, res) {
 }
 
 //READ
-function findMovies() {
+function findMovies(req, res) {
 
     Movie.find({}, function (err, movie) {
-        if (err) throw err;
-
-        console.log(movie);
+        if (err) {
+            res.status(500).send({ "message": err.message });
+        } else {
+            res.status(201).send(movie);
+        }
 
     });
 }
@@ -91,11 +92,11 @@ function deleteMovie(req, res) {
 }
 
 module.exports = {
-    createMovie: createMovie,
-    findMovie: findMovies,
-    findMovie: findMovie,
-    // updateMovie: updateMovie
-    // deleteMovie: deleteMovie
+    createMovie,
+    findMovies,
+    findMovie,
+    updateMovie,
+    deleteMovie
 }
 
 

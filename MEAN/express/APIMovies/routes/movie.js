@@ -11,9 +11,11 @@ var api = express.Router()
 // var md_upload = multiparty({uploadDir: './uploads/users'})
 
 
-api.get('/generate-movies', MovieController.createMovie);
+api.get('/create-movies', MovieController.createMovie);
 api.get('/movie', MovieController.findMovies);
-// api.get('/movie/:id', MovieController.findMovie);
+api.get('/movie/:id', MovieController.findMovie);
+api.put('/movie/:id', MovieController.updateMovie);
+api.delete('/movie/:id', MovieController.deleteMovie);
 
 
 module.exports = api;
