@@ -45,3 +45,7 @@ EXPRESS:
 
 index: se levanta la conexion con mongoose, se define y levanta el express (ver ejemplo)
 en app.js se importa express se hace instancia de express y se definen las rutas base y las definidas por el usuario
+
+
+NODE:
+nodemon paquete para 
