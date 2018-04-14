@@ -26,13 +26,13 @@ function createUser(req, res) {
     })
     
 
-    // user.save(function (err, user) {
-    //     if (err) {
-    //         res.status(500).send({"messsage": err.messsage});
+    user.save(function (err, user) {
+        if (err) {
+            res.status(500).send({"message": err.message});
             
-    //     }
-    //     res.status(200).send("Usuario creado con exito")
-    // });
+        }
+        res.status(200).send(user);
+    });
 }
 
 function getUsers(req, res) {
@@ -41,6 +41,9 @@ function getUsers(req, res) {
         
     });
 }
+
+
+f
 module.exports = {
   
     createUser,

@@ -23,14 +23,15 @@ function createUser(req, res){
 
     bcrypt.hash(req.body.password, null, null, function(err, hash){
         console.log(hash)
+        user.password = hash;
+        user.save(function (err, user){
+            if(err){
+                res.status(500).send({"message":err.message});
+            }
+            res.status(200).send("usuario creado correcatemnre")
+        });
     });
 
-    // user.save(function (err, user){
-    //     if(err){
-    //         res.status(500).send();
-    //     }
-    //     res.status(200).send("usuario creado correcatemnre")
-    // });
 }
 
 function getUsers(req, res){
@@ -39,8 +40,33 @@ function getUsers(req, res){
     });
 }
 
+function login(req, res) {
+    var username = req.body.email;
+    var password = req.body.password;
 
+    User.findOne({ email: username }, function (err, user) {
+        bcrypt.compare(password, user.password, function (err, check) {
+            if (check) {
+                console.log("concuerda");
+                res.status(200).send("Loggeado con exito");
+            } else {
+                console.log("no concuerda")
+                res.status(400).send({"message": err.message});
+            }
+        });
+    });
+}
 
+function insertImage(req, res) {
+    var userId = req.body.id;
+    var imagePath = req.files.image.path;
+    console.log(imagePath);
+    User.findByIdAndUpdate(userId, { image: imagePath },function (err, user) { //busco el ususario por el id y actualizo su campo image por el string que viene  en el path
+
+    });
+
+    res.status(200).send();
+}
 
 
 
@@ -96,4 +122,6 @@ module.exports = {
     pruebas,
     getUsers,
     createUser,
+    login,
+    insertImage
 };
