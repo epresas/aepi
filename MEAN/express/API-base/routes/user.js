@@ -15,8 +15,8 @@ api.get('/user', UserController.getUsers);
 api.post('/user', UserController.createUser);
 api.post('/user/login', UserController.login);
 api.post('/user/insert-image/:id', md_upload, UserController.insertImage);
+api.delete('/user/:id', UserController.deleteUser);
 
-// api.post('/user', UserController.saveUser)
 // api.post('/save-image',md_upload ,UserController.saveImage);
 // api.post('/login', UserController.login);
 

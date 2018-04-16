@@ -40,6 +40,17 @@ function getUsers(req, res){
     });
 }
 
+function deleteUser(req, res) {
+    let userId = req.params.id;
+    User.findByIdAndRemove(userId, function (err, users) {
+        if (err) {
+            res.status(400).send({"message": err.message});
+        } else {
+            res.status(200).send(users);
+        }
+    });
+}
+
 function login(req, res) {
     var username = req.body.email;
     var password = req.body.password;
@@ -123,5 +134,6 @@ module.exports = {
     getUsers,
     createUser,
     login,
-    insertImage
+    insertImage,
+    deleteUser
 };
